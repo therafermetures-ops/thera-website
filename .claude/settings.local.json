@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/dubau/OneDrive/Desktop/THERA/PHOTO THERA/**)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\dubau\\\\OneDrive\\\\Desktop\\\\THERA\\\\Création Site\\\\Thera fermetures\\\\thera-website-nextjs\\\\public\\\\images\" -Recurse -File | Select-Object Name, @{N='Dir';E={$_.Directory.Name}} | Format-Table)",
+      "Bash(npx next *)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell($env:PATH)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;$env:PATH\"; Set-Location \"C:\\\\Users\\\\dubau\\\\OneDrive\\\\Desktop\\\\THERA\\\\Création Site\\\\Thera fermetures\\\\thera-website-nextjs\"; node --version; npx next build 2>&1 | Select-Object -Last 60)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;$env:PATH\"; Set-Location \"C:\\\\Users\\\\dubau\\\\OneDrive\\\\Desktop\\\\THERA\\\\Création Site\\\\Thera fermetures\\\\thera-website-nextjs\"; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"`$env:PATH = 'C:\\\\Program Files\\\\nodejs;`$env:PATH'; npx next dev\" -WindowStyle Normal; Start-Sleep 4; Write-Host \"Serveur lancé sur http://localhost:3000\")",
+      "WebFetch(domain:theratec.fr)",
+      "WebFetch(domain:www.theratec.fr)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;\" + $env:PATH; cd \"C:\\\\Users\\\\dubau\\\\OneDrive\\\\Desktop\\\\THERA\\\\Création Site\\\\Thera fermetures\\\\thera-website-nextjs\"; npx next build 2>&1 | tail -30)"
+    ]
+  }
+}
