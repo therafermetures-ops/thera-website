@@ -20,7 +20,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['DM Sans', 'system-ui', 'sans-serif'],
-        display: ['Syne', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease forwards',

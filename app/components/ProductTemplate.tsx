@@ -277,7 +277,7 @@ export default function ProductTemplate({
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {processSteps.map((step, i) => (
                 <ScrollReveal key={i} delay={i * 100} className="text-center">
-                  <div className="w-14 h-14 rounded-2xl bg-dark text-white flex items-center justify-center font-black text-lg mx-auto mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  <div className="w-14 h-14 rounded-2xl bg-dark text-white flex items-center justify-center font-black text-lg mx-auto mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     {String(i + 1).padStart(2, '0')}
                   </div>
                   <p className="text-white font-semibold text-sm">{step}</p>

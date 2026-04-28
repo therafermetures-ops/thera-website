@@ -236,23 +236,24 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Le vrai sur mesure — carte avec photo */}
-              <div className="relative rounded-2xl overflow-hidden h-48 group">
-                <Image
-                  src="/images/sur-mesure.jpg"
-                  alt="Le vrai sur mesure THERA Fermetures"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-dark/80 to-dark/30" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <div className="flex items-center gap-2 mb-2">
+              {/* Le vrai sur mesure — image + texte côte à côte */}
+              <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-card">
+                <div className="relative w-full sm:w-1/2 h-64 sm:h-auto flex-shrink-0">
+                  <Image
+                    src="/images/sur-mesure.jpg"
+                    alt="Le vrai sur mesure THERA Fermetures"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                  />
+                </div>
+                <div className="bg-dark p-7 flex flex-col justify-center sm:w-1/2">
+                  <div className="flex items-center gap-2 mb-3">
                     <div className="w-4 h-0.5 bg-accent" />
-                    <span className="text-white/60 text-xs uppercase tracking-widest font-medium">Notre approche</span>
+                    <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
                   </div>
-                  <h3 className="text-white text-xl mb-1">Le vrai sur mesure</h3>
-                  <p className="text-white/75 text-sm leading-relaxed">
+                  <h3 className="text-white text-xl mb-3">Le vrai sur mesure</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
                     Chaque projet part d&apos;une feuille blanche. Dimensions exactes, coloris assortis, options adaptées — rien de standard, tout est pensé pour vous.
                   </p>
                 </div>
@@ -286,7 +287,7 @@ export default function Home() {
                 </div>
                 {/* Badge Depuis 2015 */}
                 <div className="absolute -top-4 -right-4 bg-dark rounded-2xl p-5 text-white">
-                  <div className="text-2xl font-black" style={{ fontFamily: 'Syne, sans-serif' }}>2015</div>
+                  <div className="text-2xl font-black" style={{ fontFamily: 'Montserrat, sans-serif' }}>2015</div>
                   <div className="text-xs font-medium text-white/70">Depuis</div>
                 </div>
               </div>
@@ -299,8 +300,7 @@ export default function Home() {
       <section className="section-padding bg-dark">
         <div className="container">
           <ScrollReveal className="text-center mb-12">
-            <div className="section-tag text-white/50 justify-center">Nos réalisations</div>
-            <h2 className="text-white">Quelques projets réalisés<br className="hidden md:block" /> dans votre région</h2>
+            <h2 className="text-white text-5xl md:text-6xl font-black tracking-tight">INSPIRATIONS</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
@@ -339,7 +339,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
             {processSteps.map((step, i) => (
               <ScrollReveal key={i} delay={i * 80} className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-2xl bg-dark text-white flex items-center justify-center font-black mb-4 text-base" style={{ fontFamily: 'Syne, sans-serif' }}>
+                <div className="w-14 h-14 rounded-2xl bg-dark text-white flex items-center justify-center font-black mb-4 text-base" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {step.num}
                 </div>
                 <h4 className="font-bold mb-2">{step.title}</h4>

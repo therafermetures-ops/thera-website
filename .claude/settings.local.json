@@ -31,7 +31,14 @@
       "Bash(git init *)",
       "Bash(git remote *)",
       "Bash(git fetch *)",
-      "Bash(git reset *)"
+      "Bash(git reset *)",
+      "mcp__a41b63cc-4dc7-412a-9fd1-0ede83147dee__list_teams",
+      "mcp__a41b63cc-4dc7-412a-9fd1-0ede83147dee__list_projects",
+      "mcp__a41b63cc-4dc7-412a-9fd1-0ede83147dee__list_deployments",
+      "mcp__a41b63cc-4dc7-412a-9fd1-0ede83147dee__deploy_to_vercel",
+      "Bash(npx vercel *)",
+      "Bash(curl -s \"https://thera-website-eight.vercel.app/images/logo-thera.png\" -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl -s \"https://thera-website-nextjs.vercel.app/images/logo-thera.png\" -o /dev/null -w \"%{http_code}\")"
     ]
   }
 }
