@@ -1,4 +1,4 @@
-# THERA Fermetures - Site Next.js
+# THERA Fermetures habitat- Site Next.js
 
 Site professionnel pour THERA Fermetures - Experts en aménagements extérieurs.
 
@@ -41,7 +41,7 @@ Créer un fichier `.env.local`:
 NEXT_PUBLIC_SITE_URL=https://thera-fermetures.fr
 ```
 
-## Construction pour Production
+## Construction pour Production site
 
 ```bash
 npm run build
@@ -59,8 +59,8 @@ vercel
 
 ### Méthode 2: Via GitHub
 
-1. Pusher le code sur GitHub
-2. Connecter Vercel à votre repo
+1. Pusher le code sur GitHub 
+2. Connecter Vercel à votre repo 
 3. Vercel deploy automatiquement
 
 ### Méthode 3: Via Dashboard Vercel
