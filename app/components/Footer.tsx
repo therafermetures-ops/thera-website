@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="text-white font-black text-2xl tracking-tight"> FERMETURES</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Experts en aménagements extérieurs aluminium sur mesure depuis 2015. Plus de 500 réalisations dans le Beaujolais et le Rhône.
+              Experts en aménagements extérieurs aluminium sur mesure depuis 2015. Nombreuses réalisations dans le Beaujolais et le Rhône.
             </p>
             {/* Contact */}
             <div className="space-y-3 text-sm">
@@ -106,9 +106,9 @@ export default function Footer() {
             </div>
 
             {/* CTA Box */}
-            <div className="bg-primary/10 border border-primary/20 rounded-xl p-5">
-              <p className="text-white font-bold text-sm mb-1">Devis gratuit sous 24h</p>
-              <p className="text-gray-400 text-xs mb-4">Visite offerte, sans engagement</p>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+              <p className="text-white font-bold text-sm mb-1">Devis gratuit</p>
+              <p className="text-gray-400 text-xs mb-4">Visite offerte — sans engagement</p>
               <Link
                 href="/contact"
                 className="block text-center bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2.5 rounded-lg transition-colors"

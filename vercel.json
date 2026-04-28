@@ -1,6 +1,6 @@
 {
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "NEXT_PUBLIC_SITE_URL",
+    "NEXT_PUBLIC_SITE_URL": "@thera_site_url",
     "NEXT_PUBLIC_SITE_NAME": "THERA Fermetures"
   },
   "buildCommand": "next build",

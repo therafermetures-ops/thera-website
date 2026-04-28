@@ -12,7 +12,26 @@
       "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;$env:PATH\"; Set-Location \"C:\\\\Users\\\\dubau\\\\OneDrive\\\\Desktop\\\\THERA\\\\Création Site\\\\Thera fermetures\\\\thera-website-nextjs\"; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"`$env:PATH = 'C:\\\\Program Files\\\\nodejs;`$env:PATH'; npx next dev\" -WindowStyle Normal; Start-Sleep 4; Write-Host \"Serveur lancé sur http://localhost:3000\")",
       "WebFetch(domain:theratec.fr)",
       "WebFetch(domain:www.theratec.fr)",
-      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;\" + $env:PATH; cd \"C:\\\\Users\\\\dubau\\\\OneDrive\\\\Desktop\\\\THERA\\\\Création Site\\\\Thera fermetures\\\\thera-website-nextjs\"; npx next build 2>&1 | tail -30)"
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;\" + $env:PATH; cd \"C:\\\\Users\\\\dubau\\\\OneDrive\\\\Desktop\\\\THERA\\\\Création Site\\\\Thera fermetures\\\\thera-website-nextjs\"; npx next build 2>&1 | tail -30)",
+      "Bash(cp \"C:/Users/dubau/OneDrive/Desktop/THERA/Communication/Logo 2023 noir vert.png\" \"C:/Users/dubau/OneDrive/Desktop/THERA/Création Site/Thera fermetures/thera-website-nextjs/public/images/logo-thera.png\")",
+      "Bash(cp \"C:/Users/dubau/OneDrive/Desktop/THERA/PHOTO THERA/20250829_140012.jpg\" \"C:/Users/dubau/OneDrive/Desktop/THERA/Création Site/Thera fermetures/thera-website-nextjs/public/images/sur-mesure.jpg\")",
+      "Bash(sed -i \"s/processSteps={\\\\['Visite \\\\& Mesures', 'Devis 24h', 'Fabrication FR', 'Installation', 'Mise en service'\\\\]}/processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Mise en service']}/\" app/portails/page.tsx)",
+      "Bash(sed -i \"s/processSteps={\\\\['Visite site', 'Étude \\\\& devis', 'Fabrication FR', 'Installation', 'Formation'\\\\]}/processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Formation']}/\" app/pergolas/page.tsx)",
+      "Bash(sed -i \"s/processSteps={\\\\['Visite \\\\& mesures', 'Devis 24h', 'Fabrication FR', 'Installation', 'Livraison'\\\\]}/processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Livraison']}/\" app/carports/page.tsx)",
+      "Bash(sed -i \"s/processSteps={\\\\['Visite \\\\& mesures', 'Devis 24h', 'Fabrication FR', 'Installation', 'Finitions'\\\\]}/processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Finitions']}/\" app/clotures/page.tsx)",
+      "Bash(sed -i \"s/processSteps={\\\\['Visite \\\\& Mesures', 'Devis 24h', 'Fabrication', 'Installation', 'Mise en service'\\\\]}/processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Mise en service']}/\" app/portes-de-garage/page.tsx)",
+      "Bash(perl -i -pe \"s/Devis gratuit sous 24h\\\\./Devis gratuit./g; s/sous 24h//g; s/en 24h//g; s/dans les 24h//g\" app/portails/page.tsx app/pergolas/page.tsx app/carports/page.tsx app/clotures/page.tsx app/portes-de-garage/page.tsx)",
+      "Bash(perl -i -pe \"s/Plus de 500 réalisations/Nombreuses réalisations/g; s/500\\\\+ réalisations/nos réalisations/g\" app/components/Footer.tsx)",
+      "Bash(xargs sed *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git config *)",
+      "Bash(git pull *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git fetch *)",
+      "Bash(git reset *)"
     ]
   }
 }

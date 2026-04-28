@@ -3,12 +3,12 @@ import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
   title: 'Carports Aluminium sur Mesure - Villefranche-sur-Saône | THERA Fermetures',
-  description: 'Carports aluminium sur mesure pour 1 à 4 voitures. Design épuré, pose rapide, entretien zéro. Fabrication française. Beaujolais & Rhône. Devis gratuit sous 24h.',
+  description: 'Carports aluminium sur mesure pour 1 à 4 voitures. Design épuré, pose rapide, entretien zéro. Fabrication française. Beaujolais & Rhône. Devis gratuit.',
   keywords: ['carports aluminium villefranche-sur-saône', 'abri voiture aluminium beaujolais', 'carport sur mesure rhône', 'abri voiture design'],
   alternates: { canonical: 'https://thera-fermetures.fr/carports' },
   openGraph: {
     title: 'Carports Aluminium sur Mesure — THERA Fermetures Beaujolais',
-    description: 'Protection voitures sur mesure, design épuré, pose rapide. Devis gratuit sous 24h.',
+    description: 'Protection voitures sur mesure, design épuré, pose rapide. Devis gratuit.',
     images: [{ url: '/images/carports/carport-claustra.png', width: 1200, height: 630, alt: 'Carport aluminium THERA Fermetures' }],
   },
 }
@@ -44,14 +44,14 @@ export default function CarportsPage() {
         { src: '/images/carports/carport-claustra.png', alt: 'Carport aluminium claustra', caption: 'Carport claustra aluminium' },
       ]}
       advantages={[
-        { icon: '🚗', title: 'Protection totale', text: 'Pluie, grêle, neige, soleil — vos véhicules sont protégés 365 jours par an sans risque de dommages.' },
-        { icon: '📐', title: 'Sur mesure absolu', text: 'Chaque carport est dimensionné selon votre terrain, votre maison et vos véhicules. Aucun compromis.' },
-        { icon: '🌿', title: 'Entretien zéro', text: 'L\'aluminium traité ne rouille pas, ne se déforme pas et ne nécessite aucun traitement. Simple à nettoyer.' },
-        { icon: '🎨', title: 'Design intégré', text: 'Coloris assortis à votre maison, claustra, bardage — votre carport devient un élément architectural à part entière.' },
-        { icon: '⚡', title: 'Installation express', text: 'Grâce à notre fabrication précise, la pose se fait en 1-2 jours avec un minimum de désagrément.' },
-        { icon: '💰', title: 'Valeur immobilière', text: 'Un carport bien intégré peut augmenter la valeur de votre bien de 3 à 7% selon les agences immobilières.' },
+        { icon: '', title: 'Protection totale', text: 'Pluie, grêle, neige, soleil — vos véhicules sont protégés 365 jours par an sans risque de dommages.' },
+        { icon: '', title: 'Sur mesure absolu', text: 'Chaque carport est dimensionné selon votre terrain, votre maison et vos véhicules. Aucun compromis.' },
+        { icon: '', title: 'Entretien zéro', text: 'L\'aluminium traité ne rouille pas, ne se déforme pas et ne nécessite aucun traitement. Simple à nettoyer.' },
+        { icon: '', title: 'Design intégré', text: 'Coloris assortis à votre maison, claustra, bardage — votre carport devient un élément architectural à part entière.' },
+        { icon: '', title: 'Installation express', text: 'Grâce à notre fabrication précise, la pose se fait en 1-2 jours avec un minimum de désagrément.' },
+        { icon: '', title: 'Valeur immobilière', text: 'Un carport bien intégré peut augmenter la valeur de votre bien de 3 à 7% selon les agences immobilières.' },
       ]}
-      processSteps={['Visite & mesures', 'Devis 24h', 'Fabrication FR', 'Installation', 'Livraison']}
+      processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Livraison']}
       ctaText="Obtenir mon devis carport"
       structuredData={structuredData}
     />

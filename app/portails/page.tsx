@@ -87,14 +87,14 @@ export default function PortailsPage() {
         { src: '/images/portails/portail-coulissant-arnas.jpg', alt: 'Portail coulissant motorisé Arnas', caption: 'Portail coulissant motorisé — Arnas' },
       ]}
       advantages={[
-        { icon: '💪', title: 'Robustesse extrême', text: 'Aluminium extrudé résistant aux chocs, intempéries et corrosion. Durée de vie 30+ ans.' },
-        { icon: '🧼', title: 'Zéro entretien', text: 'L\'aluminium ne rouille pas et ne se déforme pas. Un coup d\'eau suffit pour retrouver l\'éclat du neuf.' },
-        { icon: '🎨', title: '+300 coloris', text: 'Blanc, gris anthracite, noir mat, couleurs sur demande. Finition laquée Qualicoat® ultra-durable.' },
-        { icon: '🔒', title: 'Sécurité maximale', text: 'Serrures certifiées, motorisation avec détection d\'obstacles. Votre propriété est pleinement protégée.' },
-        { icon: '📱', title: 'Motorisation smart', text: 'Télécommande, smartphone, interphone vidéo. Compatibles Somfy, BFT — maison connectée.' },
-        { icon: '🏆', title: 'Fabrication française', text: 'Fabriqués en France par des partenaires certifiés Qualicoat®. Qualité et traçabilité garanties.' },
+        { icon: '', title: 'Robustesse extrême', text: 'Aluminium extrudé résistant aux chocs, intempéries et corrosion. Durée de vie 30+ ans.' },
+        { icon: '', title: 'Zéro entretien', text: 'L\'aluminium ne rouille pas et ne se déforme pas. Un coup d\'eau suffit pour retrouver l\'éclat du neuf.' },
+        { icon: '', title: '+300 coloris', text: 'Blanc, gris anthracite, noir mat, couleurs sur demande. Finition laquée Qualicoat® ultra-durable.' },
+        { icon: '', title: 'Sécurité maximale', text: 'Serrures certifiées, motorisation avec détection d\'obstacles. Votre propriété est pleinement protégée.' },
+        { icon: '', title: 'Motorisation smart', text: 'Télécommande, smartphone, interphone vidéo. Compatibles Somfy, BFT — maison connectée.' },
+        { icon: '', title: 'Fabrication française', text: 'Fabriqués en France par des partenaires certifiés Qualicoat®. Qualité et traçabilité garanties.' },
       ]}
-      processSteps={['Visite & Mesures', 'Devis 24h', 'Fabrication FR', 'Installation', 'Mise en service']}
+      processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Mise en service']}
       ctaText="Obtenir mon devis portail"
       structuredData={{
         '@context': 'https://schema.org',

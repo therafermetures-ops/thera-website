@@ -3,7 +3,7 @@ import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
   title: 'Clôtures Aluminium sur Mesure - Villefranche-sur-Saône | THERA Fermetures',
-  description: 'Clôtures et brise-vue aluminium sur mesure. Modèles pleins, ajourés, mixtes. Entretien zéro, résistance totale. Beaujolais & Rhône. Devis gratuit sous 24h.',
+  description: 'Clôtures et brise-vue aluminium sur mesure. Modèles pleins, ajourés, mixtes. Entretien zéro, résistance totale. Beaujolais & Rhône. Devis gratuit.',
   keywords: ['clôtures aluminium villefranche-sur-saône', 'brise-vue aluminium beaujolais', 'clôture sur mesure rhône', 'panneau clôture aluminium'],
   alternates: { canonical: 'https://thera-fermetures.fr/clotures' },
   openGraph: {
@@ -45,14 +45,14 @@ export default function CloturesPage() {
         { src: '/images/clotures/panneau-brise-vue.jpg', alt: 'Panneau brise-vue aluminium Villefranche', caption: 'Brise-vue aluminium — Villefranche' },
       ]}
       advantages={[
-        { icon: '🛡️', title: 'Robustesse prouvée', text: 'L\'aluminium extrudé résiste aux chocs, aux cyclones et à la corrosion. Aucune détérioration dans le temps.' },
-        { icon: '🧼', title: 'Entretien inexistant', text: 'Oubliez la peinture annuelle et la rouille. Un simple rinçage à l\'eau suffit pour garder vos clôtures comme neuves.' },
-        { icon: '🎨', title: 'Tous les coloris RAL', text: 'Blanc, anthracite, bois, couleurs personnalisées — votre clôture s\'intègre parfaitement à votre maison.' },
-        { icon: '🌿', title: '100% recyclable', text: 'L\'aluminium est infiniment recyclable. Choisir l\'aluminium c\'est aussi faire un choix éco-responsable.' },
-        { icon: '🔒', title: 'Intimité & sécurité', text: 'Panneaux pleins pour une intimité totale, ou hauteur personnalisée pour protéger votre jardin efficacement.' },
-        { icon: '⚖️', title: 'Légalité facilitée', text: 'Nous vous accompagnons dans les démarches administratives (déclaration préalable) si nécessaire.' },
+        { icon: '', title: 'Robustesse prouvée', text: 'L\'aluminium extrudé résiste aux chocs, aux cyclones et à la corrosion. Aucune détérioration dans le temps.' },
+        { icon: '', title: 'Entretien inexistant', text: 'Oubliez la peinture annuelle et la rouille. Un simple rinçage à l\'eau suffit pour garder vos clôtures comme neuves.' },
+        { icon: '', title: 'Tous les coloris RAL', text: 'Blanc, anthracite, bois, couleurs personnalisées — votre clôture s\'intègre parfaitement à votre maison.' },
+        { icon: '', title: '100% recyclable', text: 'L\'aluminium est infiniment recyclable. Choisir l\'aluminium c\'est aussi faire un choix éco-responsable.' },
+        { icon: '', title: 'Intimité & sécurité', text: 'Panneaux pleins pour une intimité totale, ou hauteur personnalisée pour protéger votre jardin efficacement.' },
+        { icon: '', title: 'Légalité facilitée', text: 'Nous vous accompagnons dans les démarches administratives (déclaration préalable) si nécessaire.' },
       ]}
-      processSteps={['Visite & mesures', 'Devis 24h', 'Fabrication FR', 'Installation', 'Finitions']}
+      processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Finitions']}
       ctaText="Obtenir mon devis clôture"
       structuredData={structuredData}
     />

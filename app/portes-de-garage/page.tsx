@@ -98,14 +98,14 @@ export default function PortesDeGaragePage() {
         { src: '/images/portes-garage/porte-rapide.jpg', alt: 'Porte de garage isolation renforcée', caption: 'Sectionnelle 60mm haute isolation' },
       ]}
       advantages={[
-        { icon: '🔒', title: 'Sécurité maximale', text: 'Serrures multipoints, panneaux renforcés, motorisation avec détection d\'obstacles. Votre garage est pleinement sécurisé.' },
-        { icon: '🌡️', title: 'Isolation optimale', text: 'Panneaux 40mm ou 60mm avec mousse polyuréthane. Réduisez vos pertes thermiques et votre facture énergétique.' },
-        { icon: '📱', title: 'Motorisation Somfy', text: 'Télécommande, smartphone, intégration domotique. Ouvrez et fermez votre garage depuis votre voiture ou votre canapé.' },
-        { icon: '🎨', title: '+300 coloris', text: 'RAL standards ou sur demande. Bois, lisse, rainuré, nervuré — la porte s\'adapte parfaitement à votre façade.' },
-        { icon: '🔧', title: 'Installation rapide', text: 'Pose professionnelle en une demi-journée. Nos techniciens interviennent dans tout le Beaujolais et le Rhône.' },
-        { icon: '🏆', title: 'Garantie 5 ans', text: 'Pièces et main d\'œuvre couverts 5 ans. Service après-vente réactif basé à Chasselay.' },
+        { icon: '', title: 'Sécurité maximale', text: 'Serrures multipoints, panneaux renforcés, motorisation avec détection d\'obstacles. Votre garage est pleinement sécurisé.' },
+        { icon: '', title: 'Isolation optimale', text: 'Panneaux 40mm ou 60mm avec mousse polyuréthane. Réduisez vos pertes thermiques et votre facture énergétique.' },
+        { icon: '', title: 'Motorisation Somfy', text: 'Télécommande, smartphone, intégration domotique. Ouvrez et fermez votre garage depuis votre voiture ou votre canapé.' },
+        { icon: '', title: '+300 coloris', text: 'RAL standards ou sur demande. Bois, lisse, rainuré, nervuré — la porte s\'adapte parfaitement à votre façade.' },
+        { icon: '', title: 'Installation rapide', text: 'Pose professionnelle en une demi-journée. Nos techniciens interviennent dans tout le Beaujolais et le Rhône.' },
+        { icon: '', title: 'Garantie 5 ans', text: 'Pièces et main d\'œuvre couverts 5 ans. Service après-vente réactif basé à Chasselay.' },
       ]}
-      processSteps={['Visite & Mesures', 'Devis 24h', 'Fabrication', 'Installation', 'Mise en service']}
+      processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Mise en service']}
       ctaText="Obtenir mon devis porte de garage"
       structuredData={{
         '@context': 'https://schema.org',

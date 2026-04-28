@@ -84,14 +84,14 @@ export default function PergolasPage() {
         { src: '/images/pergolas/pergola-store.jpg', alt: 'VizVersa store pergola', caption: 'VizVersa — store rétractable' },
       ]}
       advantages={[
-        { icon: '🌡️', title: 'Confort toute l\'année', text: 'Régulation naturelle par orientation des lames. Fraîcheur l\'été, protection pluie toute l\'année.' },
-        { icon: '🌧️', title: 'Étanchéité parfaite', text: 'Lames fermées à 145° : protection totale contre la pluie. Profitez de votre terrasse même par mauvais temps.' },
-        { icon: '📱', title: 'Pilotage intelligent', text: 'Télécommande, app smartphone, capteur de pluie automatique. Votre pergola s\'adapte à la météo.' },
-        { icon: '🏠', title: 'Plus-value immobilière', text: 'Une pergola bien intégrée augmente la valeur et l\'attractivité de votre bien immobilier.' },
-        { icon: '💡', title: 'Options premium', text: 'LED RGBW, chauffage infrarouge, stores motorisés — votre terrasse devient un vrai salon extérieur.' },
-        { icon: '🇫🇷', title: 'Fabriquée en France', text: 'Cébel, notre fabricant partenaire, est implanté au sud de Lyon. Label "Origine France Garantie".' },
+        { icon: '', title: 'Confort toute l\'année', text: 'Régulation naturelle par orientation des lames. Fraîcheur l\'été, protection pluie toute l\'année.' },
+        { icon: '', title: 'Étanchéité parfaite', text: 'Lames fermées à 145° : protection totale contre la pluie. Profitez de votre terrasse même par mauvais temps.' },
+        { icon: '', title: 'Pilotage intelligent', text: 'Télécommande, app smartphone, capteur de pluie automatique. Votre pergola s\'adapte à la météo.' },
+        { icon: '', title: 'Plus-value immobilière', text: 'Une pergola bien intégrée augmente la valeur et l\'attractivité de votre bien immobilier.' },
+        { icon: '', title: 'Options premium', text: 'LED RGBW, chauffage infrarouge, stores motorisés — votre terrasse devient un vrai salon extérieur.' },
+        { icon: '', title: 'Fabriquée en France', text: 'Cébel, notre fabricant partenaire, est implanté au sud de Lyon. Label "Origine France Garantie".' },
       ]}
-      processSteps={['Visite site', 'Étude & devis', 'Fabrication FR', 'Installation', 'Formation']}
+      processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Formation']}
       ctaText="Obtenir mon devis pergola"
       structuredData={{
         '@context': 'https://schema.org',

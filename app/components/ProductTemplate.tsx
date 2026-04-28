@@ -255,11 +255,9 @@ export default function ProductTemplate({
               {advantages.map((adv, i) => (
                 <ScrollReveal key={i} delay={i * 80}>
                   <div className="bg-white p-7 rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-400 h-full border border-gray-50">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5">
-                      {adv.icon}
-                    </div>
-                    <h3 className="text-primary mb-2 text-base">{adv.title}</h3>
-                    <p className="text-muted text-sm leading-relaxed">{adv.text}</p>
+                    <div className="w-8 h-0.5 bg-accent rounded-full mb-5" />
+                    <h3 className="text-dark mb-2 text-base">{adv.title}</h3>
+                    <p className="text-muted text-sm leading-relaxed font-light">{adv.text}</p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -279,7 +277,7 @@ export default function ProductTemplate({
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {processSteps.map((step, i) => (
                 <ScrollReveal key={i} delay={i * 100} className="text-center">
-                  <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mx-auto mb-4">
+                  <div className="w-14 h-14 rounded-2xl bg-dark text-white flex items-center justify-center font-black text-lg mx-auto mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
                     {String(i + 1).padStart(2, '0')}
                   </div>
                   <p className="text-white font-semibold text-sm">{step}</p>
@@ -294,13 +292,10 @@ export default function ProductTemplate({
       <section className="bg-dark py-20">
         <div className="container text-center">
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2 bg-white/10 text-white/70 text-xs font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-              Devis gratuit · Réponse sous 24h
-            </div>
+            <div className="section-tag justify-center text-white/40 mb-6">Votre projet</div>
             <h2 className="text-white mb-5 text-4xl">Un projet en {title.split(' ')[0].toLowerCase()}?<br />Parlons-en.</h2>
-            <p className="text-white/70 text-lg mb-10 max-w-lg mx-auto">
-              Visite offerte à domicile, fabrication française, installation par nos équipes. Sans engagement.
+            <p className="text-white/65 text-lg mb-10 max-w-lg mx-auto font-light">
+              Visite offerte à domicile, fabrication française, installation par nos équipes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary text-base py-4 px-8">
