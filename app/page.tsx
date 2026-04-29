@@ -87,9 +87,9 @@ const avantages = [
 const processSteps = [
   { num: '01', title: 'Visite', desc: 'Nous venons chez vous, prenons les mesures et analysons votre projet sur place.' },
   { num: '02', title: 'Étude', desc: 'Analyse technique complète, choix des matériaux et conception de votre projet.' },
-  { num: '03', title: 'Devis rapide', desc: 'Devis détaillé et personnalisé transmis rapidement, sans engagement de votre part.' },
-  { num: '04', title: 'Installation', desc: 'Nos équipes installent tout en 1 à 3 jours selon le projet, proprement et efficacement.' },
-  { num: '05', title: 'Maintenance', desc: 'Service après-vente réactif et garantie 10 ans sur tous nos produits et la pose.' },
+  { num: '03', title: 'Devis', desc: 'Devis détaillé et personnalisé transmis rapidement, sans engagement de votre part.' },
+  { num: '04', title: 'Installation', desc: 'Une équipe installe le matériel et effectue la mise en service.' },
+  { num: '05', title: 'Maintenance', desc: 'Service après vente et maintenance périodique.' },
 ]
 
 const localBusinessSchema = {
@@ -262,7 +262,7 @@ export default async function Home() {
 
               {/* Le vrai sur mesure — image + texte côte à côte */}
               <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-card">
-                <div className="relative w-full sm:w-1/2 h-64 sm:h-auto flex-shrink-0">
+                <div className="relative w-full sm:w-1/2 h-80 sm:h-72 flex-shrink-0">
                   <Image
                     src="/images/sur-mesure.jpg"
                     alt="Le vrai sur mesure THERA Fermetures"
@@ -271,7 +271,7 @@ export default async function Home() {
                     sizes="(max-width: 640px) 100vw, 25vw"
                   />
                 </div>
-                <div className="bg-dark p-7 flex flex-col justify-center sm:w-1/2">
+                <div className="bg-dark p-8 flex flex-col justify-center sm:w-1/2">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-4 h-0.5 bg-accent" />
                     <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
@@ -308,11 +308,6 @@ export default async function Home() {
                       <p className="text-muted text-xs">Aluminium qualité supérieure</p>
                     </div>
                   </div>
-                </div>
-                {/* Badge Depuis 2015 */}
-                <div className="absolute -top-4 -right-4 bg-dark rounded-2xl p-5 text-white">
-                  <div className="text-2xl font-black" style={{ fontFamily: 'Montserrat, sans-serif' }}>2015</div>
-                  <div className="text-xs font-medium text-white/70">Depuis</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -363,7 +358,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
             {processSteps.map((step, i) => (
               <ScrollReveal key={i} delay={i * 80} className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-2xl bg-dark text-white flex items-center justify-center font-black mb-4 text-base" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <div className="w-14 h-14 rounded-2xl text-white flex items-center justify-center font-black mb-4 text-base" style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#22c55e' }}>
                   {step.num}
                 </div>
                 <h4 className="font-bold mb-2">{step.title}</h4>
