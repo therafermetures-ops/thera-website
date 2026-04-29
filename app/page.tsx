@@ -2,6 +2,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import ScrollReveal from './components/ScrollReveal'
+import { getSupabaseAdmin } from '@/lib/supabase'
+
+export const revalidate = 60
+
+async function getSiteConfig() {
+  try {
+    const { data } = await getSupabaseAdmin().from('site_config').select('cle,valeur')
+    const cfg: Record<string, string> = {}
+    data?.forEach(({ cle, valeur }) => { if (valeur) cfg[cle] = valeur })
+    return cfg
+  } catch { return {} }
+}
 
 export const metadata: Metadata = {
   title: 'THERA Fermetures | Portails, Pergolas & Carports Aluminium — Villefranche-sur-Saône',
@@ -106,7 +118,19 @@ const localBusinessSchema = {
   areaServed: zones.map(z => ({ '@type': 'City', name: z })),
 }
 
-export default function Home() {
+export default async function Home() {
+  const cfg = await getSiteConfig()
+
+  const h1 = cfg.hero_titre_1 || 'Créateurs'
+  const h2 = cfg.hero_titre_2 || "d'espaces"
+  const h3 = cfg.hero_titre_3 || 'extérieurs'
+  const heroTag = cfg.hero_tag || 'Villefranche-sur-Saône — Beaujolais — depuis 2015'
+  const heroDesc = cfg.hero_description || 'Portails aluminium, pergolas bioclimatiques, carports et clôtures sur mesure. Fabrication française, installation par nos équipes.'
+  const btnDevis = cfg.hero_btn_devis || 'Demander un devis'
+  const btnReal = cfg.hero_btn_realisations || 'Voir nos réalisations'
+  const tel = cfg.contact_tel || '04 74 64 91 65'
+  const horaires = cfg.contact_horaires || 'Lun–Ven 8h30–17h30'
+
   return (
     <div>
       {/* ===== HERO ===== */}
@@ -119,25 +143,25 @@ export default function Home() {
         <div className="relative container pt-16 pb-16 md:pt-20 md:pb-24">
           <div className="max-w-2xl">
             <div className="section-tag text-white/60 mb-8">
-              Villefranche-sur-Saône — Beaujolais — depuis 2015
+              {heroTag}
             </div>
             <h1 className="text-white mb-6 leading-none">
-              Créateurs<br />
-              <span className="text-gradient">d&apos;espaces</span><br />
-              extérieurs
+              {h1}<br />
+              <span className="text-gradient">{h2}</span><br />
+              {h3}
             </h1>
             <p className="text-white/80 text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-light">
-              Portails aluminium, pergolas bioclimatiques, carports et clôtures sur mesure. Fabrication française, installation par nos équipes.
+              {heroDesc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-primary text-base py-4 px-8">
-                Demander un devis
+                {btnDevis}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
               <Link href="/realisations" className="btn-outline text-base py-4 px-8">
-                Voir nos réalisations
+                {btnReal}
               </Link>
             </div>
 
@@ -380,7 +404,7 @@ export default function Home() {
                   {[
                     { label: 'Visite sur site', detail: 'Gratuite et sans engagement', svg: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> },
                     { label: 'Devis personnalisé', detail: 'Détaillé et transparent', svg: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /> },
-                    { label: 'Horaires', detail: 'Lun–Ven 8h30–17h30', svg: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /> },
+                    { label: 'Horaires', detail: horaires, svg: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /> },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-4 p-3 rounded-xl hover:bg-light transition-colors">
                       <div className="w-9 h-9 rounded-lg bg-dark/5 flex items-center justify-center flex-shrink-0">
@@ -398,9 +422,9 @@ export default function Home() {
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
-                    04 74 64 91 65
+                    {tel}
                   </a>
-                  <Link href="/contact" className="btn-primary justify-center py-3.5">Demander un devis</Link>
+                  <Link href="/contact" className="btn-primary justify-center py-3.5">{btnDevis}</Link>
                 </div>
               </div>
             </ScrollReveal>
@@ -434,7 +458,7 @@ export default function Home() {
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                04 74 64 91 65
+                {tel}
               </a>
             </div>
           </ScrollReveal>

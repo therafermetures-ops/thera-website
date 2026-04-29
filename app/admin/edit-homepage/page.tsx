@@ -26,24 +26,14 @@ export default function EditHomepage() {
   const fileActuRef = useRef<HTMLInputElement>(null)
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
-  // Textes modifiables
-  const [hero, setHero] = useState({
-    titre: 'Vos fermetures sur mesure',
-    sousTitre: 'Portails · Clôtures · Pergolas · Carports · Portes de garage',
-    btnTexte: 'Demander un devis gratuit',
-    tel: '04 74 64 91 65',
-  })
-
-  const [contact, setContact] = useState({
-    adresse: '123 Route du Beaujolais, Villefranche-sur-Saône',
-    email: 'contact@thera-fermetures.fr',
-    horaires: 'Lun–Ven : 8h–18h | Sam : 9h–12h',
-  })
+  // Textes depuis Supabase
+  const [config, setConfig] = useState<Record<string, string>>({})
+  const [configLoaded, setConfigLoaded] = useState(false)
 
   useEffect(() => {
     loadActualites()
+    loadConfig()
 
-    // Écouter les clics depuis la preview (postMessage)
     const handleMessage = (e: MessageEvent) => {
       if (e.data?.type === 'EDIT_SECTION') {
         const section = e.data.section as Section
@@ -55,6 +45,37 @@ export default function EditHomepage() {
     window.addEventListener('message', handleMessage)
     return () => window.removeEventListener('message', handleMessage)
   }, [])
+
+  const loadConfig = async () => {
+    const res = await fetch('/api/admin/config')
+    const data = await res.json()
+    const cfg: Record<string, string> = {}
+    if (Array.isArray(data)) data.forEach((item: { cle: string; valeur: string }) => { cfg[item.cle] = item.valeur || '' })
+    setConfig(cfg)
+    setConfigLoaded(true)
+  }
+
+  const setField = (cle: string, valeur: string) => setConfig(prev => ({ ...prev, [cle]: valeur }))
+
+  const handleSaveConfig = async (categorie: string) => {
+    setSaving(true)
+    try {
+      const updates = Object.entries(config)
+        .filter(([cle]) => cle.startsWith(categorie === 'hero' ? 'hero_' : 'contact_'))
+        .map(([cle, valeur]) => ({ cle, valeur }))
+      const res = await fetch('/api/admin/config', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates),
+      })
+      if (res.ok) {
+        setSaved(true)
+        setTimeout(() => { setSaved(false); iframeRef.current?.contentWindow?.location.reload() }, 1500)
+      }
+    } finally {
+      setSaving(false)
+    }
+  }
 
   const loadActualites = async () => {
     const res = await fetch('/api/admin/actualites')
@@ -159,44 +180,39 @@ export default function EditHomepage() {
 
           {/* === SECTION HERO === */}
           {activeSection === 'hero' && (
-            <div className="space-y-5">
-              <div>
-                <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Titre principal</label>
-                <input
-                  value={hero.titre}
-                  onChange={e => setHero({ ...hero, titre: e.target.value })}
-                  className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
-                  placeholder="Titre principal..."
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Sous-titre / Services</label>
-                <input
-                  value={hero.sousTitre}
-                  onChange={e => setHero({ ...hero, sousTitre: e.target.value })}
-                  className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
-                  placeholder="Sous-titre..."
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Texte bouton devis</label>
-                <input
-                  value={hero.btnTexte}
-                  onChange={e => setHero({ ...hero, btnTexte: e.target.value })}
-                  className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Téléphone affiché</label>
-                <input
-                  value={hero.tel}
-                  onChange={e => setHero({ ...hero, tel: e.target.value })}
-                  className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
-                />
-              </div>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-700">
-                ℹ️ Les modifications de texte hero sont enregistrées localement. Pour les appliquer sur le vrai site, contactez votre développeur ou utilisez la section Actualités pour communiquer avec vos clients.
-              </div>
+            <div className="space-y-4">
+              {!configLoaded ? (
+                <p className="text-gray-400 text-sm text-center py-8">Chargement...</p>
+              ) : (
+                <>
+                  {[
+                    { cle: 'hero_tag', label: 'Tag (ex: Villefranche — depuis 2015)' },
+                    { cle: 'hero_titre_1', label: 'Titre ligne 1' },
+                    { cle: 'hero_titre_2', label: 'Titre ligne 2 (en dégradé)' },
+                    { cle: 'hero_titre_3', label: 'Titre ligne 3' },
+                    { cle: 'hero_btn_devis', label: 'Bouton devis' },
+                    { cle: 'hero_btn_realisations', label: 'Bouton réalisations' },
+                  ].map(({ cle, label }) => (
+                    <div key={cle}>
+                      <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">{label}</label>
+                      <input
+                        value={config[cle] || ''}
+                        onChange={e => setField(cle, e.target.value)}
+                        className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
+                      />
+                    </div>
+                  ))}
+                  <div>
+                    <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Description sous le titre</label>
+                    <textarea
+                      value={config['hero_description'] || ''}
+                      onChange={e => setField('hero_description', e.target.value)}
+                      className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400 resize-none"
+                      rows={3}
+                    />
+                  </div>
+                </>
+              )}
             </div>
           )}
 
@@ -357,40 +373,46 @@ export default function EditHomepage() {
 
           {/* === SECTION CONTACT === */}
           {activeSection === 'contact' && (
-            <div className="space-y-5">
-              <div>
-                <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Adresse</label>
-                <input
-                  value={contact.adresse}
-                  onChange={e => setContact({ ...contact, adresse: e.target.value })}
-                  className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Email</label>
-                <input
-                  type="email"
-                  value={contact.email}
-                  onChange={e => setContact({ ...contact, email: e.target.value })}
-                  className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">Horaires</label>
-                <input
-                  value={contact.horaires}
-                  onChange={e => setContact({ ...contact, horaires: e.target.value })}
-                  className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
-                />
-              </div>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-700">
-                ℹ️ Pour modifier les informations de contact sur le vrai site, parlez-en à votre développeur.
-              </div>
+            <div className="space-y-4">
+              {!configLoaded ? (
+                <p className="text-gray-400 text-sm text-center py-8">Chargement...</p>
+              ) : (
+                <>
+                  {[
+                    { cle: 'contact_tel', label: 'Téléphone' },
+                    { cle: 'contact_email', label: 'Email' },
+                    { cle: 'contact_adresse', label: 'Adresse' },
+                    { cle: 'contact_horaires', label: 'Horaires' },
+                  ].map(({ cle, label }) => (
+                    <div key={cle}>
+                      <label className="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-1.5">{label}</label>
+                      <input
+                        value={config[cle] || ''}
+                        onChange={e => setField(cle, e.target.value)}
+                        className="w-full p-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-400"
+                      />
+                    </div>
+                  ))}
+                </>
+              )}
             </div>
           )}
         </div>
 
         {/* Footer - Bouton sauvegarder */}
+        {(activeSection === 'hero' || activeSection === 'contact') && (
+          <div className="p-4 border-t border-gray-100 bg-gray-50">
+            <button
+              onClick={() => handleSaveConfig(activeSection)}
+              disabled={saving}
+              className={`w-full py-3 rounded-xl font-bold text-sm transition-all ${
+                saved ? 'bg-green-500 text-white' : 'bg-orange-500 text-white hover:bg-orange-600 disabled:opacity-40'
+              }`}
+            >
+              {saved ? '✅ Sauvegardé ! Aperçu rafraîchi...' : saving ? 'Sauvegarde...' : '💾 Sauvegarder et appliquer'}
+            </button>
+          </div>
+        )}
         {activeSection === 'actualites' && selectedActualite && (
           <div className="p-4 border-t border-gray-100 bg-gray-50">
             <button
