@@ -83,9 +83,12 @@ export default function EditHomepage() {
     setActualites(Array.isArray(data) ? data : [])
   }
 
+  const [saveError, setSaveError] = useState<string | null>(null)
+
   const handleSaveActualite = async () => {
     if (!selectedActualite) return
     setSaving(true)
+    setSaveError(null)
     try {
       const url = isNewActualite
         ? '/api/admin/actualites'
@@ -96,6 +99,7 @@ export default function EditHomepage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(selectedActualite),
       })
+      const json = await res.json()
       if (res.ok) {
         setSaved(true)
         setTimeout(() => setSaved(false), 2000)
@@ -104,7 +108,11 @@ export default function EditHomepage() {
           setSelectedActualite(null)
           setIsNewActualite(false)
         }
+      } else {
+        setSaveError(json.error || `Erreur ${res.status}`)
       }
+    } catch (e) {
+      setSaveError('Erreur réseau')
     } finally {
       setSaving(false)
     }
@@ -414,7 +422,12 @@ export default function EditHomepage() {
           </div>
         )}
         {activeSection === 'actualites' && selectedActualite && (
-          <div className="p-4 border-t border-gray-100 bg-gray-50">
+          <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2">
+            {saveError && (
+              <div className="bg-red-50 border border-red-200 rounded-lg px-3 py-2 text-xs text-red-700 font-medium">
+                ❌ {saveError}
+              </div>
+            )}
             <button
               onClick={handleSaveActualite}
               disabled={saving || !selectedActualite.titre || !selectedActualite.description}
