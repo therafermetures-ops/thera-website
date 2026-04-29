@@ -4,16 +4,43 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+/* ── SLIDES (4 images) ── */
 const slides = [
-  { src: '/images/portails/portail-villefranche.jpg', alt: 'Portail aluminium Villefranche-sur-Saône', label: 'Portails sur mesure' },
-  { src: '/images/pergolas/pergola-bioclimatique.jpg', alt: 'Pergola bioclimatique THERA', label: 'Pergolas bioclimatiques' },
-  { src: '/images/carports/carport-claustra.png', alt: 'Carport aluminium claustra', label: 'Carports aluminium' },
-  { src: '/images/portails/portail-coulissant-chasselay.jpg', alt: 'Portail coulissant Chasselay', label: 'Portails coulissants' },
-  { src: '/images/pergolas/pergola-austral.jpg', alt: 'Pergola motorisée THERA', label: 'Pergolas motorisées' },
+  {
+    src: '/images/portails/20250127_173625.jpg',
+    alt: 'Portail aluminium sur mesure THERA Fermetures',
+    label: 'Portails sur mesure',
+  },
+  {
+    src: '/images/pergolas/pergola-bioclimatique.jpg',
+    alt: 'Pergola bioclimatique motorisée THERA',
+    label: 'Pergolas bioclimatiques',
+  },
+  {
+    src: '/images/portails/portail-villefranche.jpg',
+    alt: 'Portail aluminium Villefranche-sur-Saône',
+    label: 'Portails aluminium',
+  },
+  {
+    src: '/images/carports/carport-claustra.png',
+    alt: 'Carport aluminium claustra THERA',
+    label: 'Carports aluminium',
+  },
 ]
 
-const DURATION = 5000
+/* ── NAV LINKS ── */
+const NAV_LINKS = [
+  { label: 'Portails',     href: '/portails' },
+  { label: 'Pergolas',     href: '/pergolas' },
+  { label: 'Carports',     href: '/carports' },
+  { label: 'Clôtures',     href: '/clotures' },
+  { label: 'Réalisations', href: '/realisations' },
+  { label: 'Contact',      href: '/contact' },
+]
 
+const DURATION = 5500   // ms — durée d'une slide
+
+/* ── PROPS ── */
 type Props = {
   tag: string
   h1: string
@@ -24,87 +51,83 @@ type Props = {
   btnReal: string
 }
 
+/* ────────────────────────────────────────────── */
 export default function HeroSlideshow({ tag, h1, h2, h3, heroDesc, btnDevis, btnReal }: Props) {
-  const [current, setCurrent] = useState(0)
-  const [progress, setProgress] = useState(0)
-  const [parallax, setParallax] = useState({ x: 0, y: 0 })
-  const [titleVisible, setTitleVisible] = useState(false)
+  const [current, setCurrent]     = useState(0)
+  const [parallax, setParallax]   = useState({ x: 0, y: 0 })
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const progressRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
 
-  const goTo = useCallback((idx: number) => {
-    setCurrent(idx)
-    setProgress(0)
-    setTitleVisible(false)
-    setTimeout(() => setTitleVisible(true), 100)
-  }, [])
-
-  const next = useCallback(() => {
-    goTo((current + 1) % slides.length)
-  }, [current, goTo])
-
-  // Auto-play
-  useEffect(() => {
-    intervalRef.current = setInterval(next, DURATION)
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current) }
-  }, [next])
-
-  // Progress bar
-  useEffect(() => {
-    setProgress(0)
-    setTitleVisible(true)
-    const start = Date.now()
-    progressRef.current = setInterval(() => {
-      const elapsed = Date.now() - start
-      setProgress(Math.min((elapsed / DURATION) * 100, 100))
-    }, 30)
-    return () => { if (progressRef.current) clearInterval(progressRef.current) }
-  }, [current])
-
-  // Parallax on mouse move
-  useEffect(() => {
-    const handleMouse = (e: MouseEvent) => {
-      if (!containerRef.current) return
-      const rect = containerRef.current.getBoundingClientRect()
-      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20
-      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 12
-      setParallax({ x, y })
-    }
-    const el = containerRef.current
-    el?.addEventListener('mousemove', handleMouse)
-    return () => el?.removeEventListener('mousemove', handleMouse)
-  }, [])
-
-  const handleSlideClick = (idx: number) => {
+  /* Auto-play */
+  const startInterval = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current)
-    goTo(idx)
     intervalRef.current = setInterval(() => {
-      setCurrent(prev => {
-        const next = (prev + 1) % slides.length
-        goTo(next)
-        return next
-      })
+      setCurrent(prev => (prev + 1) % slides.length)
     }, DURATION)
+  }, [])
+
+  useEffect(() => {
+    startInterval()
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current) }
+  }, [startInterval])
+
+  /* Parallaxe souris */
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => {
+      setParallax({
+        x: (e.clientX / window.innerWidth  - 0.5) * 2,   // -1 → +1
+        y: (e.clientY / window.innerHeight - 0.5) * 2,
+      })
+    }
+    window.addEventListener('mousemove', onMove)
+    return () => window.removeEventListener('mousemove', onMove)
+  }, [])
+
+  /* Clic sur un indicateur */
+  const handleDotClick = (idx: number) => {
+    setCurrent(idx)
+    startInterval()
   }
 
+  /* ── RENDER ── */
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      style={{
+        position: 'relative',
+        minHeight: '100svh',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: '#111827',
+      }}
+    >
 
-      {/* ── IMAGES ── */}
+      {/* ══════════════════════════════
+          BACKGROUND IMAGES
+      ══════════════════════════════ */}
       {slides.map((slide, i) => (
         <div
           key={i}
-          className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0'}`}
-          style={{ willChange: 'opacity' }}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            zIndex: 0,
+            opacity: i === current ? 1 : 0,
+            transition: 'opacity 1.6s ease-in-out',
+          }}
+          aria-hidden={i !== current}
         >
+          {/* Inner div for parallax + scale */}
           <div
-            className="absolute inset-[-5%]"
             style={{
+              position: 'absolute',
+              inset: '-6%',
               transform: i === current
-                ? `translate(${parallax.x * 0.5}px, ${parallax.y * 0.5}px) scale(1.05)`
-                : 'scale(1.05)',
-              transition: i === current ? 'transform 0.1s ease-out' : 'none',
+                ? `translate(${parallax.x * -14}px, ${parallax.y * -10}px) scale(1.06)`
+                : 'scale(1.12)',
+              transition: i === current
+                ? 'transform 0.18s ease-out'
+                : 'transform 1.6s ease',
+              willChange: 'transform',
             }}
           >
             <Image
@@ -119,39 +142,294 @@ export default function HeroSlideshow({ tag, h1, h2, h3, heroDesc, btnDevis, btn
         </div>
       ))}
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20 z-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+      {/* ══════════════════════════════
+          GRAIN TEXTURE (SVG feTurbulence)
+      ══════════════════════════════ */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 2,
+          pointerEvents: 'none',
+          opacity: 0.45,
+          mixBlendMode: 'overlay',
+        }}
+        aria-hidden="true"
+      >
+        <svg
+          width="100%"
+          height="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ display: 'block', width: '100%', height: '100%' }}
+        >
+          <filter id="hero-grain-f" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.65"
+              numOctaves="3"
+              stitchTiles="stitch"
+            />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#hero-grain-f)" />
+        </svg>
+      </div>
 
-      {/* ── CONTENU ── */}
-      <div className="relative z-20 container pt-16 pb-16 md:pt-20 md:pb-24">
-        <div className="max-w-2xl">
+      {/* ══════════════════════════════
+          GRADIENTS (vertical + horizontal)
+      ══════════════════════════════ */}
+      {/* Vertical : sombre haut + sombre bas */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute', inset: 0, zIndex: 3, pointerEvents: 'none',
+          background:
+            'linear-gradient(to bottom, rgba(17,24,39,0.60) 0%, transparent 30%, transparent 58%, rgba(17,24,39,0.72) 100%)',
+        }}
+      />
+      {/* Horizontal : sombre gauche → transparent droite */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute', inset: 0, zIndex: 4, pointerEvents: 'none',
+          background:
+            'linear-gradient(to right, rgba(17,24,39,0.88) 0%, rgba(17,24,39,0.52) 38%, rgba(17,24,39,0.12) 65%, transparent 100%)',
+        }}
+      />
 
-          {/* Tag animé */}
-          <div
-            className="section-tag text-white/60 mb-8 transition-all duration-700"
+      {/* ══════════════════════════════
+          NAV TRANSPARENTE
+      ══════════════════════════════ */}
+      <nav
+        style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0,
+          zIndex: 50,
+          padding: '22px 0',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1280,
+            margin: '0 auto',
+            padding: '0 28px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 20,
+          }}
+        >
+          {/* ── Logo mark ── */}
+          <Link
+            href="/"
             style={{
-              opacity: titleVisible ? 1 : 0,
-              transform: titleVisible ? 'translateY(0)' : 'translateY(10px)',
-              transitionDelay: '0ms',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 11,
+              textDecoration: 'none',
+              flexShrink: 0,
             }}
           >
-            {tag}
+            {/* Carré semi-transparent avec 3 barres */}
+            <div
+              style={{
+                width: 38,
+                height: 38,
+                background: 'rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(255,255,255,0.14)',
+                borderRadius: 9,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 5,
+                flexShrink: 0,
+              }}
+            >
+              <div style={{ width: 20, height: 2, background: '#fff',    borderRadius: 2 }} />
+              <div style={{ width: 20, height: 2, background: '#45b535', borderRadius: 2 }} />
+              <div style={{ width: 20, height: 2, background: '#fff',    borderRadius: 2 }} />
+            </div>
+            {/* Texte logo */}
+            <div>
+              <div
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 700,
+                  fontSize: 15,
+                  letterSpacing: '0.13em',
+                  color: '#fff',
+                  lineHeight: 1.1,
+                  textTransform: 'uppercase',
+                }}
+              >
+                THERA
+              </div>
+              <div
+                style={{
+                  fontFamily: "'Fraunces', serif",
+                  fontStyle: 'italic',
+                  fontSize: 11,
+                  color: 'rgba(255,255,255,0.50)',
+                  lineHeight: 1.2,
+                }}
+              >
+                Fermetures
+              </div>
+            </div>
+          </Link>
+
+          {/* ── Nav pills center (glass effect) ── */}
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+            <div
+              className="hero-nav-pills"
+              style={{
+                background: 'rgba(255,255,255,0.07)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                backdropFilter: 'blur(14px)',
+                WebkitBackdropFilter: 'blur(14px)',
+                borderRadius: 999,
+                padding: '5px',
+                gap: 2,
+                alignItems: 'center',
+              }}
+            >
+              {NAV_LINKS.map(link => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="hero-nav-link"
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 13,
+                    fontWeight: 500,
+                    color: 'rgba(255,255,255,0.72)',
+                    textDecoration: 'none',
+                    padding: '6px 13px',
+                    borderRadius: 999,
+                    transition: 'background 0.18s, color 0.18s',
+                    whiteSpace: 'nowrap',
+                    display: 'block',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* Titre ligne par ligne */}
-          <h1 className="text-white mb-6 leading-none">
+          {/* ── CTA pill ── */}
+          <Link
+            href="/contact"
+            className="hero-cta-pill"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
+              fontSize: 13,
+              color: '#111827',
+              background: '#fff',
+              textDecoration: 'none',
+              padding: '10px 20px',
+              borderRadius: 999,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+              flexShrink: 0,
+              transition: 'background 0.22s, color 0.22s',
+            }}
+          >
+            Devis gratuit
+            <span
+              className="hero-cta-arrow"
+              style={{ transition: 'transform 0.2s', display: 'inline-block' }}
+            >
+              →
+            </span>
+          </Link>
+        </div>
+      </nav>
+
+      {/* ══════════════════════════════
+          CONTENU PRINCIPAL
+      ══════════════════════════════ */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 20,
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          maxWidth: 1280,
+          margin: '0 auto',
+          width: '100%',
+          padding: '130px 28px 110px',
+        }}
+      >
+        <div style={{ maxWidth: 740 }}>
+
+          {/* Eyebrow — point pulsant + texte */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              marginBottom: 30,
+            }}
+          >
+            <div
+              className="hero-pulse-dot"
+              style={{
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                background: '#45b535',
+                flexShrink: 0,
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.65)',
+              }}
+            >
+              {tag}
+            </span>
+          </div>
+
+          {/* Titre — 3 lignes animées (Fraunces) */}
+          <h1
+            style={{
+              fontFamily: "'Fraunces', serif",
+              fontWeight: 300,
+              lineHeight: 0.95,
+              color: '#fff',
+              margin: '0 0 28px',
+              fontSize: 'clamp(48px, 9vw, 144px)',
+              letterSpacing: '-0.01em',
+            }}
+          >
             {[h1, h2, h3].map((line, i) => (
               <span
-                key={`${current}-${i}`}
-                className="block overflow-hidden"
+                key={`${current}-line-${i}`}
+                style={{
+                  display: 'block',
+                  overflow: 'hidden',
+                  paddingBottom: '0.05em',
+                }}
               >
                 <span
-                  className={`block transition-all duration-700 ${i === 1 ? 'text-gradient' : ''}`}
                   style={{
-                    opacity: titleVisible ? 1 : 0,
-                    transform: titleVisible ? 'translateY(0)' : 'translateY(30px)',
-                    transitionDelay: `${100 + i * 120}ms`,
+                    display: 'block',
+                    fontStyle: i === 1 ? 'italic' : 'normal',
+                    color: i === 1 ? '#e85d04' : '#fff',
+                    opacity: 0,
+                    transform: 'translateY(110%)',
+                    animation: `heroWordIn 0.85s cubic-bezier(0.22,1,0.36,1) ${i * 150}ms forwards`,
                   }}
                 >
                   {line}
@@ -160,13 +438,20 @@ export default function HeroSlideshow({ tag, h1, h2, h3, heroDesc, btnDevis, btn
             ))}
           </h1>
 
-          {/* Description */}
+          {/* Sous-titre */}
           <p
-            className="text-white/80 text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-light transition-all duration-700"
+            key={`${current}-desc`}
             style={{
-              opacity: titleVisible ? 1 : 0,
-              transform: titleVisible ? 'translateY(0)' : 'translateY(15px)',
-              transitionDelay: '480ms',
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 'clamp(15px, 1.8vw, 19px)',
+              fontWeight: 300,
+              color: 'rgba(255,255,255,0.78)',
+              maxWidth: 540,
+              lineHeight: 1.7,
+              margin: '0 0 40px',
+              opacity: 0,
+              transform: 'translateY(18px)',
+              animation: 'heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) 600ms forwards',
             }}
           >
             {heroDesc}
@@ -174,77 +459,184 @@ export default function HeroSlideshow({ tag, h1, h2, h3, heroDesc, btnDevis, btn
 
           {/* Boutons */}
           <div
-            className="flex flex-col sm:flex-row gap-4 transition-all duration-700"
+            key={`${current}-btns`}
             style={{
-              opacity: titleVisible ? 1 : 0,
-              transform: titleVisible ? 'translateY(0)' : 'translateY(15px)',
-              transitionDelay: '580ms',
+              display: 'flex',
+              gap: 14,
+              flexWrap: 'wrap',
+              opacity: 0,
+              transform: 'translateY(18px)',
+              animation: 'heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) 750ms forwards',
             }}
           >
-            <Link href="/contact" className="btn-primary text-base py-4 px-8">
+            {/* Bouton primary : fond sombre → orange */}
+            <Link
+              href="/contact"
+              className="hero-btn-primary"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600,
+                fontSize: 15,
+                color: '#fff',
+                background: '#111827',
+                textDecoration: 'none',
+                padding: '14px 26px',
+                borderRadius: 12,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8,
+                transition: 'background 0.25s',
+              }}
+            >
               {btnDevis}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <span
+                className="hero-btn-arrow"
+                style={{ fontSize: 17, transition: 'transform 0.22s', display: 'inline-block' }}
+              >
+                ↗
+              </span>
             </Link>
-            <Link href="/realisations" className="btn-outline text-base py-4 px-8">
+
+            {/* Bouton ghost : transparent + icône play */}
+            <Link
+              href="/realisations"
+              className="hero-btn-ghost"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+                fontSize: 15,
+                color: '#fff',
+                textDecoration: 'none',
+                padding: '14px 26px',
+                borderRadius: 12,
+                border: '1px solid rgba(255,255,255,0.35)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                transition: 'background 0.2s, border-color 0.2s',
+              }}
+            >
+              <span
+                style={{
+                  width: 28,
+                  height: 28,
+                  borderRadius: '50%',
+                  border: '1px solid rgba(255,255,255,0.4)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: 10,
+                  flexShrink: 0,
+                }}
+              >
+                ▶
+              </span>
               {btnReal}
             </Link>
-          </div>
-
-          {/* Trust badges */}
-          <div
-            className="flex flex-wrap gap-3 mt-10 transition-all duration-700"
-            style={{
-              opacity: titleVisible ? 1 : 0,
-              transitionDelay: '700ms',
-            }}
-          >
-            {['Fabrication française', 'Garantie 10 ans', 'Visite offerte', 'Pose en 1–3 jours'].map((b) => (
-              <span key={b} className="flex items-center gap-1.5 text-white/75 text-sm bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/15">
-                <span className="w-1 h-1 rounded-full bg-accent inline-block" />
-                {b}
-              </span>
-            ))}
           </div>
         </div>
       </div>
 
-      {/* ── INDICATEURS ── */}
-      <div className="absolute bottom-8 left-0 right-0 z-20">
-        <div className="container">
-          <div className="flex items-center gap-3">
-            {slides.map((slide, i) => (
+      {/* ══════════════════════════════
+          BARRE BAS — caption + progress bars
+      ══════════════════════════════ */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 36,
+          left: 0,
+          right: 0,
+          zIndex: 30,
+          display: 'flex',
+          justifyContent: 'center',
+          pointerEvents: 'none',
+        }}
+        aria-hidden="true"
+      >
+        <div
+          style={{
+            maxWidth: 1280,
+            width: '100%',
+            padding: '0 28px',
+            display: 'flex',
+            alignItems: 'flex-end',
+            justifyContent: 'space-between',
+            pointerEvents: 'auto',
+          }}
+        >
+          {/* Caption gauche : numéro + séparateur + label */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+            <span
+              style={{
+                fontFamily: "'Fraunces', serif",
+                fontStyle: 'italic',
+                fontSize: 30,
+                fontWeight: 300,
+                color: 'rgba(255,255,255,0.35)',
+                lineHeight: 1,
+                minWidth: 32,
+              }}
+            >
+              {String(current + 1).padStart(2, '0')}
+            </span>
+            <div
+              style={{
+                width: 1,
+                height: 32,
+                background: 'rgba(255,255,255,0.2)',
+                flexShrink: 0,
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 12,
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.55)',
+                letterSpacing: '0.06em',
+              }}
+            >
+              {slides[current].label}
+            </span>
+          </div>
+
+          {/* Progress bars droite */}
+          <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+            {slides.map((_, i) => (
               <button
                 key={i}
-                onClick={() => handleSlideClick(i)}
-                className="group flex flex-col gap-1.5 cursor-pointer"
-                aria-label={`Slide ${i + 1}`}
+                onClick={() => handleDotClick(i)}
+                className="hero-progress-btn"
+                style={{
+                  width: 38,
+                  height: 2,
+                  display: 'block',
+                }}
+                aria-label={`Slide ${i + 1} : ${slides[i].label}`}
               >
-                {/* Label */}
-                <span className={`text-xs font-medium transition-all duration-300 ${i === current ? 'text-white' : 'text-white/40 group-hover:text-white/70'}`}>
-                  {i === current ? slide.label : ''}
-                </span>
-                {/* Barre de progression */}
-                <div className={`h-0.5 rounded-full transition-all duration-300 ${i === current ? 'w-16 bg-white/30' : 'w-8 bg-white/20 group-hover:bg-white/40'}`}>
-                  {i === current && (
-                    <div
-                      className="h-full bg-accent rounded-full transition-none"
-                      style={{ width: `${progress}%` }}
-                    />
-                  )}
-                </div>
+                {/* Fill animé — clé = current pour reset CSS animation */}
+                {i === current && (
+                  <div
+                    key={`fill-${current}`}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      height: '100%',
+                      width: '100%',
+                      background: '#fff',
+                      transformOrigin: 'left center',
+                      transform: 'scaleX(0)',
+                      animation: `heroProgressFill ${DURATION}ms linear forwards`,
+                    }}
+                  />
+                )}
               </button>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Label slide actuel — coin droit */}
-      <div className="absolute bottom-8 right-8 z-20 text-right hidden md:block">
-        <div className="text-white/40 text-xs uppercase tracking-widest">{current + 1} / {slides.length}</div>
-        <div className="text-white/70 text-sm font-medium mt-0.5">{slides[current].label}</div>
-      </div>
     </section>
   )
 }

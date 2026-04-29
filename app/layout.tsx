@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from './components/Header'
+import ClientLayoutShell from './components/ClientLayoutShell'
 import Footer from './components/Footer'
 import FloatingCTA from './components/FloatingCTA'
 
@@ -66,8 +66,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="bg-white text-dark antialiased">
-        <Header />
-        <main className="pt-[108px]">{children}</main>
+        <ClientLayoutShell>
+          {children}
+        </ClientLayoutShell>
         <Footer />
         <FloatingCTA />
       </body>
