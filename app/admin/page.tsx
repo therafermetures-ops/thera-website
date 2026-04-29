@@ -1,13 +1,13 @@
 import Link from 'next/link'
-import { supabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 
 async function getStats() {
   const [{ count: total }, { count: publiees }, { count: brouillons }] = await Promise.all([
-    supabaseAdmin.from('actualites').select('*', { count: 'exact', head: true }),
-    supabaseAdmin.from('actualites').select('*', { count: 'exact', head: true }).eq('statut', 'publiee'),
-    supabaseAdmin.from('actualites').select('*', { count: 'exact', head: true }).eq('statut', 'brouillon'),
+    getSupabaseAdmin().from('actualites').select('*', { count: 'exact', head: true }),
+    getSupabaseAdmin().from('actualites').select('*', { count: 'exact', head: true }).eq('statut', 'publiee'),
+    getSupabaseAdmin().from('actualites').select('*', { count: 'exact', head: true }).eq('statut', 'brouillon'),
   ])
-  const { data: recentes } = await supabaseAdmin
+  const { data: recentes } = await getSupabaseAdmin()
     .from('actualites')
     .select('id, titre, statut, date_publiee')
     .order('created_at', { ascending: false })

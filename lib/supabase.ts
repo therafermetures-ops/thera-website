@@ -1,16 +1,18 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
-// Client public (lecture)
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Client public (lecture seule — pages publiques)
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-// Client admin (lecture + écriture complète)
-export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-  auth: { autoRefreshToken: false, persistSession: false },
-})
+// Client admin — instancié à la demande, jamais au chargement du module
+export function getSupabaseAdmin() {
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || SUPABASE_ANON_KEY
+  return createClient(SUPABASE_URL, serviceKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  })
+}
 
 export type Actualite = {
   id: string

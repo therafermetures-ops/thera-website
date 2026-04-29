@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 import { getSessionFromCookies } from '@/lib/auth'
 
 export async function POST(request: NextRequest) {
@@ -17,12 +17,12 @@ export async function POST(request: NextRequest) {
   const filename = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
   const buffer = Buffer.from(await file.arrayBuffer())
 
-  const { error } = await supabaseAdmin.storage
+  const { error } = await getSupabaseAdmin().storage
     .from('actualites')
     .upload(filename, buffer, { contentType: file.type, upsert: false })
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
 
-  const { data } = supabaseAdmin.storage.from('actualites').getPublicUrl(filename)
+  const { data } = getSupabaseAdmin().storage.from('actualites').getPublicUrl(filename)
   return NextResponse.json({ url: data.publicUrl })
 }

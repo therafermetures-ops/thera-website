@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { supabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 import DeleteButton from './DeleteButton'
 
 export default async function AdminActualites() {
-  const { data: actualites } = await supabaseAdmin
+  const { data: actualites } = await getSupabaseAdmin()
     .from('actualites')
     .select('*')
     .order('date_publiee', { ascending: false })

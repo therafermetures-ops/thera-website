@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { supabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 import ActualiteForm from '../ActualiteForm'
 import { notFound } from 'next/navigation'
 
 export default async function EditerActualite({ params }: { params: { id: string } }) {
-  const { data: actualite } = await supabaseAdmin
+  const { data: actualite } = await getSupabaseAdmin()
     .from('actualites')
     .select('*')
     .eq('id', params.id)
