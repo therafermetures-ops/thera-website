@@ -24,6 +24,7 @@ export default function EditHomepage() {
   const [isNewActualite, setIsNewActualite] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const fileActuRef = useRef<HTMLInputElement>(null)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
 
   // Textes modifiables
   const [hero, setHero] = useState({
@@ -41,6 +42,18 @@ export default function EditHomepage() {
 
   useEffect(() => {
     loadActualites()
+
+    // Écouter les clics depuis la preview (postMessage)
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data?.type === 'EDIT_SECTION') {
+        const section = e.data.section as Section
+        setActiveSection(section)
+        setSelectedActualite(null)
+        setIsNewActualite(false)
+      }
+    }
+    window.addEventListener('message', handleMessage)
+    return () => window.removeEventListener('message', handleMessage)
   }, [])
 
   const loadActualites = async () => {
@@ -417,11 +430,12 @@ export default function EditHomepage() {
           </a>
         </div>
 
-        {/* iFrame du vrai site */}
+        {/* iFrame preview interactive */}
         <iframe
-          src="https://thera-website-nextjs.vercel.app"
+          ref={iframeRef}
+          src="/preview"
           className="flex-1 w-full bg-white"
-          title="Aperçu du site"
+          title="Aperçu interactif du site"
         />
       </div>
     </div>
