@@ -136,6 +136,7 @@ export default function Header() {
             </div>
 
             <Link href="/realisations" className="nav-dark-link">Réalisations</Link>
+            <Link href="/actualites" className="nav-dark-link">Actualités</Link>
             <Link href="/a-propos" className="nav-dark-link">À Propos</Link>
             <Link href="/contact" className="nav-dark-link">Contact</Link>
 
@@ -181,6 +182,7 @@ export default function Header() {
             </div>
 
             <Link href="/realisations" onClick={() => setIsOpen(false)} className="text-xl font-bold text-dark py-3 border-b border-gray-100 hover:text-primary transition-colors">Réalisations</Link>
+            <Link href="/actualites" onClick={() => setIsOpen(false)} className="text-xl font-bold text-dark py-3 border-b border-gray-100 hover:text-primary transition-colors">Actualités</Link>
             <Link href="/a-propos" onClick={() => setIsOpen(false)} className="text-xl font-bold text-dark py-3 border-b border-gray-100 hover:text-primary transition-colors">À Propos</Link>
             <Link href="/contact" onClick={() => setIsOpen(false)} className="text-xl font-bold text-dark py-3 border-b border-gray-100 hover:text-primary transition-colors">Contact</Link>
 

@@ -74,6 +74,7 @@ export default function Footer() {
               {[
                 { label: 'Accueil', href: '/' },
                 { label: 'Nos Réalisations', href: '/realisations' },
+                { label: 'Actualités', href: '/actualites' },
                 { label: 'À Propos', href: '/a-propos' },
                 { label: 'Contact', href: '/contact' },
               ].map((item) => (

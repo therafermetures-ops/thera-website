@@ -38,7 +38,12 @@
       "mcp__a41b63cc-4dc7-412a-9fd1-0ede83147dee__deploy_to_vercel",
       "Bash(npx vercel *)",
       "Bash(curl -s \"https://thera-website-eight.vercel.app/images/logo-thera.png\" -o /dev/null -w \"%{http_code}\")",
-      "Bash(curl -s \"https://thera-website-nextjs.vercel.app/images/logo-thera.png\" -o /dev/null -w \"%{http_code}\")"
+      "Bash(curl -s \"https://thera-website-nextjs.vercel.app/images/logo-thera.png\" -o /dev/null -w \"%{http_code}\")",
+      "mcp__453a1250-47ee-4208-b2fd-fcab2d7bfc1e__list_projects",
+      "mcp__453a1250-47ee-4208-b2fd-fcab2d7bfc1e__get_project_url",
+      "mcp__453a1250-47ee-4208-b2fd-fcab2d7bfc1e__apply_migration",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ]
   }
 }
