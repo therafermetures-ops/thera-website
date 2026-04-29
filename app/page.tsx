@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import ScrollReveal from './components/ScrollReveal'
+import HeroSlideshow from './components/HeroSlideshow'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 export const revalidate = 60
@@ -133,56 +134,16 @@ export default async function Home() {
 
   return (
     <div>
-      {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/images/portails/portail-arnas.jpg" alt="Portail aluminium THERA Fermetures" fill className="object-cover" priority quality={90} />
-          <div className="hero-gradient absolute inset-0" />
-        </div>
-
-        <div className="relative container pt-16 pb-16 md:pt-20 md:pb-24">
-          <div className="max-w-2xl">
-            <div className="section-tag text-white/60 mb-8">
-              {heroTag}
-            </div>
-            <h1 className="text-white mb-6 leading-none">
-              {h1}<br />
-              <span className="text-gradient">{h2}</span><br />
-              {h3}
-            </h1>
-            <p className="text-white/80 text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-light">
-              {heroDesc}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary text-base py-4 px-8">
-                {btnDevis}
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link href="/realisations" className="btn-outline text-base py-4 px-8">
-                {btnReal}
-              </Link>
-            </div>
-
-            {/* Trust badges — sans emojis */}
-            <div className="flex flex-wrap gap-3 mt-10">
-              {['Fabrication française', 'Garantie 10 ans', 'Visite offerte', 'Pose en 1–3 jours'].map((b) => (
-                <span key={b} className="flex items-center gap-1.5 text-white/75 text-sm bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/15">
-                  <span className="w-1 h-1 rounded-full bg-accent inline-block" />
-                  {b}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
-          <span className="text-xs uppercase tracking-widest">Découvrir</span>
-          <div className="w-px h-10 bg-gradient-to-b from-white/40 to-transparent" />
-        </div>
-      </section>
+      {/* ===== HERO SLIDESHOW ===== */}
+      <HeroSlideshow
+        tag={heroTag}
+        h1={h1}
+        h2={h2}
+        h3={h3}
+        heroDesc={heroDesc}
+        btnDevis={btnDevis}
+        btnReal={btnReal}
+      />
 
       {/* ===== PRODUITS ===== */}
       <section className="section-padding bg-light">
@@ -298,7 +259,7 @@ export default async function Home() {
                 {/* Badge Fabrication Française */}
                 <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-5 shadow-card border border-gray-100">
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-dark flex items-center justify-center">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#22c55e' }}>
                       <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
