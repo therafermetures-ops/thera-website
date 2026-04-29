@@ -35,37 +35,37 @@ export default function Header() {
 
         {/* ── BANDEAU SUPÉRIEUR BLANC ── */}
         <div className="bg-white border-b border-gray-100">
-          <div className="container flex items-center justify-between py-3">
+          <div className="container flex items-center justify-between py-5">
 
-            {/* Logo PNG */}
+            {/* Logo PNG — agrandi */}
             <Link href="/" onClick={() => setIsOpen(false)} className="flex-shrink-0">
               <Image
                 src="/images/logo-thera.png"
                 alt="THERA Fermetures"
-                width={200}
-                height={56}
-                className="h-12 w-auto object-contain"
+                width={260}
+                height={72}
+                className="h-16 w-auto object-contain"
                 priority
               />
             </Link>
 
             {/* Téléphone + CTA — desktop */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-8">
               <a href="tel:+33474649165" className="flex items-center gap-3 group">
-                <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-200">
-                  <svg className="w-4 h-4 text-primary group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20">
+                <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-200">
+                  <svg className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                 </div>
                 <div>
                   <div className="text-[11px] text-muted leading-none mb-0.5 uppercase tracking-wide">Appelez-nous</div>
-                  <div className="text-[15px] font-bold text-dark tracking-tight">04 74 64 91 65</div>
+                  <div className="text-[17px] font-bold text-dark tracking-tight">04 74 64 91 65</div>
                 </div>
               </a>
 
-              <Link href="/contact" className="btn-primary text-sm py-2.5 px-6">
+              <Link href="/contact" className="btn-primary text-sm py-3 px-7">
                 Devis Gratuit
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
