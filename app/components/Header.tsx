@@ -125,24 +125,17 @@ export default function Header() {
 
           {/* ── Téléphone + CTA ── */}
           <div className="hidden lg:flex items-center gap-6">
-            <a href="tel:+33474649165" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-200">
-                <svg className="w-4.5 h-4.5 text-primary group-hover:text-white transition-colors duration-200" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" className="text-green-600">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
               </div>
               <div>
                 <div className="text-[11px] text-muted leading-none mb-0.5 uppercase tracking-wide font-medium">Appelez-nous</div>
-                <div className="text-[16px] font-bold text-dark tracking-tight">04 74 64 91 65</div>
+                <div className="text-[16px] font-bold text-dark tracking-tight select-all">04 74 64 91 65</div>
               </div>
-            </a>
-
-            <Link href="/contact" className="btn-primary text-sm py-3 px-6">
-              Devis Gratuit
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            </div>
           </div>
 
           {/* ── Hamburger mobile ── */}
