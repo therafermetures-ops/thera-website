@@ -1,20 +1,16 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import Header from './Header'
 
 /**
- * Gère la visibilité du Header et le padding-top du <main>.
- * Sur la homepage (/), le Header est masqué car le Hero embarque sa propre nav transparente.
+ * Shell client simple : Header présent sur toutes les pages.
+ * Le padding-top est ajouté ici pour compenser le header fixe.
  */
 export default function ClientLayoutShell({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
-  const isHome = pathname === '/'
-
   return (
     <>
-      {!isHome && <Header />}
-      <main className={isHome ? '' : 'pt-[108px]'}>
+      <Header />
+      <main className="pt-[108px]">
         {children}
       </main>
     </>
