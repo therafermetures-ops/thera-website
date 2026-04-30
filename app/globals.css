@@ -146,7 +146,7 @@ h4 { font-size: 1rem; font-weight: 700; }
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 
-/* ===== NAV LINK (dark bar) ===== */
+/* ===== NAV LINK (header single bar) ===== */
 .nav-dark-link {
   @apply px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors duration-200;
   font-family: 'DM Sans', sans-serif;
@@ -158,6 +158,12 @@ h4 { font-size: 1rem; font-weight: 700; }
   transition: left 0.2s ease, right 0.2s ease;
 }
 .nav-dark-link:hover::after { left: 1rem; right: 1rem; }
+
+/* ===== HEADER LINK ===== */
+.header-link {
+  @apply px-3 py-2 text-sm font-semibold text-dark/70 hover:text-dark rounded-lg hover:bg-dark/5 transition-all duration-200 whitespace-nowrap;
+  font-family: 'DM Sans', sans-serif;
+}
 
 /* ===== PROCESS STEP LINE ===== */
 .process-step { @apply relative flex flex-col items-center text-center; }

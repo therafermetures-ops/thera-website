@@ -10,7 +10,7 @@ export default function ClientLayoutShell({ children }: { children: React.ReactN
   return (
     <>
       <Header />
-      <main className="pt-[108px]">
+      <main className="pt-[120px]">
         {children}
       </main>
     </>
