@@ -172,57 +172,21 @@ export default function ContactPage() {
                   </div>
                 ))}
 
-                <div className="border-t border-gray-100 pt-5">
-                  <p className="font-semibold text-dark text-sm mb-2">Horaires d&apos;ouverture</p>
-                  <p className="text-muted text-sm font-light">Lundi — Vendredi : 8h30 — 17h30</p>
-                  <p className="text-muted text-sm font-light">Samedi : Sur rendez-vous</p>
+                {/* Carte Google Maps */}
+                <div className="rounded-2xl overflow-hidden shadow-card border border-gray-100" style={{ height: '320px' }}>
+                  <iframe
+                    title="THERA Fermetures — 134 ZA du Crouloup, 69380 Chasselay"
+                    src="https://maps.google.com/maps?q=134+ZA+du+Crouloup+69380+Chasselay+France&output=embed&z=15"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
-
-                <div className="border-t border-gray-100 pt-5">
-                  <p className="font-semibold text-dark text-sm mb-2">Zone d&apos;intervention</p>
-                  <p className="text-muted text-sm font-light">
-                    Villefranche-sur-Saône, Arnas, Chasselay, Limonest, Lozanne, Trévoux et toute la région Beaujolais et Rhône.
-                  </p>
-                </div>
-
-                {/* Trust list — sans emojis, sans "24h" */}
-                <div className="bg-light rounded-xl p-5 space-y-2.5">
-                  {['Visite gratuite de votre site', 'Devis sans engagement', 'Fabrication française', 'Pose par nos équipes'].map((t) => (
-                    <div key={t} className="flex items-center gap-2.5 text-sm text-dark">
-                      <svg className="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {t}
-                    </div>
-                  ))}
-                </div>
-
-                <a href="tel:+33474649165" className="flex items-center justify-center gap-2 bg-dark text-white py-4 rounded-xl font-semibold hover:bg-dark-2 transition-colors">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  04 74 64 91 65
-                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Carte Google Maps */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <h2 className="text-center mb-8">Nous trouver</h2>
-          <div className="rounded-2xl overflow-hidden shadow-card h-96">
-            <iframe
-              title="THERA Fermetures — 134 za du Crouloup, 69380 Chasselay"
-              src="https://maps.google.com/maps?q=134+za+du+Crouloup+69380+Chasselay&output=embed&z=14"
-              width="100%" height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
           </div>
         </div>
       </section>
