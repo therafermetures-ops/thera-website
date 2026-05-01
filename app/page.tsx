@@ -31,12 +31,18 @@ const products = [
 ]
 
 const gallery = [
-  { src: '/images/realisations/portail-arnas.jpg', alt: 'Portail aluminium Arnas', cat: 'Portail' },
+  { src: '/images/portails/portail-villefranche.jpg', alt: 'Portail aluminium Villefranche-sur-Saône', cat: 'Portail' },
   { src: '/images/realisations/pergola-limonest.jpg', alt: 'Pergola bioclimatique Limonest', cat: 'Pergola' },
+  { src: '/images/portails/portail-battant-design.jpg', alt: 'Portail battant design aluminium', cat: 'Portail' },
+  { src: '/images/realisations/cloture-alu.jpg', alt: 'Clôture aluminium sur mesure', cat: 'Clôture' },
+  { src: '/images/portails/20250127_173625.jpg', alt: 'Portail aluminium sur mesure 2025', cat: 'Portail' },
+  { src: '/images/realisations/pergola-austral.jpg', alt: 'Pergola motorisée bioclimatique', cat: 'Pergola' },
+  { src: '/images/portails/portail-trevoux.jpg', alt: 'Portail aluminium Trévoux', cat: 'Portail' },
   { src: '/images/realisations/portail-caluire.jpg', alt: 'Portail aluminium Caluire', cat: 'Portail' },
-  { src: '/images/realisations/cloture-alu.jpg', alt: 'Clôture aluminium', cat: 'Clôture' },
-  { src: '/images/realisations/pergola-austral.jpg', alt: 'Pergola motorisée', cat: 'Pergola' },
+  { src: '/images/portails/portail-autoportant.jpg', alt: 'Portail autoportant aluminium', cat: 'Portail' },
   { src: '/images/realisations/portail-cloture-amberieux.jpg', alt: 'Portail et clôture Ambérieux', cat: 'Portail' },
+  { src: '/images/portails/20240920_102940.jpg', alt: 'Portail aluminium réalisation 2024', cat: 'Portail' },
+  { src: '/images/realisations/brise-vue.jpg', alt: 'Brise-vue aluminium', cat: 'Clôture' },
 ]
 
 const zones = [
@@ -210,7 +216,7 @@ export default async function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {avantages.map((a, i) => (
                   <div key={i} className="flex gap-3 p-4 rounded-xl hover:bg-light transition-colors">
-                    <div className="w-10 h-10 rounded-lg bg-dark/5 flex items-center justify-center text-dark flex-shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0">
                       {a.icon}
                     </div>
                     <div>
@@ -249,7 +255,7 @@ export default async function Home() {
               <div className="relative">
                 <div className="relative h-[520px] md:h-[580px] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/portails/portail-villefranche.jpg"
+                    src="/images/portails/portail-motorise-integre.jpg"
                     alt="Installation THERA Fermetures Villefranche-sur-Saône"
                     fill
                     className="object-cover"
@@ -280,7 +286,7 @@ export default async function Home() {
       <section className="section-padding bg-dark">
         <div className="container">
           <ScrollReveal className="text-center mb-12">
-            <h2 className="text-white text-5xl md:text-6xl font-black tracking-tight">INSPIRATIONS</h2>
+            <h2 className="text-white text-5xl md:text-6xl font-normal tracking-tight">INSPIRATIONS</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
