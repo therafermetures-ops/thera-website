@@ -64,6 +64,18 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="bg-white text-dark antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'THERA Fermetures',
+              alternateName: 'Thera Fermetures',
+              url: 'https://thera-fermetures.fr',
+            }),
+          }}
+        />
         <ClientLayoutShell>
           {children}
         </ClientLayoutShell>
