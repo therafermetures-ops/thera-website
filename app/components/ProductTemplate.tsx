@@ -267,28 +267,6 @@ export default function ProductTemplate({
         </section>
       )}
 
-      {/* Processus */}
-      {processSteps.length > 0 && (
-        <section className="section-padding bg-dark">
-          <div className="container">
-            <ScrollReveal className="text-center mb-14">
-              <div className="section-tag justify-center text-white/60">Comment ça marche</div>
-              <h2 className="text-white">Notre processus<br />d&apos;installation</h2>
-            </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {processSteps.map((step, i) => (
-                <ScrollReveal key={i} delay={i * 100} className="text-center">
-                  <div className="w-14 h-14 rounded-2xl bg-dark text-white flex items-center justify-center font-black text-lg mx-auto mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                    {String(i + 1).padStart(2, '0')}
-                  </div>
-                  <p className="text-white font-semibold text-sm">{step}</p>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* PROCESS STEPS */}
       <ProcessSteps />
 
