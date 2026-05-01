@@ -229,16 +229,16 @@ export default async function Home() {
 
               {/* Le vrai sur mesure — image + texte côte à côte */}
               <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-card">
-                <div className="relative w-full sm:w-1/2 h-80 sm:h-72 flex-shrink-0">
+                <div className="relative w-full sm:w-1/2 h-96 sm:h-96 flex-shrink-0">
                   <Image
-                    src="/images/sur-mesure.jpg"
-                    alt="Le vrai sur mesure THERA Fermetures"
+                    src="/images/portails/portail_coulissant_en_pente.png"
+                    alt="Portail coulissant en pente THERA Fermetures"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
-                <div className="bg-dark p-8 flex flex-col justify-center sm:w-1/2">
+                <div className="bg-dark p-10 flex flex-col justify-center sm:w-1/2">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-4 h-0.5 bg-accent" />
                     <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
