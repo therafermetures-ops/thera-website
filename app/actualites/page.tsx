@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { supabase } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 import ProcessSteps from '../components/ProcessSteps'
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export const revalidate = 60
 
 export default async function ActualitesPage() {
-  const { data: actualites } = await supabase
+  const { data: actualites } = await getSupabaseAdmin()
     .from('actualites')
     .select('*')
     .eq('statut', 'publiee')
