@@ -170,8 +170,8 @@ export default function ContactPage() {
                   },
                 ].map((item) => (
                   <div key={item.label} className="flex gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-dark/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4.5 h-4.5 w-5 h-5 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">{item.svg}</svg>
+                    <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">{item.svg}</svg>
                     </div>
                     <div>
                       <p className="font-semibold text-dark text-sm mb-0.5">{item.label}</p>

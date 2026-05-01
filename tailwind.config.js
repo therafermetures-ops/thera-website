@@ -15,7 +15,7 @@ module.exports = {
         'dark-2': '#1f2937',
         light: '#f8f8f6',
         'light-2': '#f0f0ec',
-        muted: '#6b7280',
+        muted: '#4b5563',
         success: '#16a34a',
       },
       fontFamily: {

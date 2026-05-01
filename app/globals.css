@@ -7,7 +7,7 @@
 /* ===== BASE ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
@@ -15,7 +15,6 @@ body {
   background: #fff;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
 }
 
 /* ===== LAYOUT ===== */
@@ -31,10 +30,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
-h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 800; }
-h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); @apply mb-4; font-weight: 700; }
-h3 { font-size: 1.2rem; @apply mb-3; font-weight: 700; }
-h4 { font-size: 1rem; font-weight: 700; }
+h1 { font-size: clamp(38px, 5.5vw, 64px); font-weight: 800; }
+h2 { font-size: clamp(30px, 4vw, 45px); @apply mb-4; font-weight: 700; }
+h3 { font-size: 19px; @apply mb-3; font-weight: 700; }
+h4 { font-size: 16px; font-weight: 700; }
 
 /* ===== BUTTONS ===== */
 .btn-primary {
