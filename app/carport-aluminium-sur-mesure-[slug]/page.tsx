@@ -1,18 +1,12 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ProductTemplate from '@/app/components/ProductTemplate'
-import { getCityBySlug, getAllCitySlugs } from '@/lib/cities-data'
+import { getCityBySlug } from '@/lib/cities-data'
 
-export const revalidate = 60 // ISR
+export const revalidate = 60 // ISR - cache 60s, regénéré à la demande
 
-export async function generateStaticParams() {
-  return getAllCitySlugs().map((slug) => ({
-    slug,
-  }))
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = params
   const city = getCityBySlug(slug)
 
   if (!city) {
@@ -43,8 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-export default async function CarportsGeoPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
+export default async function CarportsGeoPage({ params }: { params: { slug: string } }) {
+  const { slug } = params
   const city = getCityBySlug(slug)
 
   if (!city) {
