@@ -84,7 +84,7 @@ export default function HeroSlideshow({ tag, h1, h2, h3, heroDesc, btnDevis, btn
           </div>
 
           {/* Titre ligne par ligne */}
-          <h1 className="text-white mb-6 leading-none">
+          <h1 className="text-white mb-6 leading-none font-extrabold">
             {[h1, h2, h3].map((line, i) => (
               <span key={i} className="block overflow-hidden">
                 <span
