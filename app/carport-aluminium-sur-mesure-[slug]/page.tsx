@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import ProductTemplate from '@/app/components/ProductTemplate'
 import { getCityBySlug } from '@/lib/cities-data'
 
+export const dynamic = 'force-dynamic'
+
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = params
