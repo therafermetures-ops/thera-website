@@ -1,5 +1,5 @@
-import { Metadata } from 'next'
-import ProductTemplate from '../../components/ProductTemplate'
+﻿import { Metadata } from 'next'
+import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
   title: 'Pergola Bioclimatique sur Mesure Limonest | THERA Fermetures',

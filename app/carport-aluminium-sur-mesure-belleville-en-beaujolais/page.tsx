@@ -1,5 +1,5 @@
-import { Metadata } from 'next'
-import ProductTemplate from '../../components/ProductTemplate'
+﻿import { Metadata } from 'next'
+import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
   title: 'Carport Aluminium sur Mesure Belleville-en-Beaujolais | THERA Fermetures',
