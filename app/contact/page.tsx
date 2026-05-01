@@ -5,8 +5,8 @@ import { useState } from 'react'
 import ProcessSteps from '../components/ProcessSteps'
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
-interface FormData { name: string; email: string; phone: string; product: string; message: string }
-const initialForm: FormData = { name: '', email: '', phone: '', product: '', message: '' }
+interface FormData { name: string; email: string; phone: string; codePostal: string; commune: string; product: string; message: string }
+const initialForm: FormData = { name: '', email: '', phone: '', codePostal: '', commune: '', product: '', message: '' }
 
 function validate(data: FormData): Partial<Record<keyof FormData, string>> {
   const errors: Partial<Record<keyof FormData, string>> = {}
@@ -14,6 +14,7 @@ function validate(data: FormData): Partial<Record<keyof FormData, string>> {
   if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.email = 'Email invalide'
   if (!data.product) errors.product = 'Veuillez sélectionner un produit'
   if (data.phone && !/^[\d\s\+\-\(\)\.]{6,20}$/.test(data.phone)) errors.phone = 'Numéro invalide'
+  if (data.codePostal && !/^\d{4,5}$/.test(data.codePostal)) errors.codePostal = 'Code postal invalide'
   return errors
 }
 
@@ -35,7 +36,7 @@ export default function ContactPage() {
     if (Object.keys(validationErrors).length > 0) { setErrors(validationErrors); return }
     setStatus('loading'); setServerError('')
     try {
-      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) })
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...formData, commune: `${formData.codePostal} ${formData.commune}`.trim() }) })
       const data = await res.json()
       if (data.success) { setStatus('success'); setFormData(initialForm); setErrors({}) }
       else { setStatus('error'); setServerError(data.error || 'Une erreur est survenue. Veuillez réessayer.') }
@@ -107,6 +108,17 @@ export default function ContactPage() {
                   <label className="block font-semibold mb-1.5 text-sm" htmlFor="phone">Téléphone</label>
                   <input id="phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} className={inputClass('phone')} placeholder="04 74 XX XX XX" autoComplete="tel" />
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block font-semibold mb-1.5 text-sm" htmlFor="codePostal">Code postal</label>
+                    <input id="codePostal" type="text" name="codePostal" value={formData.codePostal} onChange={handleChange} className={inputClass('codePostal')} placeholder="69380" autoComplete="postal-code" maxLength={5} />
+                    {errors.codePostal && <p className="text-red-500 text-xs mt-1">{errors.codePostal}</p>}
+                  </div>
+                  <div>
+                    <label className="block font-semibold mb-1.5 text-sm" htmlFor="commune">Commune</label>
+                    <input id="commune" type="text" name="commune" value={formData.commune} onChange={handleChange} className={inputClass('commune')} placeholder="Chasselay" autoComplete="address-level2" />
+                  </div>
                 </div>
                 <div>
                   <label className="block font-semibold mb-1.5 text-sm" htmlFor="product">Produit souhaité <span className="text-red-500">*</span></label>

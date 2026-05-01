@@ -6,6 +6,8 @@ interface ContactFormData {
   name: string
   email: string
   phone: string
+  codePostal: string
+  commune: string
   product: string
   message: string
 }
@@ -35,7 +37,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error }, { status: 400 })
     }
 
-    const { name, email, phone, product, message } = body as ContactFormData
+    const { name, email, phone, codePostal, commune, product, message } = body as ContactFormData
     const productLabel = productLabels[product] || product
     const apiKey = process.env.BREVO_API_KEY
 
@@ -55,7 +57,8 @@ export async function POST(request: NextRequest) {
             <tr><td style="padding: 8px; font-weight: bold; width: 40%;">Nom :</td><td style="padding: 8px;">${name}</td></tr>
             <tr style="background:#fff"><td style="padding: 8px; font-weight: bold;">Email :</td><td style="padding: 8px;"><a href="mailto:${email}">${email}</a></td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">Téléphone :</td><td style="padding: 8px;">${phone || 'Non renseigné'}</td></tr>
-            <tr style="background:#fff"><td style="padding: 8px; font-weight: bold;">Produit :</td><td style="padding: 8px;"><strong>${productLabel}</strong></td></tr>
+            <tr style="background:#fff"><td style="padding: 8px; font-weight: bold;">Localisation :</td><td style="padding: 8px;">${[codePostal, commune].filter(Boolean).join(' ') || 'Non renseigné'}</td></tr>
+            <tr><td style="padding: 8px; font-weight: bold;">Produit :</td><td style="padding: 8px;"><strong>${productLabel}</strong></td></tr>
             <tr><td style="padding: 8px; font-weight: bold; vertical-align: top;">Message :</td><td style="padding: 8px;">${message ? message.replace(/\n/g, '<br>') : 'Aucun message'}</td></tr>
           </table>
         </div>
