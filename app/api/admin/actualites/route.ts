@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 import { getSessionFromCookies } from '@/lib/auth'
 
 export async function GET() {
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from('actualites')
     .select('*')
     .order('date_publiee', { ascending: false })
@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
   const body = await request.json()
   const { titre, description, photo_url, statut, date_publiee } = body
 
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from('actualites')
     .insert({ titre, description, photo_url, statut: statut || 'publiee', date_publiee })
     .select()

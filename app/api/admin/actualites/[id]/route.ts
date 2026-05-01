@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 import { getSessionFromCookies } from '@/lib/auth'
 
 export async function GET(_: NextRequest, { params }: { params: { id: string } }) {
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from('actualites')
     .select('*')
     .eq('id', params.id)
@@ -18,7 +18,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
   if (!session) return NextResponse.json({ error: 'Non autorisé' }, { status: 401 })
 
   const body = await request.json()
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from('actualites')
     .update(body)
     .eq('id', params.id)
@@ -33,7 +33,7 @@ export async function DELETE(_: NextRequest, { params }: { params: { id: string 
   const session = await getSessionFromCookies()
   if (!session) return NextResponse.json({ error: 'Non autorisé' }, { status: 401 })
 
-  const { error } = await supabaseAdmin
+  const { error } = await getSupabaseAdmin()
     .from('actualites')
     .delete()
     .eq('id', params.id)

@@ -1,0 +1,111 @@
+{
+  "pageId": "home",
+  "meta": {
+    "title": "THERA Fermetures | Portails, Pergolas & Carports Aluminium",
+    "lang": "fr",
+    "description": "Experts en portails aluminium, pergolas bioclimatiques, carports et clôtures sur mesure depuis 2015."
+  },
+  "components": [
+    {
+      "id": "hero-thera",
+      "type": "HeroSection",
+      "order": 0,
+      "props": {
+        "title": "Créateurs d'espaces extérieurs",
+        "subtitle": "Portails aluminium, pergolas bioclimatiques, carports et clôtures sur mesure. Fabrication française, installation par nos équipes.",
+        "backgroundImage": "/images/portails/portail-arnas.jpg",
+        "ctaText": "Demander un devis"
+      },
+      "style": {
+        "padding": "120px 40px",
+        "backgroundColor": "#1a1a1a",
+        "color": "#ffffff"
+      },
+      "children": []
+    },
+    {
+      "id": "stats-thera",
+      "type": "StatsCounter",
+      "order": 1,
+      "props": {
+        "stats": [
+          { "value": 500, "suffix": "+", "label": "Réalisations", "description": "installations réussies" },
+          { "value": 10, "suffix": "+", "label": "Ans d'expérience", "description": "depuis 2015" },
+          { "value": 98, "suffix": "%", "label": "Satisfaction", "description": "clients satisfaits" },
+          { "value": 10, "suffix": " ans", "label": "Garantie", "description": "sur tous nos produits" }
+        ]
+      },
+      "style": { "padding": "56px 0", "backgroundColor": "#ffffff" },
+      "children": []
+    },
+    {
+      "id": "products-thera",
+      "type": "ProductGrid",
+      "order": 2,
+      "props": {
+        "title": "Une gamme complète pour votre aménagement extérieur",
+        "subtitle": "Chaque produit est conçu sur mesure et fabriqué en France. Qualité professionnelle, installation incluse.",
+        "products": [
+          { "title": "Portails Aluminium", "desc": "Battants, coulissants ou motorisés. Design sur mesure.", "href": "/portails", "image": "/images/portails/portail-arnas.jpg", "tag": "Le + demandé" },
+          { "title": "Pergolas Bioclimatiques", "desc": "Lames orientables motorisées. Profitez de votre terrasse 365 jours par an.", "href": "/pergolas", "image": "/images/pergolas/pergola-bioclimatique.jpg", "tag": "Tendance 2025" },
+          { "title": "Carports Aluminium", "desc": "Protection élégante pour vos véhicules. Structures sur mesure.", "href": "/carports", "image": "/images/carports/carport-claustra.png", "tag": null },
+          { "title": "Clôtures Aluminium", "desc": "Délimitez et sécurisez votre propriété. Modèles sur mesure.", "href": "/clotures", "image": "/images/clotures/cloture-alu.jpg", "tag": null }
+        ]
+      },
+      "style": { "padding": "80px 0", "backgroundColor": "#f8f7f5" },
+      "children": []
+    },
+    {
+      "id": "process-thera",
+      "type": "ProcessSection",
+      "order": 3,
+      "props": {
+        "title": "Un accompagnement complet de A à Z",
+        "steps": [
+          { "num": "01", "title": "Visite", "desc": "Nous venons chez vous, prenons les mesures et analysons votre projet sur place." },
+          { "num": "02", "title": "Étude", "desc": "Analyse technique complète, choix des matériaux et conception de votre projet." },
+          { "num": "03", "title": "Devis rapide", "desc": "Devis détaillé et personnalisé transmis rapidement, sans engagement." },
+          { "num": "04", "title": "Installation", "desc": "Nos équipes installent tout en 1 à 3 jours selon le projet, proprement." },
+          { "num": "05", "title": "Maintenance", "desc": "Service après-vente réactif et garantie 10 ans sur tous nos produits." }
+        ]
+      },
+      "style": { "padding": "80px 0", "backgroundColor": "#f8f7f5" },
+      "children": []
+    },
+    {
+      "id": "gallery-thera",
+      "type": "GalleryGrid",
+      "order": 4,
+      "props": {
+        "title": "INSPIRATIONS",
+        "images": [
+          { "src": "/images/realisations/portail-arnas.jpg", "alt": "Portail aluminium Arnas", "cat": "Portail" },
+          { "src": "/images/realisations/pergola-limonest.jpg", "alt": "Pergola bioclimatique Limonest", "cat": "Pergola" },
+          { "src": "/images/realisations/portail-caluire.jpg", "alt": "Portail aluminium Caluire", "cat": "Portail" },
+          { "src": "/images/realisations/cloture-alu.jpg", "alt": "Clôture aluminium", "cat": "Clôture" },
+          { "src": "/images/realisations/pergola-austral.jpg", "alt": "Pergola motorisée", "cat": "Pergola" },
+          { "src": "/images/realisations/portail-cloture-amberieux.jpg", "alt": "Portail et clôture Ambérieux", "cat": "Portail" }
+        ]
+      },
+      "style": { "padding": "80px 0", "backgroundColor": "#1a1a1a" },
+      "children": []
+    },
+    {
+      "id": "cta-thera",
+      "type": "CTASection",
+      "order": 5,
+      "props": {
+        "tag": "Prêt à démarrer ?",
+        "title": "Transformez votre extérieur dès aujourd'hui",
+        "subtitle": "Visite offerte à domicile, devis personnalisé sans engagement, fabrication française.",
+        "ctaPrimary": "Demander mon devis",
+        "ctaPrimaryHref": "/contact",
+        "ctaSecondary": "04 74 64 91 65",
+        "ctaSecondaryHref": "tel:+33474649165",
+        "backgroundImage": "/images/portails/portail-coulissant-chasselay.jpg"
+      },
+      "style": { "padding": "96px 0", "backgroundColor": "#1a1a1a", "color": "#ffffff" },
+      "children": []
+    }
+  ]
+}
