@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import ProcessSteps from '../components/ProcessSteps'
 
 export const metadata: Metadata = {
   title: 'Nos Réalisations — Portfolio THERA Fermetures',
@@ -95,6 +96,8 @@ export default function RealisationsPage() {
           </div>
         </div>
       </section>
+
+      <ProcessSteps />
 
       {/* CTA */}
       <section className="bg-dark py-20">

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
+import ProcessSteps from '../components/ProcessSteps'
 
 export const metadata: Metadata = {
   title: 'Actualités — THERA Fermetures Villefranche-sur-Saône',
@@ -105,6 +106,8 @@ export default async function ActualitesPage() {
           )}
         </div>
       </section>
+
+      <ProcessSteps />
 
       {/* CTA */}
       <section className="bg-dark py-20">

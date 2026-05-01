@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '../components/ScrollReveal'
+import ProcessSteps from '../components/ProcessSteps'
 
 export const metadata: Metadata = {
   title: 'À Propos — Qui sommes-nous | THERA Fermetures',
@@ -208,6 +209,8 @@ export default function AProposPage() {
           </div>
         </div>
       </section>
+
+      <ProcessSteps />
 
       {/* CTA */}
       <section className="bg-dark border-t border-white/5 py-20">

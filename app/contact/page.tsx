@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import ProcessSteps from '../components/ProcessSteps'
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 interface FormData { name: string; email: string; phone: string; product: string; message: string }
@@ -225,6 +226,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <ProcessSteps />
 
       {/* FAQ */}
       <section className="section-padding">

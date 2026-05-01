@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import ScrollReveal from './ScrollReveal'
+import ProcessSteps from './ProcessSteps'
 
 interface Advantage {
   icon: string
@@ -287,6 +288,9 @@ export default function ProductTemplate({
           </div>
         </section>
       )}
+
+      {/* PROCESS STEPS */}
+      <ProcessSteps />
 
       {/* CTA */}
       <section className="bg-dark py-20">
