@@ -227,35 +227,13 @@ export default async function Home() {
                 ))}
               </div>
 
-              {/* Le vrai sur mesure — image + texte côte à côte */}
-              <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-card">
-                <div className="relative w-full sm:w-1/2 h-96 sm:h-96 flex-shrink-0">
-                  <Image
-                    src="/images/portails/portail_coulissant_en_pente.png"
-                    alt="Portail coulissant en pente THERA Fermetures"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="bg-dark p-10 flex flex-col justify-center sm:w-1/2">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-4 h-0.5 bg-accent" />
-                    <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
-                  </div>
-                  <h3 className="text-white text-xl mb-3">Le vrai sur mesure</h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    Chaque projet part d&apos;une feuille blanche. Dimensions exactes, coloris assortis, options adaptées — rien de standard, tout est pensé pour vous.
-                  </p>
-                </div>
-              </div>
             </ScrollReveal>
 
             <ScrollReveal direction="right">
               <div className="relative">
                 <div className="relative h-[520px] md:h-[580px] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/portails/portail-motorise-integre.jpg"
+                    src="/images/portails/portail-battant-somfy.jpg"
                     alt="Installation THERA Fermetures Villefranche-sur-Saône"
                     fill
                     className="object-cover"
@@ -279,6 +257,31 @@ export default async function Home() {
               </div>
             </ScrollReveal>
           </div>
+
+          {/* Le vrai sur mesure — pleine largeur */}
+          <ScrollReveal className="mt-12">
+            <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-card">
+              <div className="relative w-full sm:w-3/5 h-80 sm:h-96 flex-shrink-0">
+                <Image
+                  src="/images/portails/portail_coulissant_en_pente.png"
+                  alt="Portail coulissant en pente THERA Fermetures"
+                  fill
+                  className="object-contain bg-gray-50"
+                  sizes="(max-width: 640px) 100vw, 60vw"
+                />
+              </div>
+              <div className="bg-dark p-10 flex flex-col justify-center sm:w-2/5">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-4 h-0.5 bg-accent" />
+                  <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
+                </div>
+                <h3 className="text-white text-2xl mb-4">Le vrai sur mesure</h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Chaque projet part d&apos;une feuille blanche. Dimensions exactes, coloris assortis, options adaptées — rien de standard, tout est pensé pour vous.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
