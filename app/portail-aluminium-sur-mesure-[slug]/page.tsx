@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import ProductTemplate from '@/app/components/ProductTemplate'
 import { getCityBySlug } from '@/lib/cities-data'
 
-export const revalidate = 60 // ISR - cache 60s, regénéré à la demande
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = params
