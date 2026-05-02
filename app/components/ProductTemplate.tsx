@@ -170,10 +170,7 @@ export default function ProductTemplate({
                       {/* Texte */}
                       <div>
                         <div className="flex items-center gap-3 mb-4">
-                          <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-black text-sm">
-                            {String(i + 1).padStart(2, '0')}
-                          </span>
-                          <h3 className="text-2xl font-black">{variant.title}</h3>
+                          <h3 className="text-2xl font-normal">{variant.title}</h3>
                         </div>
                         <p className="text-muted text-base leading-relaxed mb-6">{variant.description}</p>
                         <ul className="space-y-2.5 mb-8">
