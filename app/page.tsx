@@ -58,7 +58,7 @@ const avantages = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'Qualité Garantie 10 ans',
+    title: 'Qualité supérieure',
     desc: 'Aluminium première qualité, non recyclé. Chaque installation bénéficie de notre garantie décennale.',
   },
   {
@@ -156,40 +156,28 @@ export default async function Home() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
-              <div className="section-tag">Notre histoire</div>
-              <h2 className="mb-6">Une entreprise familiale<br />ancrée dans son territoire</h2>
+              <div className="section-tag" />
+              <h2 className="mb-6">Une entreprise à votre écoute,<br />proche de chez vous</h2>
               <p className="text-muted text-lg mb-6 leading-relaxed font-light">
-                THERA Fermetures est née en 2015 d&apos;une conviction simple : les particuliers méritent des produits d&apos;aménagement extérieur de qualité professionnelle, installés par des artisans locaux qui connaissent leur région et leurs clients.
+                THERA Fermetures est née en 2015 d&apos;une conviction simple : apporter des prestations soignées et personnalisées parce que chaque projet est unique ! Nous vous conseillons sur le meilleur produit adapté techniquement tout en tenant compte de vos goûts et vos besoins.
+              </p>
+              <p className="text-muted text-lg mb-2 leading-relaxed font-light">
+                Basé à Chasselay au nord de Lyon, nous intervenons dans un rayon de plus de 50 km pour accompagner chaque projet, de la première visite à la mise en service.
               </p>
               <p className="text-muted text-lg mb-8 leading-relaxed font-light">
-                Basés à Chasselay, au cœur du Beaujolais, nous intervenons dans un rayon de plus de 50 km pour accompagner chaque projet, de la première visite à la mise en service. Notre force : la relation directe, sans intermédiaire, et un suivi personnalisé.
+                Notre force : la relation directe, la pose par nos soins et un suivi personnalisé.
               </p>
-              <div className="flex flex-wrap gap-2.5">
-                {['Fabrication française', 'Pose professionnelle', 'Garantie 10 ans', 'Devis gratuit'].map((b) => (
-                  <span key={b} className="inline-flex items-center gap-1.5 bg-dark/5 text-dark text-sm font-medium px-3 py-1.5 rounded-full">
-                    <svg className="w-3 h-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {b}
-                  </span>
-                ))}
-              </div>
             </ScrollReveal>
 
             <ScrollReveal direction="right">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-48 overflow-hidden">
-                  <Image src="/images/portails/portail-arnas.jpg" alt="Portail aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
-                </div>
-                <div className="relative h-48 mt-8 overflow-hidden">
-                  <Image src="/images/pergolas/pergola-bioclimatique.jpg" alt="Pergola bioclimatique réalisation THERA" fill className="object-cover" sizes="25vw" />
-                </div>
-                <div className="relative h-48 overflow-hidden">
-                  <Image src="/images/clotures/cloture-alu.jpg" alt="Clôture aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
-                </div>
-                <div className="relative h-48 mt-8 overflow-hidden">
-                  <Image src="/images/carports/carport-claustra.png" alt="Carport aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
-                </div>
+              <div className="relative h-[480px] overflow-hidden">
+                <Image
+                  src="/images/portails/portail_aluminium_cebel_villefranche_sur_saone.jpg"
+                  alt="Portail aluminium Cébel THERA Fermetures Villefranche-sur-Saône"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </ScrollReveal>
           </div>
@@ -214,14 +202,8 @@ export default async function Home() {
                   <div className="relative h-64 md:h-72 overflow-hidden rounded-2xl">
                     <Image src={p.image} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                     <div className="product-card-overlay" />
-                    {p.tag && (
-                      <div className="absolute top-4 left-4">
-                        <span className="badge-primary text-xs">{p.tag}</span>
-                      </div>
-                    )}
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <h3 className="text-white text-xl mb-1">{p.title}</h3>
-                      <p className="text-white/70 text-sm leading-relaxed">{p.desc}</p>
                       <div className="mt-3 flex items-center gap-1.5 text-white/90 text-sm font-medium">
                         Découvrir
                         <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,7 +236,7 @@ export default async function Home() {
               <div className="section-tag">Pourquoi nous choisir</div>
               <h2 className="mb-6">L&apos;expertise locale<br />au service de votre projet</h2>
               <p className="text-muted text-lg mb-8 font-light leading-relaxed">
-                Depuis 2015, THERA Fermetures accompagne les particuliers et professionnels du Beaujolais dans la création de leurs espaces extérieurs. Notre équipe locale connaît parfaitement les spécificités de la région.
+                Depuis 2015, THERA Fermetures accompagne les particuliers et professionnels de la région dans les réalisations de leur projet extérieurs. Nous proposons un service clé en main, une prestation complète pour une meilleure continuité et un suivi plus simple.
               </p>
 
               {/* 4 avantages classiques */}
@@ -265,8 +247,8 @@ export default async function Home() {
                       {a.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm mb-1">{a.title}</h4>
-                      <p className="text-muted text-xs leading-relaxed">{a.desc}</p>
+                      <h4 className="font-medium text-base mb-1">{a.title}</h4>
+                      <p className="text-muted text-sm leading-relaxed">{a.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -278,8 +260,8 @@ export default async function Home() {
               <div className="relative">
                 <div className="relative h-[520px] md:h-[580px] overflow-hidden">
                   <Image
-                    src="/images/portails/portail-battant-somfy.jpg"
-                    alt="Installation THERA Fermetures Villefranche-sur-Saône"
+                    src="/images/pergolas/pergola_expostion_showroom_chasselay.jpg"
+                    alt="Showroom pergola THERA Fermetures Chasselay"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
