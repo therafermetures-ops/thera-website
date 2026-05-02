@@ -151,6 +151,51 @@ export default async function Home() {
         btnReal={btnReal}
       />
 
+      {/* ===== NOTRE HISTOIRE ===== */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollReveal direction="left">
+              <div className="section-tag">Notre histoire</div>
+              <h2 className="mb-6">Une entreprise familiale<br />ancrée dans son territoire</h2>
+              <p className="text-muted text-lg mb-6 leading-relaxed font-light">
+                THERA Fermetures est née en 2015 d&apos;une conviction simple : les particuliers méritent des produits d&apos;aménagement extérieur de qualité professionnelle, installés par des artisans locaux qui connaissent leur région et leurs clients.
+              </p>
+              <p className="text-muted text-lg mb-8 leading-relaxed font-light">
+                Basés à Chasselay, au cœur du Beaujolais, nous intervenons dans un rayon de plus de 50 km pour accompagner chaque projet, de la première visite à la mise en service. Notre force : la relation directe, sans intermédiaire, et un suivi personnalisé.
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                {['Fabrication française', 'Pose professionnelle', 'Garantie 10 ans', 'Devis gratuit'].map((b) => (
+                  <span key={b} className="inline-flex items-center gap-1.5 bg-dark/5 text-dark text-sm font-medium px-3 py-1.5 rounded-full">
+                    <svg className="w-3 h-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    {b}
+                  </span>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative h-48 overflow-hidden">
+                  <Image src="/images/portails/portail-arnas.jpg" alt="Portail aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
+                </div>
+                <div className="relative h-48 mt-8 overflow-hidden">
+                  <Image src="/images/pergolas/pergola-bioclimatique.jpg" alt="Pergola bioclimatique réalisation THERA" fill className="object-cover" sizes="25vw" />
+                </div>
+                <div className="relative h-48 overflow-hidden">
+                  <Image src="/images/clotures/cloture-alu.jpg" alt="Clôture aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
+                </div>
+                <div className="relative h-48 mt-8 overflow-hidden">
+                  <Image src="/images/carports/carport-claustra.png" alt="Carport aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ===== PRODUITS ===== */}
       <section className="section-padding bg-light">
         <div className="container">
@@ -231,7 +276,7 @@ export default async function Home() {
 
             <ScrollReveal direction="right">
               <div className="relative">
-                <div className="relative h-[520px] md:h-[580px] rounded-2xl overflow-hidden">
+                <div className="relative h-[520px] md:h-[580px] overflow-hidden">
                   <Image
                     src="/images/portails/portail-battant-somfy.jpg"
                     alt="Installation THERA Fermetures Villefranche-sur-Saône"
@@ -260,7 +305,7 @@ export default async function Home() {
 
           {/* Le vrai sur mesure — pleine largeur */}
           <ScrollReveal className="mt-12">
-            <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-card">
+            <div className="flex flex-col sm:flex-row overflow-hidden border border-gray-100 shadow-card">
               <div className="relative w-full sm:w-3/5 h-80 sm:h-96 flex-shrink-0">
                 <Image
                   src="/images/portails/portail_coulissant_en_pente.png"
@@ -295,7 +340,7 @@ export default async function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {gallery.map((img, i) => (
               <ScrollReveal key={i} delay={i * 80}>
-                <div className="relative h-48 md:h-60 rounded-xl overflow-hidden group">
+                <div className="relative h-48 md:h-60 overflow-hidden group">
                   <Image src={img.src} alt={img.alt} fill className="object-cover transition-transform duration-500 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 33vw" loading={i < 3 ? 'eager' : 'lazy'} />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all duration-300" />
                   <div className="absolute bottom-3 left-3">

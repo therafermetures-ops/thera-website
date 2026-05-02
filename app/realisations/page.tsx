@@ -60,7 +60,7 @@ export default function RealisationsPage() {
           {/* Grille photos */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {realisations.map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-card card-hover group">
+              <div key={i} className="bg-white overflow-hidden shadow-card card-hover group">
                 <div className="relative h-56 w-full overflow-hidden">
                   <Image
                     src={item.image}

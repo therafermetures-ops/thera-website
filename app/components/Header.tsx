@@ -47,7 +47,6 @@ const NAV_MAIN = [
   { label: 'Accueil',      href: '/' },
   { label: 'Réalisations', href: '/realisations' },
   { label: 'Actualités',   href: '/actualites' },
-  { label: 'À Propos',     href: '/a-propos' },
   { label: 'Contact',      href: '/contact' },
 ]
 
@@ -199,7 +198,7 @@ export default function Header() {
                 key={p.href}
                 href={p.href}
                 onClick={() => setMegaOpen(false)}
-                className="group block rounded-2xl overflow-hidden border border-gray-100 hover:border-primary/40 hover:shadow-xl transition-all duration-300"
+                className="group block overflow-hidden border border-gray-100 hover:border-primary/40 hover:shadow-xl transition-all duration-300"
               >
                 {/* Image */}
                 <div className="relative h-40 overflow-hidden bg-light">
@@ -359,7 +358,7 @@ export default function Header() {
                       onClick={() => setMobileOpen(false)}
                       className="flex items-center gap-3 p-3 rounded-xl bg-light hover:bg-primary/10 transition-colors group"
                     >
-                      <div className="relative w-12 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                      <div className="relative w-12 h-10 overflow-hidden flex-shrink-0">
                         <Image src={p.image} alt={p.title} fill className="object-cover" sizes="48px" />
                       </div>
                       <div className="min-w-0">

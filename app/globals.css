@@ -4,14 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== VARIABLES TYPOGRAPHIQUES (overridées depuis Supabase via layout.tsx) ===== */
+:root {
+  --typo-h1-font: 'Montserrat', system-ui, sans-serif;
+  --typo-h1-size: clamp(38px, 5.5vw, 64px);
+  --typo-h1-weight: 700;
+  --typo-h1-color: #111827;
+
+  --typo-h2-font: 'Montserrat', system-ui, sans-serif;
+  --typo-h2-size: clamp(30px, 4vw, 45px);
+  --typo-h2-weight: 700;
+  --typo-h2-color: #111827;
+
+  --typo-h3-font: 'Montserrat', system-ui, sans-serif;
+  --typo-h3-size: 19px;
+  --typo-h3-weight: 700;
+  --typo-h3-color: #111827;
+
+  --typo-body-font: 'DM Sans', system-ui, sans-serif;
+  --typo-body-size: 18px;
+  --typo-body-weight: 400;
+  --typo-body-color: #111827;
+
+  --typo-muted-color: #4b5563;
+  --typo-muted-size: 1rem;
+}
+
 /* ===== BASE ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  color: #111827;
+  font-family: var(--typo-body-font);
+  font-size: var(--typo-body-size);
+  font-weight: var(--typo-body-weight);
+  color: var(--typo-body-color);
   background: #fff;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -23,17 +51,16 @@ body {
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', system-ui, sans-serif;
-  font-weight: 700;
-  color: #111827;
   line-height: 1.12;
   letter-spacing: -0.025em;
 }
 
-h1 { font-size: clamp(38px, 5.5vw, 64px); font-weight: 700; }
-h2 { font-size: clamp(30px, 4vw, 45px); @apply mb-4; font-weight: 700; }
-h3 { font-size: 19px; @apply mb-3; font-weight: 700; }
-h4 { font-size: 16px; font-weight: 700; }
+h1 { font-family: var(--typo-h1-font); font-size: var(--typo-h1-size); font-weight: var(--typo-h1-weight); color: var(--typo-h1-color); }
+h2 { font-family: var(--typo-h2-font); font-size: var(--typo-h2-size); font-weight: var(--typo-h2-weight); color: var(--typo-h2-color); @apply mb-4; }
+h3 { font-family: var(--typo-h3-font); font-size: var(--typo-h3-size); font-weight: var(--typo-h3-weight); color: var(--typo-h3-color); @apply mb-3; }
+h4 { font-family: var(--typo-h3-font); font-size: 16px; font-weight: var(--typo-h3-weight); color: var(--typo-h3-color); }
+
+.text-muted, [class*="text-muted"] { color: var(--typo-muted-color) !important; }
 
 /* ===== BUTTONS ===== */
 .btn-primary {
@@ -169,7 +196,7 @@ h4 { font-size: 16px; font-weight: 700; }
 @media (max-width: 768px) { .process-step::after { display: none; } }
 
 /* ===== SMOOTH IMAGE ===== */
-img { max-width: 100%; height: auto; }
+img { max-width: 100%; height: auto; border-radius: 0 !important; }
 
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 5px; }

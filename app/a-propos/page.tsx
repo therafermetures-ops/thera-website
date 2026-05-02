@@ -106,16 +106,16 @@ export default function AProposPage() {
 
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-48 rounded-2xl overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <Image src="/images/portails/portail-arnas.jpg" alt="Portail aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
                 </div>
-                <div className="relative h-48 rounded-2xl overflow-hidden mt-8">
+                <div className="relative h-48 overflow-hidden mt-8">
                   <Image src="/images/pergolas/pergola-bioclimatique.jpg" alt="Pergola bioclimatique réalisation THERA" fill className="object-cover" sizes="25vw" />
                 </div>
-                <div className="relative h-48 rounded-2xl overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <Image src="/images/clotures/cloture-alu.jpg" alt="Clôture aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
                 </div>
-                <div className="relative h-48 rounded-2xl overflow-hidden mt-8">
+                <div className="relative h-48 overflow-hidden mt-8">
                   <Image src="/images/carports/carport-claustra.png" alt="Carport aluminium réalisation THERA" fill className="object-cover" sizes="25vw" />
                 </div>
               </div>

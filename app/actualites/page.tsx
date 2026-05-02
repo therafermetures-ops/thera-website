@@ -43,7 +43,7 @@ export default async function ActualitesPage() {
             <>
               {/* Article vedette */}
               <div className="mb-10">
-                <Link href={`/actualites/${actualites[0].id}`} className="group grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-all duration-300">
+                <Link href={`/actualites/${actualites[0].id}`} className="group grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden shadow-card hover:shadow-xl transition-all duration-300">
                   <div className="relative h-64 md:h-80 bg-gray-100">
                     {actualites[0].photo_url ? (
                       <Image src={actualites[0].photo_url} alt={actualites[0].titre} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -73,7 +73,7 @@ export default async function ActualitesPage() {
               {actualites.length > 1 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {actualites.slice(1).map((a) => (
-                    <Link key={a.id} href={`/actualites/${a.id}`} className="group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 card-hover">
+                    <Link key={a.id} href={`/actualites/${a.id}`} className="group bg-white overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 card-hover">
                       <div className="relative h-48 bg-gray-100">
                         {a.photo_url ? (
                           <Image src={a.photo_url} alt={a.titre} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />

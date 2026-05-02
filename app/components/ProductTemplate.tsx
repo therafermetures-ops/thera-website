@@ -134,7 +134,7 @@ export default function ProductTemplate({
                     <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${!isEven ? 'md:[&>*:first-child]:order-2' : ''}`}>
                       {/* Image */}
                       {variant.image ? (
-                        <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-card group">
+                        <div className="relative h-72 md:h-96 overflow-hidden shadow-card group">
                           <Image
                             src={variant.image}
                             alt={variant.imageAlt || variant.title}
@@ -152,7 +152,7 @@ export default function ProductTemplate({
                           )}
                         </div>
                       ) : (
-                        <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                        <div className="relative h-72 md:h-96 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                           <div className="text-center text-muted">
                             <div className="text-6xl mb-4">📸</div>
                             <p className="font-semibold">Photo disponible sur demande</p>
@@ -210,7 +210,7 @@ export default function ProductTemplate({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {galleryImages.map((img, i) => (
                 <ScrollReveal key={i} delay={i * 80}>
-                  <div className="relative h-60 rounded-2xl overflow-hidden group shadow-card">
+                  <div className="relative h-60 overflow-hidden group shadow-card">
                     <Image
                       src={img.src}
                       alt={img.alt}

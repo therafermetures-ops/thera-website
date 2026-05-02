@@ -60,7 +60,7 @@ export default async function ActualiteDetail({ params }: { params: { id: string
       <section className="section-padding">
         <div className="container max-w-3xl">
           {actualite.photo_url && (
-            <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden mb-10 shadow-card">
+            <div className="relative h-64 md:h-96 overflow-hidden mb-10 shadow-card">
               <Image src={actualite.photo_url} alt={actualite.titre} fill className="object-cover" />
             </div>
           )}
@@ -88,7 +88,7 @@ export default async function ActualiteDetail({ params }: { params: { id: string
             <h2 className="mb-8">Autres actualités</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {autres.map(a => (
-                <Link key={a.id} href={`/actualites/${a.id}`} className="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-all card-hover group">
+                <Link key={a.id} href={`/actualites/${a.id}`} className="bg-white overflow-hidden shadow-card hover:shadow-xl transition-all card-hover group">
                   <div className="relative h-40 bg-gray-100">
                     {a.photo_url ? (
                       <Image src={a.photo_url} alt={a.titre} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
