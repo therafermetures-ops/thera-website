@@ -58,7 +58,7 @@ const avantages = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'Qualité Garantie 10 ans',
+    title: 'Qualité supérieure',
     desc: 'Aluminium première qualité, non recyclé. Chaque installation bénéficie de notre garantie décennale.',
   },
   {
@@ -265,8 +265,8 @@ export default async function Home() {
                       {a.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm mb-1">{a.title}</h4>
-                      <p className="text-muted text-xs leading-relaxed">{a.desc}</p>
+                      <h4 className="font-semibold text-base mb-1">{a.title}</h4>
+                      <p className="text-muted text-sm leading-relaxed">{a.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -278,7 +278,7 @@ export default async function Home() {
               <div className="relative">
                 <div className="relative h-[520px] md:h-[580px] overflow-hidden">
                   <Image
-                    src="/images/portails/portail-battant-somfy.jpg"
+                    src="/images/pergolas/pergola_expostion_showroom_chasselay.jpg"
                     alt="Installation THERA Fermetures Villefranche-sur-Saône"
                     fill
                     className="object-cover"

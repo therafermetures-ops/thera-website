@@ -43,7 +43,8 @@
       "mcp__453a1250-47ee-4208-b2fd-fcab2d7bfc1e__get_project_url",
       "mcp__453a1250-47ee-4208-b2fd-fcab2d7bfc1e__apply_migration",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000)"
     ]
   }
 }
