@@ -303,8 +303,8 @@ export default async function Home() {
                   <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
                 </div>
                 <h3 className="text-white text-2xl mb-4">Le vrai sur mesure</h3>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Chaque projet part d&apos;une feuille blanche. Dimensions exactes, coloris assortis, options adaptées — rien de standard, tout est pensé pour vous.
+                <p className="text-white/70 text-base leading-relaxed">
+                  Chaque projet est unique et part d&apos;une feuille blanche. Dimensions, coloris, matériaux, automatismes — design et technique, rien de standard, chaque projet est réfléchi.
                 </p>
               </div>
             </div>
