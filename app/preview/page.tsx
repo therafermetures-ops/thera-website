@@ -79,7 +79,7 @@ export default function PreviewPage() {
       <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <p className="text-accent text-sm font-bold uppercase tracking-widest mb-3">Nos produits</p>
+            <p className="text-accent text-sm font-bold uppercase tracking-widest mb-3">Nos solutions</p>
             <h2 className="text-3xl md:text-4xl font-black text-dark">Ce que nous fabriquons</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

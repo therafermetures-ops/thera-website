@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-widest">Nos Produits</h4>
+            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-widest">Nos Solutions</h4>
             <ul className="space-y-3">
               {[
                 { label: 'Portails Aluminium', href: '/portails', desc: 'Battants & coulissants' },

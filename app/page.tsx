@@ -189,10 +189,6 @@ export default async function Home() {
         <div className="container">
           <ScrollReveal className="text-center mb-14">
             <div className="section-tag justify-center">Nos solutions</div>
-            <h2>Une gamme complète pour<br className="hidden md:block" /> votre aménagement extérieur</h2>
-            <p className="text-muted text-lg max-w-2xl mx-auto mt-4 font-light">
-              Chaque produit est conçu sur mesure et fabriqué en France. Qualité professionnelle, installation incluse.
-            </p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

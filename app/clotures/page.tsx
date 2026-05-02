@@ -15,11 +15,12 @@ export const metadata: Metadata = {
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
+  '@type': 'Service',
   name: 'Clôtures Aluminium sur Mesure',
   description: 'Clôtures et brise-vue aluminium sur mesure fabriqués en France et installés par THERA Fermetures dans le Beaujolais.',
-  brand: { '@type': 'Brand', name: 'THERA Fermetures' },
-  offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'EUR' }, availability: 'https://schema.org/InStock', url: 'https://thera-fermetures.fr/clotures' },
+  provider: { '@type': 'LocalBusiness', name: 'THERA Fermetures' },
+  areaServed: 'Beaujolais, Villefranche-sur-Saône, Rhône',
+  serviceType: 'Installation de clôtures aluminium sur mesure',
 }
 
 export default function CloturesPage() {

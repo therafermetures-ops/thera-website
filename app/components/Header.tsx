@@ -107,7 +107,7 @@ export default function Header() {
                 onClick={() => setMegaOpen(v => !v)}
                 aria-expanded={megaOpen}
               >
-                Nos Produits
+                Nos Solutions
                 <svg
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${megaOpen ? 'rotate-180' : ''}`}
                   fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -126,8 +126,8 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" className="text-green-600">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" className="text-green-600">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.2 10.8 19.79 19.79 0 01.11 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
                 </svg>
               </div>
               <div>
@@ -211,14 +211,6 @@ export default function Header() {
                   />
                   {/* Overlay dégradé au hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  {/* Badge tag */}
-                  {p.tag && (
-                    <div className="absolute top-2.5 left-2.5">
-                      <span className="text-[10px] font-bold bg-primary text-white px-2 py-0.5 rounded-full uppercase tracking-wide">
-                        {p.tag}
-                      </span>
-                    </div>
-                  )}
                 </div>
 
                 {/* Texte */}
@@ -337,7 +329,7 @@ export default function Header() {
                 onClick={() => setMobileProdOpen(v => !v)}
                 className="w-full flex items-center justify-between px-3 py-3 rounded-xl font-semibold text-dark hover:bg-light transition-colors"
               >
-                Nos Produits
+                Nos Solutions
                 <svg
                   className={`w-4 h-4 text-muted transition-transform duration-300 ${mobileProdOpen ? 'rotate-180' : ''}`}
                   fill="none" stroke="currentColor" viewBox="0 0 24 24"
