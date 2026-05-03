@@ -31,6 +31,8 @@ interface ProductTemplateProps {
   galleryImages?: { src: string; alt: string; caption?: string }[]
   ctaText?: string
   structuredData?: object
+  youtubeId?: string
+  youtubeStart?: number
 }
 
 export default function ProductTemplate({
@@ -46,6 +48,8 @@ export default function ProductTemplate({
   galleryImages,
   ctaText = 'Demander un Devis Gratuit',
   structuredData,
+  youtubeId,
+  youtubeStart = 0,
 }: ProductTemplateProps) {
   return (
     <div>
@@ -91,7 +95,20 @@ export default function ProductTemplate({
               </Link>
             </ScrollReveal>
 
-            {features.length > 0 && (
+            {youtubeId ? (
+              <ScrollReveal direction="right">
+                <div className="relative w-full overflow-hidden rounded-2xl shadow-card" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube-nocookie.com/embed/${youtubeId}?start=${youtubeStart}&rel=0&modestbranding=1`}
+                    title="Vidéo présentation"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </ScrollReveal>
+            ) : features.length > 0 ? (
               <ScrollReveal direction="right">
                 <div className="bg-light rounded-2xl p-8">
                   <h3 className="mb-6 text-lg">Caractéristiques incluses</h3>
@@ -109,7 +126,7 @@ export default function ProductTemplate({
                   </ul>
                 </div>
               </ScrollReveal>
-            )}
+            ) : null}
           </div>
         </div>
       </section>
@@ -143,13 +160,6 @@ export default function ProductTemplate({
                             sizes="(max-width: 768px) 100vw, 50vw"
                             loading={i < 2 ? 'eager' : 'lazy'}
                           />
-                          {variant.badge && (
-                            <div className="absolute top-4 left-4">
-                              <span className="inline-flex items-center gap-1.5 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">
-                                {variant.badge}
-                              </span>
-                            </div>
-                          )}
                         </div>
                       ) : (
                         <div className="relative h-72 md:h-96 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
@@ -157,13 +167,6 @@ export default function ProductTemplate({
                             <div className="text-6xl mb-4">📸</div>
                             <p className="font-semibold">Photo disponible sur demande</p>
                           </div>
-                          {variant.badge && (
-                            <div className="absolute top-4 left-4">
-                              <span className="inline-flex items-center gap-1.5 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">
-                                {variant.badge}
-                              </span>
-                            </div>
-                          )}
                         </div>
                       )}
 

@@ -136,7 +136,7 @@ export default async function Home() {
   const btnDevis = cfg.hero_btn_devis || 'Demander un devis'
   const btnReal = cfg.hero_btn_realisations || 'Voir nos réalisations'
   const tel = cfg.contact_tel || '04 74 64 91 65'
-  const horaires = cfg.contact_horaires || 'Lun–Ven 8h30–17h30'
+  const horaires = cfg.contact_horaires || 'Lun–Ven 8h00–17h30'
 
   return (
     <div>

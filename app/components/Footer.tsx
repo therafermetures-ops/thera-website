@@ -91,8 +91,9 @@ export default function Footer() {
             </ul>
 
             <h4 className="font-bold text-white mb-3 mt-7 text-sm uppercase tracking-widest">Horaires</h4>
-            <p className="text-gray-400 text-sm">Lun – Ven : 8h30 – 17h30</p>
-            <p className="text-gray-400 text-sm">Samedi : Sur rendez-vous</p>
+            <p className="text-gray-400 text-sm">Accueil sur rendez-vous</p>
+            <p className="text-gray-400 text-sm">Lun – Ven : 8h00 – 17h30</p>
+            <p className="text-gray-400 text-sm">N&apos;hésitez pas à nous laisser un message !</p>
           </div>
 
           {/* Zone + CTA */}

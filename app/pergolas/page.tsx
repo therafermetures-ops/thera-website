@@ -41,6 +41,8 @@ export default async function PergolasPage() {
       description={cfg.pergolas_description || "Les pergolas bioclimatiques THERA Fermetures, fabriquées par Cébel au sud de Lyon, transforment votre terrasse en véritable espace de vie. Grâce aux lames orientables motorisées, vous maîtrisez l'ensoleillement, la ventilation et la protection contre la pluie. Ajoutez éclairage LED, chauffage infrarouge ou stores motorisés pour un confort absolu en toute saison."}
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique Carat motorisée installée par THERA Fermetures"
+      youtubeId="e1naNyEi2EQ"
+      youtubeStart={22}
       features={[
         'Lames orientables de 0° à 145° (de fermé à ouvert)',
         'Motorisation électrique silencieuse + télécommande',

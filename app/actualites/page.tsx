@@ -43,10 +43,10 @@ export default async function ActualitesPage() {
             <>
               {/* Article vedette */}
               <div className="mb-10">
-                <Link href={`/actualites/${actualites[0].id}`} className="group grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden shadow-card hover:shadow-xl transition-all duration-300">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden shadow-card">
                   <div className="relative h-64 md:h-80 bg-gray-100">
                     {actualites[0].photo_url ? (
-                      <Image src={actualites[0].photo_url} alt={actualites[0].titre} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <Image src={actualites[0].photo_url} alt={actualites[0].titre} fill className="object-cover" />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                         <span className="text-gray-400 text-4xl">📰</span>
@@ -60,23 +60,20 @@ export default async function ActualitesPage() {
                         {new Date(actualites[0].date_publiee).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
                       </span>
                     </div>
-                    <h2 className="text-xl md:text-2xl mb-4 group-hover:text-primary transition-colors">{actualites[0].titre}</h2>
+                    <h2 className="text-xl md:text-2xl mb-4">{actualites[0].titre}</h2>
                     <p className="text-muted text-sm leading-relaxed line-clamp-3">{actualites[0].description}</p>
-                    <span className="mt-6 text-primary font-semibold text-sm flex items-center gap-1">
-                      Lire la suite →
-                    </span>
                   </div>
-                </Link>
+                </div>
               </div>
 
               {/* Grille */}
               {actualites.length > 1 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {actualites.slice(1).map((a) => (
-                    <Link key={a.id} href={`/actualites/${a.id}`} className="group bg-white overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 card-hover">
+                    <div key={a.id} className="bg-white overflow-hidden shadow-card">
                       <div className="relative h-48 bg-gray-100">
                         {a.photo_url ? (
-                          <Image src={a.photo_url} alt={a.titre} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                          <Image src={a.photo_url} alt={a.titre} fill className="object-cover" />
                         ) : (
                           <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                             <span className="text-gray-300 text-3xl">📰</span>
@@ -90,10 +87,10 @@ export default async function ActualitesPage() {
                             {new Date(a.date_publiee).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
                           </span>
                         </div>
-                        <h3 className="font-bold text-dark text-base mb-2 group-hover:text-primary transition-colors line-clamp-2">{a.titre}</h3>
+                        <h3 className="font-bold text-dark text-base mb-2 line-clamp-2">{a.titre}</h3>
                         <p className="text-muted text-xs leading-relaxed line-clamp-3">{a.description}</p>
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
               )}

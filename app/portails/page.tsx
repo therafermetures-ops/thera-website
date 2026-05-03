@@ -41,6 +41,8 @@ export default async function PortailsPage() {
       description={cfg.portails_description || "Les portails aluminium THERA Fermetures combinent design contemporain, sécurité maximale et durabilité exceptionnelle. Chaque portail est fabriqué sur mesure à partir d'aluminium extrudé de première qualité, non recyclé, avec plus de 300 coloris disponibles. Motorisation Somfy ou BFT en option pour un accès ultra-pratique au quotidien."}
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure installé à Arnas par THERA Fermetures"
+      youtubeId="wVuPyTZSGig"
+      youtubeStart={22}
       features={[
         'Aluminium extrudé première qualité (non recyclé)',
         '+300 coloris disponibles — RAL standards ou sur demande',
