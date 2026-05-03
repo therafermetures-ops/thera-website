@@ -59,13 +59,13 @@ export default async function PergolasPage() {
           specs: [
             'Poteaux à section diamant — design unique et contemporain',
             'Label "Origine France Garantie" — fabrication Cébel (Lyon)',
-            'Options ajoutables après installation (LED, stores, chauffage)',
+            'Store Veozip intégré au coffre sans rail visible',
             'Fixations invisibles — aucune vis apparente',
             'Finitions deux tons disponibles',
             'Personnalisation totale : dimensions, couleurs, options',
           ],
-          image: '/images/pergolas/pergola-bioclimatique.jpg',
-          imageAlt: 'Pergola Carat bioclimatique installée par THERA Fermetures',
+          image: '/images/pergolas/pergola_bioclimatique_cebel.png',
+          imageAlt: 'Pergola Carat bioclimatique Cébel installée par THERA Fermetures',
         },
         {
           title: 'Pergola Elements',

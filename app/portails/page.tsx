@@ -64,8 +64,8 @@ export default async function PortailsPage() {
             "Entretien minime — roulements en acier inoxydable",
             "Disponible avec ou sans portillon assorti",
           ],
-          image: '/images/portails/portail-coulissant-chasselay.jpg',
-          imageAlt: 'Portail coulissant aluminium installé à Chasselay par THERA Fermetures',
+          image: '/images/portails/portail_coulissant_alu_ajouré_villefranche.jpg',
+          imageAlt: 'Portail coulissant aluminium ajouré Villefranche-sur-Saône THERA Fermetures',
         },
         {
           title: 'Portail Battant',
@@ -79,8 +79,8 @@ export default async function PortailsPage() {
             "Personnalisation totale : lames, barreaux, tôle décorative",
             "Portillon assorti disponible en option",
           ],
-          image: '/images/portails/portail-battant-somfy.jpg',
-          imageAlt: 'Portail battant aluminium motorisation intégrée Somfy THERA Fermetures',
+          image: '/images/portails/Portail_battant_aluminium_rillieux.png',
+          imageAlt: 'Portail battant aluminium Rillieux THERA Fermetures',
         },
         {
           title: 'Portail Autoportant',
@@ -94,8 +94,8 @@ export default async function PortailsPage() {
             "Compatible motorisation à galets ou chaîne",
             "Structure renforcée pour les portails lourds",
           ],
-          image: '/images/portails/portail-autoportant.jpg',
-          imageAlt: 'Portail autoportant aluminium industriel THERA Fermetures',
+          image: '/images/portails/Portail_battant_aluminium_rillieux.png',
+          imageAlt: 'Portail autoportant aluminium THERA Fermetures',
         },
       ]}
       galleryImages={[
