@@ -420,6 +420,99 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ===== PRO & COLLECTIF ===== */}
+      <section className="section-padding bg-dark overflow-hidden">
+        <div className="container">
+          <ScrollReveal className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-white/40 text-xs font-bold uppercase tracking-widest mb-4">
+              <div className="w-4 h-px bg-accent" />
+              Professionnel & Collectif
+              <div className="w-4 h-px bg-accent" />
+            </div>
+            <h2 className="text-white">Vous êtes professionnel<br className="hidden md:block" /> ou copropriété ?</h2>
+            <p className="text-white/60 text-lg max-w-2xl mx-auto mt-4 font-light">
+              THERA Fermetures intervient aussi pour les professionnels et collectivités : portails de résidence, portails industriels et barrières levantes automatiques.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {/* Portail pro */}
+            <ScrollReveal direction="left">
+              <a
+                href="https://www.thera-proaccess.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block relative h-72 md:h-96 overflow-hidden"
+              >
+                <Image
+                  src="/images/pro/portail_copropriété_coulissant_villefranche.jpg"
+                  alt="Portail copropriété aluminium THERA Fermetures"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary mb-2">Copropriétés & Résidences</span>
+                  <h3 className="text-white text-xl mb-2">Portails professionnels</h3>
+                  <p className="text-white/70 text-sm mb-4">Coulissants grande largeur, motorisation haute fréquence, contrôle d&apos;accès intégré.</p>
+                  <span className="inline-flex items-center gap-1.5 text-primary text-sm font-semibold group-hover:gap-3 transition-all">
+                    Découvrir
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </ScrollReveal>
+
+            {/* Barrière */}
+            <ScrollReveal direction="right">
+              <a
+                href="https://www.thera-proaccess.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block relative h-72 md:h-96 overflow-hidden"
+              >
+                <Image
+                  src="/images/pro/barrière levante parking copropriété.jpg"
+                  alt="Barrière levante parking copropriété THERA Fermetures"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary mb-2">Parkings & Lotissements</span>
+                  <h3 className="text-white text-xl mb-2">Barrières levantes</h3>
+                  <p className="text-white/70 text-sm mb-4">Automatiques, levée en 3 secondes, badge RFID, télécommande ou smartphone.</p>
+                  <span className="inline-flex items-center gap-1.5 text-primary text-sm font-semibold group-hover:gap-3 transition-all">
+                    Découvrir
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal className="text-center mt-8">
+            <a
+              href="https://www.thera-proaccess.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border-2 border-white/20 text-white hover:border-primary hover:text-primary px-8 py-3.5 rounded-xl font-semibold transition-all"
+            >
+              Voir toutes nos solutions professionnelles
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ===== CTA FINAL ===== */}
       <section className="relative py-24 md:py-36 overflow-hidden bg-dark">
         <div className="absolute inset-0 opacity-15">

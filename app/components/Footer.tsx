@@ -3,6 +3,7 @@ import Link from 'next/link'
 const zones = [
   'Villefranche-sur-Saône', 'Arnas', 'Chasselay', 'Limonest',
   'Lozanne', 'Trévoux', 'Belleville', 'Caluire-et-Cuire',
+  'Lyon', 'Mâcon', 'Genay',
 ]
 
 export default function Footer() {

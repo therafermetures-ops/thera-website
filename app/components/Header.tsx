@@ -120,6 +120,15 @@ export default function Header() {
             {NAV_MAIN.slice(1).map(link => (
               <Link key={link.href} href={link.href} className="header-link">{link.label}</Link>
             ))}
+            <a
+              href="https://www.thera-proaccess.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="header-link flex flex-col items-center leading-tight text-center py-1"
+            >
+              <span className="text-[11px] font-bold uppercase tracking-widest text-primary">Professionnel</span>
+              <span className="text-[11px] font-bold uppercase tracking-widest text-primary">& Collectif</span>
+            </a>
           </nav>
 
           {/* ── Téléphone + CTA ── */}
@@ -375,6 +384,15 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="https://www.thera-proaccess.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col px-3 py-3 rounded-xl hover:bg-light transition-colors"
+            >
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">Professionnel</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">& Collectif</span>
+            </a>
           </nav>
         </div>
 
