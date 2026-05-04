@@ -39,6 +39,9 @@ interface ProductTemplateProps {
   presentationImageAlt?: string
   afterVariants?: ReactNode
   seoText?: string
+  squareImages?: boolean
+  gallerySectionTag?: string
+  showAdvantages?: boolean
 }
 
 export default function ProductTemplate({
@@ -60,6 +63,9 @@ export default function ProductTemplate({
   presentationImageAlt,
   afterVariants,
   seoText,
+  squareImages = false,
+  gallerySectionTag = 'Nos réalisations',
+  showAdvantages = true,
 }: ProductTemplateProps) {
   return (
     <div>
@@ -107,7 +113,7 @@ export default function ProductTemplate({
 
             {presentationImage ? (
               <ScrollReveal direction="right">
-                <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-card">
+                <div className={`relative h-80 md:h-96 overflow-hidden shadow-card ${squareImages ? '' : 'rounded-2xl'}`}>
                   <Image
                     src={presentationImage}
                     alt={presentationImageAlt || title}
@@ -174,7 +180,7 @@ export default function ProductTemplate({
                     <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${!isEven ? 'md:[&>*:first-child]:order-2' : ''}`}>
                       {/* Image */}
                       {variant.image ? (
-                        <div className={`relative h-72 md:h-96 overflow-hidden shadow-card group ${variant.objectFit === 'contain' ? 'bg-white' : ''}`}>
+                        <div className={`relative h-72 md:h-96 overflow-hidden shadow-card group ${variant.objectFit === 'contain' ? 'bg-white' : ''} ${squareImages ? '' : 'rounded-2xl'}`}>
                           <Image
                             src={variant.image}
                             alt={variant.imageAlt || variant.title}
@@ -232,7 +238,7 @@ export default function ProductTemplate({
         <section className="section-padding">
           <div className="container">
             <ScrollReveal className="text-center mb-12">
-              <div className="section-tag justify-center">Nos réalisations</div>
+              <div className="section-tag justify-center">{gallerySectionTag}</div>
               <h2>Quelques exemples<br />de nos installations</h2>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -270,7 +276,7 @@ export default function ProductTemplate({
       )}
 
       {/* Avantages */}
-      {advantages.length > 0 && (
+      {showAdvantages && advantages.length > 0 && (
         <section className={`section-padding ${!(galleryImages && galleryImages.length > 0) && !(variants && variants.length > 0) ? 'bg-light' : variants && variants.length > 0 ? '' : 'bg-light'}`}>
           <div className="container">
             <ScrollReveal className="text-center mb-12">

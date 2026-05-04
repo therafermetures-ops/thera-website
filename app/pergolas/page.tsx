@@ -46,6 +46,9 @@ export default async function PergolasPage() {
       heroImageAlt="Pergola bioclimatique Carat motorisée installée par THERA Fermetures"
       presentationImage="/images/pergolas/Pergola d'exposition à Chasselay.jpg"
       presentationImageAlt="Pergola d'exposition à Chasselay — Showroom THERA Fermetures"
+      squareImages={true}
+      gallerySectionTag="INSPIRATION"
+      showAdvantages={false}
       features={[
         'Lames orientables de 0° à 145° (de fermé à ouvert)',
         'Motorisation électrique silencieuse + télécommande',
@@ -133,7 +136,7 @@ export default async function PergolasPage() {
                   { src: "/images/pergolas/enceinte-intégrée.avif", label: "Enceinte intégrée" },
                 ].map((item, i) => (
                   <ScrollReveal key={i} delay={i * 80}>
-                    <div className="relative h-48 rounded-xl overflow-hidden shadow-card group">
+                    <div className="relative h-48 overflow-hidden shadow-card group">
                       <Image
                         src={item.src}
                         alt={item.label}

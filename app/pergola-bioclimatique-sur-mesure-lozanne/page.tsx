@@ -93,7 +93,7 @@ export default function PergolaPage() {
                 { src: "/images/pergolas/enceinte-intégrée.avif", label: "Enceinte intégrée" },
               ].map((item, i) => (
                 <ScrollReveal key={i} delay={i * 80}>
-                  <div className="relative h-48 rounded-xl overflow-hidden shadow-card group">
+                  <div className="relative h-48 overflow-hidden shadow-card group">
                     <Image src={item.src} alt={item.label} fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 50vw, 25vw" />
@@ -129,6 +129,9 @@ export default function PergolaPage() {
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Formation']}
       presentationImage="/images/pergolas/Pergola d'exposition à Chasselay.jpg"
       presentationImageAlt="Pergola d'exposition à Chasselay — Showroom THERA Fermetures"
+      squareImages={true}
+      gallerySectionTag="INSPIRATION"
+      showAdvantages={false}
             seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure à Lozanne et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
             ctaText="Obtenir mon devis pergola a Lozanne"
       structuredData={{
