@@ -128,9 +128,6 @@ export default function ProCollectifTemplate({ city, citySlug, region = 'Beaujol
                   />
                 </div>
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-bold uppercase tracking-widest text-primary border border-primary/30 rounded-full px-3 py-1">Le plus demandé</span>
-                  </div>
                   <h3 className="text-2xl font-normal mb-4">Portail de Résidence & Copropriété</h3>
                   <p className="text-muted text-base leading-relaxed mb-6">
                     Portail coulissant ou battant grande largeur pour entrées de résidences, copropriétés et lotissements. Aluminium traitement de surface haute durabilité, motorisation Came ou Somfy haute fréquence, interphone et visiophone intégrés. Entretien minimal, résistance maximale aux utilisations intensives.
@@ -219,9 +216,6 @@ export default function ProCollectifTemplate({ city, citySlug, region = 'Beaujol
                   />
                 </div>
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-bold uppercase tracking-widest text-primary border border-primary/30 rounded-full px-3 py-1">Parking & Lotissement</span>
-                  </div>
                   <h3 className="text-2xl font-normal mb-4">Barrière Levante Automatique</h3>
                   <p className="text-muted text-base leading-relaxed mb-6">
                     Barrières levantes motorisées pour parkings, lotissements et accès sécurisés. Levée rapide en moins de 3 secondes, bras en aluminium ou acier galvanisé, compatible avec tous les systèmes de tickets, badges et télécommandes. Installation rapide, maintenance assurée par nos techniciens.
@@ -350,7 +344,7 @@ export default function ProCollectifTemplate({ city, citySlug, region = 'Beaujol
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                04 74 64 91 65
+                04 74 65 91 65
               </a>
             </div>
           </ScrollReveal>

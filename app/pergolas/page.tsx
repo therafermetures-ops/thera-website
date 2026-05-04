@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
 import ProductTemplate from '../components/ProductTemplate'
+import ScrollReveal from '../components/ScrollReveal'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 export const revalidate = 60
@@ -41,8 +44,6 @@ export default async function PergolasPage() {
       description={cfg.pergolas_description || "Les pergolas bioclimatiques THERA Fermetures, fabriquées par Cébel au sud de Lyon, transforment votre terrasse en véritable espace de vie. Grâce aux lames orientables motorisées, vous maîtrisez l'ensoleillement, la ventilation et la protection contre la pluie. Ajoutez éclairage LED, chauffage infrarouge ou stores motorisés pour un confort absolu en toute saison."}
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique Carat motorisée installée par THERA Fermetures"
-      youtubeId="e1naNyEi2EQ"
-      youtubeStart={22}
       features={[
         'Lames orientables de 0° à 145° (de fermé à ouvert)',
         'Motorisation électrique silencieuse + télécommande',
@@ -81,8 +82,8 @@ export default async function PergolasPage() {
             'Installation rapide — 1 à 2 jours selon dimensions',
             'Garantie 10 ans structure et finitions',
           ],
-          image: '/images/pergolas/pergola-austral.jpg',
-          imageAlt: 'Pergola Elements motorisée THERA Fermetures',
+          image: '/images/pergolas/pergola-bioclimatique-modele-abordable.avif',
+          imageAlt: 'Pergola Elements bioclimatique THERA Fermetures',
         },
         {
           title: 'VizVersa — Store Bioclimatique',
@@ -96,15 +97,116 @@ export default async function PergolasPage() {
             'Design épuré — invisible quand rétractée',
             'Compatible avec éclairage et chauffage intégrés',
           ],
-          image: '/images/pergolas/pergola-store.jpg',
-          imageAlt: 'Pergola VizVersa store rétractable THERA Fermetures',
+          image: '/images/pergolas/pergola-toile-retractable.avif',
+          imageAlt: 'Pergola VizVersa toile rétractable THERA Fermetures',
         },
       ]}
       galleryImages={[
         { src: '/images/pergolas/pergola-bioclimatique.jpg', alt: 'Pergola Carat Limonest', caption: 'Pergola Carat — Limonest' },
-        { src: '/images/pergolas/pergola-austral.jpg', alt: 'Pergola Elements motorisée', caption: 'Pergola Elements motorisée' },
+        { src: '/images/pergolas/pergola_bioclimatique_bellevile.png', alt: 'Pergola Elements motorisée', caption: 'Pergola Elements motorisée' },
         { src: '/images/pergolas/pergola-store.jpg', alt: 'VizVersa store pergola', caption: 'VizVersa — store rétractable' },
       ]}
+      afterVariants={
+        <div>
+          {/* Pergola d'exposition à Chasselay */}
+          <section className="section-padding bg-light">
+            <div className="container">
+              <ScrollReveal className="text-center mb-12">
+                <div className="section-tag justify-center">Showroom</div>
+                <h2>Pergola d&apos;exposition<br className="hidden md:block" /> à Chasselay</h2>
+                <p className="text-muted text-lg max-w-2xl mx-auto mt-4">
+                  Visitez notre showroom pour découvrir une pergola Carat en situation réelle avec tous les équipements intégrés.
+                </p>
+              </ScrollReveal>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <ScrollReveal delay={0}>
+                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-card">
+                    <Image
+                      src="/images/pergolas/Pergola d'exposition à Chasselay.avif"
+                      alt="Pergola d'exposition à Chasselay"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal delay={80}>
+                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-card">
+                    <Image
+                      src="/images/pergolas/20260411_140237.jpg"
+                      alt="Pergola d'exposition Chasselay intérieur"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal delay={160}>
+                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-card">
+                    <Image
+                      src="/images/pergolas/20260411_140319.jpg"
+                      alt="Pergola d'exposition Chasselay détail"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                </ScrollReveal>
+              </div>
+            </div>
+          </section>
+
+          {/* Personnalisable et évolutive */}
+          <section className="section-padding">
+            <div className="container">
+              <ScrollReveal className="text-center mb-12">
+                <div className="section-tag justify-center">Complémentaires</div>
+                <h2>Personnalisable<br className="hidden md:block" /> et évolutive</h2>
+                <p className="text-muted text-lg max-w-2xl mx-auto mt-4">
+                  Tous les équipements s&apos;intègrent après installation grâce aux méthodes de fixation identiques à celles d&apos;usine.
+                </p>
+              </ScrollReveal>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { src: "/images/pergolas/structure bi-ton.avif", label: "Structure bi-ton" },
+                  { src: "/images/pergolas/prise-de-courant.avif", label: "Prise de courant" },
+                  { src: "/images/pergolas/eclairage-blanc.avif", label: "Éclairage blanc" },
+                  { src: "/images/pergolas/eclairage-couleur.avif", label: "Éclairage couleur" },
+                  { src: "/images/pergolas/panneau-brise-vue.avif", label: "Panneau brise-vue" },
+                  { src: "/images/pergolas/liserés.avif", label: "Liserés" },
+                  { src: "/images/pergolas/enceinte-intégrée.avif", label: "Enceinte intégrée" },
+                ].map((item, i) => (
+                  <ScrollReveal key={i} delay={i * 80}>
+                    <div className="relative h-48 rounded-xl overflow-hidden shadow-card group">
+                      <Image
+                        src={item.src}
+                        alt={item.label}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                        <p className="text-white text-sm font-semibold">{item.label}</p>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+              <ScrollReveal className="text-center mt-12">
+                <p className="text-muted text-lg max-w-3xl mx-auto mb-8">
+                  La pergola Carat propose des stores dissimulés dans la structure — pas de coffre visible, ni de rails apparents — pour une esthétique parfaite même lorsque le store est ouvert.
+                </p>
+                <Link href="/contact" className="btn-outline-dark">
+                  Configurer ma pergola
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </ScrollReveal>
+            </div>
+          </section>
+        </div>
+      }
       advantages={[
         { icon: '', title: "Confort toute l'année", text: "Régulation naturelle par orientation des lames. Fraîcheur l'été, protection pluie toute l'année." },
         { icon: '', title: 'Étanchéité parfaite', text: 'Lames fermées à 145° : protection totale contre la pluie. Profitez de votre terrasse même par mauvais temps.' },
@@ -115,6 +217,7 @@ export default async function PergolasPage() {
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Formation']}
       ctaText="Obtenir mon devis pergola"
+      seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'Service',
