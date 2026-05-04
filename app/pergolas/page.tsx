@@ -44,6 +44,8 @@ export default async function PergolasPage() {
       description={cfg.pergolas_description || "Les pergolas bioclimatiques THERA Fermetures, fabriquées par Cébel au sud de Lyon, transforment votre terrasse en véritable espace de vie. Grâce aux lames orientables motorisées, vous maîtrisez l'ensoleillement, la ventilation et la protection contre la pluie. Ajoutez éclairage LED, chauffage infrarouge ou stores motorisés pour un confort absolu en toute saison."}
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique Carat motorisée installée par THERA Fermetures"
+      presentationImage="/images/pergolas/Pergola d'exposition à Chasselay.jpg"
+      presentationImageAlt="Pergola d'exposition à Chasselay — Showroom THERA Fermetures"
       features={[
         'Lames orientables de 0° à 145° (de fermé à ouvert)',
         'Motorisation électrique silencieuse + télécommande',
@@ -84,6 +86,7 @@ export default async function PergolasPage() {
           ],
           image: '/images/pergolas/pergola-bioclimatique-modele-abordable.avif',
           imageAlt: 'Pergola Elements bioclimatique THERA Fermetures',
+          objectFit: 'contain' as const,
         },
         {
           title: 'VizVersa — Store Bioclimatique',
@@ -99,6 +102,7 @@ export default async function PergolasPage() {
           ],
           image: '/images/pergolas/pergola-toile-retractable.avif',
           imageAlt: 'Pergola VizVersa toile rétractable THERA Fermetures',
+          objectFit: 'contain' as const,
         },
       ]}
       galleryImages={[
@@ -108,54 +112,6 @@ export default async function PergolasPage() {
       ]}
       afterVariants={
         <div>
-          {/* Pergola d'exposition à Chasselay */}
-          <section className="section-padding bg-light">
-            <div className="container">
-              <ScrollReveal className="text-center mb-12">
-                <div className="section-tag justify-center">Showroom</div>
-                <h2>Pergola d&apos;exposition<br className="hidden md:block" /> à Chasselay</h2>
-                <p className="text-muted text-lg max-w-2xl mx-auto mt-4">
-                  Visitez notre showroom pour découvrir une pergola Carat en situation réelle avec tous les équipements intégrés.
-                </p>
-              </ScrollReveal>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <ScrollReveal delay={0}>
-                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-card">
-                    <Image
-                      src="/images/pergolas/Pergola d'exposition à Chasselay.avif"
-                      alt="Pergola d'exposition à Chasselay"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={80}>
-                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-card">
-                    <Image
-                      src="/images/pergolas/20260411_140237.jpg"
-                      alt="Pergola d'exposition Chasselay intérieur"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={160}>
-                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-card">
-                    <Image
-                      src="/images/pergolas/20260411_140319.jpg"
-                      alt="Pergola d'exposition Chasselay détail"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                </ScrollReveal>
-              </div>
-            </div>
-          </section>
-
           {/* Personnalisable et évolutive */}
           <section className="section-padding">
             <div className="container">
@@ -163,7 +119,7 @@ export default async function PergolasPage() {
                 <div className="section-tag justify-center">Complémentaires</div>
                 <h2>Personnalisable<br className="hidden md:block" /> et évolutive</h2>
                 <p className="text-muted text-lg max-w-2xl mx-auto mt-4">
-                  Tous les équipements s&apos;intègrent après installation grâce aux méthodes de fixation identiques à celles d&apos;usine.
+                  Les équipements complémentaires pour personnaliser votre pergola.
                 </p>
               </ScrollReveal>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

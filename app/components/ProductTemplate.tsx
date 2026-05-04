@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ScrollReveal from './ScrollReveal'
 import ProcessSteps from './ProcessSteps'
+import { ReactNode } from 'react'
 
 interface Advantage {
   icon: string
@@ -16,6 +17,7 @@ export interface ProductVariant {
   specs: string[]
   image?: string
   imageAlt?: string
+  objectFit?: 'cover' | 'contain'
 }
 
 interface ProductTemplateProps {
@@ -33,6 +35,10 @@ interface ProductTemplateProps {
   structuredData?: object
   youtubeId?: string
   youtubeStart?: number
+  presentationImage?: string
+  presentationImageAlt?: string
+  afterVariants?: ReactNode
+  seoText?: string
 }
 
 export default function ProductTemplate({
@@ -50,6 +56,10 @@ export default function ProductTemplate({
   structuredData,
   youtubeId,
   youtubeStart = 0,
+  presentationImage,
+  presentationImageAlt,
+  afterVariants,
+  seoText,
 }: ProductTemplateProps) {
   return (
     <div>
@@ -95,7 +105,20 @@ export default function ProductTemplate({
               </Link>
             </ScrollReveal>
 
-            {youtubeId ? (
+            {presentationImage ? (
+              <ScrollReveal direction="right">
+                <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-card">
+                  <Image
+                    src={presentationImage}
+                    alt={presentationImageAlt || title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+              </ScrollReveal>
+            ) : youtubeId ? (
               <ScrollReveal direction="right">
                 <div className="relative w-full overflow-hidden rounded-2xl shadow-card" style={{ paddingBottom: '56.25%' }}>
                   <iframe
@@ -151,12 +174,12 @@ export default function ProductTemplate({
                     <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${!isEven ? 'md:[&>*:first-child]:order-2' : ''}`}>
                       {/* Image */}
                       {variant.image ? (
-                        <div className="relative h-72 md:h-96 overflow-hidden shadow-card group">
+                        <div className={`relative h-72 md:h-96 overflow-hidden shadow-card group ${variant.objectFit === 'contain' ? 'bg-white' : ''}`}>
                           <Image
                             src={variant.image}
                             alt={variant.imageAlt || variant.title}
                             fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className={`${variant.objectFit === 'contain' ? 'object-contain p-4' : 'object-cover transition-transform duration-500 group-hover:scale-105'}`}
                             sizes="(max-width: 768px) 100vw, 50vw"
                             loading={i < 2 ? 'eager' : 'lazy'}
                           />
@@ -201,6 +224,8 @@ export default function ProductTemplate({
           </div>
         </section>
       )}
+
+      {afterVariants}
 
       {/* Galerie */}
       {galleryImages && galleryImages.length > 0 && (
@@ -290,12 +315,20 @@ export default function ProductTemplate({
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                04 74 64 91 65
+                04 74 65 91 65
               </a>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {seoText && (
+        <div className="bg-light border-t border-gray-100 py-4">
+          <div className="container">
+            <h3 className="text-xs text-gray-400 font-light leading-relaxed">{seoText}</h3>
+          </div>
+        </div>
+      )}
 
       {structuredData && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
