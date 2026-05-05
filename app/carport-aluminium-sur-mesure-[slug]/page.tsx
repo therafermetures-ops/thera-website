@@ -3,11 +3,9 @@ import { notFound } from 'next/navigation'
 import ProductTemplate from '@/app/components/ProductTemplate'
 import { getCityBySlug, getAllCitySlugs } from '@/lib/cities-data'
 
+// Removed generateStaticParams - use dynamic rendering with ISR instead
 export const revalidate = 60
 
-export async function generateStaticParams() {
-  return getAllCitySlugs().map((slug) => ({ slug }))
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params

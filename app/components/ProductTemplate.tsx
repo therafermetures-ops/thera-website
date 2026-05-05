@@ -28,6 +28,10 @@ interface ProductTemplateProps {
   heroImage?: string
   heroImageAlt?: string
   galleryImages?: { src: string; alt: string; caption?: string }[]
+  afterVariants?: React.ReactNode
+  youtubeId?: string
+  youtubeStart?: number
+  seoText?: string
   ctaText?: string
   structuredData?: object
 }
@@ -43,6 +47,10 @@ export default function ProductTemplate({
   heroImage,
   heroImageAlt,
   galleryImages,
+  afterVariants,
+  youtubeId,
+  youtubeStart,
+  seoText,
   ctaText = 'Demander un Devis Gratuit',
   structuredData,
 }: ProductTemplateProps) {
@@ -201,6 +209,9 @@ export default function ProductTemplate({
         </section>
       )}
 
+      {/* After Variants Custom Section */}
+      {afterVariants}
+
       {/* Galerie */}
       {galleryImages && galleryImages.length > 0 && (
         <section className="section-padding">
@@ -304,11 +315,11 @@ export default function ProductTemplate({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <a href="tel:+33474649165" className="inline-flex items-center gap-2 border-2 border-white/20 text-white hover:border-white/50 hover:bg-white/5 px-8 py-4 rounded-xl font-bold transition-all">
+              <a href="tel:+33474659165" className="inline-flex items-center gap-2 border-2 border-white/20 text-white hover:border-white/50 hover:bg-white/5 px-8 py-4 rounded-xl font-bold transition-all">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                04 74 64 91 65
+                04 74 65 91 65
               </a>
             </div>
           </ScrollReveal>
