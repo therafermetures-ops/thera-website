@@ -65,7 +65,7 @@ export default function ProductTemplate({
   seoText,
   squareImages = false,
   gallerySectionTag = 'Nos réalisations',
-  showAdvantages = true,
+  showAdvantages = false,
 }: ProductTemplateProps) {
   return (
     <div>

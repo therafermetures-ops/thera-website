@@ -64,7 +64,6 @@ export default function PergolaPage() {
           ],
           image: '/images/pergolas/pergola-bioclimatique-modele-abordable.avif',
           imageAlt: 'Pergola Elements bioclimatique THERA Fermetures',
-          objectFit: 'contain' as const,
         },
       ]}
       galleryImages={[
@@ -91,6 +90,7 @@ export default function PergolaPage() {
                 { src: "/images/pergolas/panneau-brise-vue.avif", label: "Panneau brise-vue" },
                 { src: "/images/pergolas/liserés.avif", label: "Liserés" },
                 { src: "/images/pergolas/enceinte-intégrée.avif", label: "Enceinte intégrée" },
+                { src: "/images/pergolas/Pergola connectée.jpg", label: "Pergola connectée" },
               ].map((item, i) => (
                 <ScrollReveal key={i} delay={i * 80}>
                   <div className="relative h-48 overflow-hidden shadow-card group">
