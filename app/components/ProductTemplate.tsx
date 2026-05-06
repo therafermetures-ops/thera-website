@@ -42,6 +42,7 @@ interface ProductTemplateProps {
   squareImages?: boolean
   gallerySectionTag?: string
   showAdvantages?: boolean
+  showGalleryLink?: boolean
 }
 
 export default function ProductTemplate({
@@ -66,6 +67,7 @@ export default function ProductTemplate({
   squareImages = false,
   gallerySectionTag = 'INSPIRATIONS',
   showAdvantages = false,
+  showGalleryLink = true,
 }: ProductTemplateProps) {
   return (
     <div>
@@ -262,14 +264,16 @@ export default function ProductTemplate({
                 </ScrollReveal>
               ))}
             </div>
-            <ScrollReveal className="text-center mt-10">
-              <Link href="/realisations" className="btn-outline-dark">
-                Voir toutes nos réalisations
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </ScrollReveal>
+            {showGalleryLink && (
+              <ScrollReveal className="text-center mt-10">
+                <Link href="/realisations" className="btn-outline-dark">
+                  Voir toutes nos réalisations
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </ScrollReveal>
+            )}
           </div>
         </section>
       )}

@@ -54,6 +54,7 @@ export default function CarportPage() {
         areaServed: { '@type': 'City', name: 'Belleville-en-Beaujolais' },
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
+      showGalleryLink={false}
     />
   )
 }

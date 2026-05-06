@@ -64,8 +64,8 @@ export default async function PortesDeGaragePage() {
             'Hublots ovales ou rectangulaires disponibles',
             'Nombreux styles : lisse, rainuré, bois, nervuré',
           ],
-          image: '/images/portes-garage/porte-garage-villefranche.jpg',
-          imageAlt: 'Porte de garage sectionnelle 40mm installée par THERA Fermetures',
+          image: '/images/portes-garage/Porte de garage sectionnelle vitrée.jpg',
+          imageAlt: 'Porte de garage sectionnelle vitrée installée par THERA Fermetures',
         },
         {
           title: 'Sectionnelle 60mm',
@@ -79,8 +79,8 @@ export default async function PortesDeGaragePage() {
             'Résistance accrue aux chocs et effractions',
             'Compatible motorisation Somfy haute performance',
           ],
-          image: '/images/portes-garage/porte-rapide.jpg',
-          imageAlt: 'Porte de garage sectionnelle 60mm haute isolation THERA Fermetures',
+          image: '/images/portes-garage/porte de garage Lyon 5 metres.jpg',
+          imageAlt: 'Porte de garage sectionnelle Lyon 5 mètres THERA Fermetures',
         },
         {
           title: 'Porte Enroulable',
@@ -115,8 +115,10 @@ export default async function PortesDeGaragePage() {
       ]}
       galleryImages={[
         { src: '/images/portes-garage/porte-garage-villefranche.jpg', alt: 'Porte de garage sectionnelle Villefranche', caption: 'Sectionnelle — Villefranche-sur-Saône' },
-        { src: '/images/portes-garage/porte-rapide.jpg', alt: 'Porte de garage isolation renforcée', caption: 'Sectionnelle 60mm haute isolation' },
+        { src: '/images/portes-garage/porte de garage Lyon 5 metres.jpg', alt: 'Porte de garage Lyon 5 mètres', caption: 'Sectionnelle 60mm — Lyon' },
+        { src: '/images/portes-garage/Porte de garage avec portillon.jpg', alt: 'Porte de garage avec portillon', caption: 'Porte de garage avec portillon' },
       ]}
+      showGalleryLink={false}
       advantages={[
         { icon: '', title: 'Sécurité maximale', text: "Serrures multipoints, panneaux renforcés, motorisation avec détection d'obstacles. Votre garage est pleinement sécurisé." },
         { icon: '', title: 'Isolation optimale', text: 'Panneaux 40mm ou 60mm avec mousse polyuréthane. Réduisez vos pertes thermiques et votre facture énergétique.' },
