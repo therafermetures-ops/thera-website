@@ -38,18 +38,17 @@ export default async function PortesDeGaragePage() {
     <ProductTemplate
       title={cfg.portes_garage_titre || 'Portes de Garage sur Mesure'}
       subtitle={cfg.portes_garage_sous_titre || 'Sectionnelles, enroulables ou battantes — motorisées, isolées, fabriquées sur mesure dans tout le Beaujolais'}
-      description={cfg.portes_garage_description || "Les portes de garage THERA Fermetures allient sécurité, isolation thermique et design contemporain. Chaque porte est fabriquée sur mesure selon vos dimensions exactes, avec motorisation Somfy intégrée en option. Que vous ayez besoin d'une porte sectionnelle haute isolation, d'une enroulable gain de place ou d'une battante traditionnelle, nous avons la solution adaptée à votre garage et à votre architecture."}
+      description={cfg.portes_garage_description || "À ressorts de traction intégrés dans les rails ou au linteau, ces ressorts sont conçus pour compenser le poids de la porte pendant des milliers de cycles d'ouverture."}
+      presentationTitle="Les portes sectionnelles"
       heroImage="/images/portes-garage/porte-garage-villefranche.jpg"
       heroImageAlt="Porte de garage sectionnelle motorisée installée à Villefranche par THERA Fermetures"
       features={[
-        'Fabrication sur mesure — toutes dimensions',
+        'Fabrication sur mesure 6 mètres',
         'Motorisation Somfy silencieuse + télécommande',
         'Panneaux isolants 40mm ou 60mm disponibles',
         'Double paroi acier galvanisé ou aluminium',
         '+300 coloris RAL disponibles',
         'Hublots et vitrages en option',
-        'Serrure de sécurité certifiée',
-        "Garantie 5 ans pièces et main d'œuvre",
       ]}
       variants={[
         {

@@ -43,6 +43,7 @@ interface ProductTemplateProps {
   gallerySectionTag?: string
   showAdvantages?: boolean
   showGalleryLink?: boolean
+  presentationTitle?: string
 }
 
 export default function ProductTemplate({
@@ -68,6 +69,7 @@ export default function ProductTemplate({
   gallerySectionTag = 'INSPIRATIONS',
   showAdvantages = false,
   showGalleryLink = true,
+  presentationTitle,
 }: ProductTemplateProps) {
   return (
     <div>
@@ -103,7 +105,7 @@ export default function ProductTemplate({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <ScrollReveal direction="left">
               <div className="section-tag">Présentation</div>
-              <h2 className="mb-6">{title}</h2>
+              <h2 className="mb-6">{presentationTitle || title}</h2>
               <p className="text-muted text-lg leading-relaxed mb-8">{description}</p>
               <Link href="/contact" className="btn-outline-dark">
                 Obtenir mon devis
