@@ -184,9 +184,6 @@ export default function Header() {
           <div className="flex items-center justify-between mb-7">
             <div>
               <div className="section-tag mb-1">Toutes nos solutions</div>
-              <p className="text-dark font-bold text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                Fabrication française — installation par nos équipes
-              </p>
             </div>
             <Link
               href="/contact"
@@ -242,30 +239,6 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Pied du mega menu — badges confiance */}
-          <div className="flex flex-wrap items-center gap-6 mt-7 pt-6 border-t border-gray-100">
-            {[
-              { icon: '🏭', label: 'Fabrication française' },
-              { icon: '✅', label: 'Garantie 10 ans' },
-              { icon: '🏠', label: 'Visite offerte à domicile' },
-              { icon: '🔧', label: 'Installation par nos équipes' },
-              { icon: '📐', label: '100 % sur mesure' },
-            ].map(b => (
-              <div key={b.label} className="flex items-center gap-2 text-xs text-muted font-medium">
-                <span>{b.icon}</span>
-                {b.label}
-              </div>
-            ))}
-            <div className="ml-auto">
-              <Link
-                href="/realisations"
-                onClick={() => setMegaOpen(false)}
-                className="text-xs font-semibold text-primary hover:text-primary-dark flex items-center gap-1 transition-colors"
-              >
-                Voir toutes nos réalisations →
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
 
