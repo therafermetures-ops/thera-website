@@ -130,7 +130,7 @@ export default function PergolaPage() {
       presentationImage="/images/pergolas/Pergola d'exposition à Chasselay.jpg"
       presentationImageAlt="Pergola d'exposition à Chasselay — Showroom THERA Fermetures"
       squareImages={true}
-      gallerySectionTag="INSPIRATION"
+      gallerySectionTag="INSPIRATIONS"
       showAdvantages={false}
             seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure à Villefranche-sur-Saône et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
             ctaText="Obtenir mon devis pergola a Villefranche-sur-Saône"

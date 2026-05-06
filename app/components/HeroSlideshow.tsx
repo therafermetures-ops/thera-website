@@ -133,24 +133,6 @@ export default function HeroSlideshow({ tag, h1, h2, h3, heroDesc, btnDevis, btn
             </Link>
           </div>
 
-          {/* Trust badges */}
-          <div
-            className="flex flex-wrap gap-3 mt-10 transition-all duration-700"
-            style={{
-              opacity: visible ? 1 : 0,
-              transitionDelay: '700ms',
-            }}
-          >
-            {['Fabrication française', 'Garantie 10 ans', 'Visite offerte', 'Pose en 1–3 jours'].map((b) => (
-              <span
-                key={b}
-                className="flex items-center gap-1.5 text-white/75 text-sm bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/15"
-              >
-                <span className="w-1 h-1 rounded-full bg-accent inline-block" />
-                {b}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

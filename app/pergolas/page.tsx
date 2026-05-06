@@ -47,7 +47,7 @@ export default async function PergolasPage() {
       presentationImage="/images/pergolas/Pergola d'exposition à Chasselay.jpg"
       presentationImageAlt="Pergola d'exposition à Chasselay — Showroom THERA Fermetures"
       squareImages={true}
-      gallerySectionTag="INSPIRATION"
+      gallerySectionTag="INSPIRATIONS"
       showAdvantages={false}
       features={[
         'Lames orientables de 0° à 145° (de fermé à ouvert)',
@@ -99,8 +99,7 @@ export default async function PergolasPage() {
             'Blocage de la chaleur solaire — confort naturel',
             'Structure au sol — résistance au vent supérieure',
             'Protège de grandes surfaces en un seul tenant',
-            'Design épuré — invisible quand rétractée',
-            'Compatible avec éclairage et chauffage intégrés',
+            'Éclairage leds',
           ],
           image: '/images/pergolas/pergola-toile-retractable.avif',
           imageAlt: 'Pergola VizVersa toile rétractable THERA Fermetures',

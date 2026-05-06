@@ -64,7 +64,7 @@ export default function ProductTemplate({
   afterVariants,
   seoText,
   squareImages = false,
-  gallerySectionTag = 'Nos réalisations',
+  gallerySectionTag = 'INSPIRATIONS',
   showAdvantages = false,
 }: ProductTemplateProps) {
   return (
@@ -239,7 +239,6 @@ export default function ProductTemplate({
           <div className="container">
             <ScrollReveal className="text-center mb-12">
               <div className="section-tag justify-center">{gallerySectionTag}</div>
-              <h2>Quelques exemples<br />de nos installations</h2>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {galleryImages.map((img, i) => (

@@ -3,6 +3,9 @@ import './globals.css'
 import ClientLayoutShell from './components/ClientLayoutShell'
 import Footer from './components/Footer'
 import FloatingCTA from './components/FloatingCTA'
+import { getSupabaseAdmin } from '@/lib/supabase'
+
+export const revalidate = 60
 
 const BASE_URL = 'https://thera-fermetures.fr'
 
@@ -52,16 +55,64 @@ export const metadata: Metadata = {
   alternates: { canonical: BASE_URL },
 }
 
-export default function RootLayout({
+async function getTypoConfig(): Promise<Record<string, string>> {
+  try {
+    const { data } = await getSupabaseAdmin()
+      .from('site_config')
+      .select('cle,valeur')
+      .eq('categorie', 'typographie')
+    const cfg: Record<string, string> = {}
+    data?.forEach(({ cle, valeur }: { cle: string; valeur: string | null }) => {
+      if (valeur) cfg[cle] = valeur
+    })
+    return cfg
+  } catch { return {} }
+}
+
+function buildTypoCss(cfg: Record<string, string>): string {
+  const v = (key: string, fallback: string) => cfg[key] || fallback
+  return `
+    :root {
+      --typo-h1-font: ${v('typo_h1_font', "'Montserrat', system-ui, sans-serif")};
+      --typo-h1-size: ${v('typo_h1_size', 'clamp(38px, 5.5vw, 64px)')};
+      --typo-h1-weight: ${v('typo_h1_weight', '700')};
+      --typo-h1-color: ${v('typo_h1_color', '#111827')};
+
+      --typo-h2-font: ${v('typo_h2_font', "'Montserrat', system-ui, sans-serif")};
+      --typo-h2-size: ${v('typo_h2_size', 'clamp(30px, 4vw, 45px)')};
+      --typo-h2-weight: ${v('typo_h2_weight', '700')};
+      --typo-h2-color: ${v('typo_h2_color', '#111827')};
+
+      --typo-h3-font: ${v('typo_h3_font', "'Montserrat', system-ui, sans-serif")};
+      --typo-h3-size: ${v('typo_h3_size', '19px')};
+      --typo-h3-weight: ${v('typo_h3_weight', '700')};
+      --typo-h3-color: ${v('typo_h3_color', '#111827')};
+
+      --typo-body-font: ${v('typo_body_font', "'DM Sans', system-ui, sans-serif")};
+      --typo-body-size: ${v('typo_body_size', '18px')};
+      --typo-body-weight: ${v('typo_body_weight', '400')};
+      --typo-body-color: ${v('typo_body_color', '#111827')};
+
+      --typo-muted-color: ${v('typo_muted_color', '#4b5563')};
+      --typo-muted-size: ${v('typo_muted_size', '1rem')};
+    }
+  `.trim()
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const typoCfg = await getTypoConfig()
+  const typoCss = buildTypoCss(typoCfg)
+
   return (
     <html lang="fr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <style dangerouslySetInnerHTML={{ __html: typoCss }} />
       </head>
       <body className="bg-white text-dark antialiased">
         <script

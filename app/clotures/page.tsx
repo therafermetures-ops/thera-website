@@ -55,6 +55,7 @@ export default function CloturesPage() {
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Finitions']}
       ctaText="Obtenir mon devis clôture"
+      seoText="Entreprise Thera Fermetures : vente et installation de clôture aluminium sur mesure. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={structuredData}
     />
   )

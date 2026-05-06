@@ -187,7 +187,7 @@ h4 { font-family: var(--typo-h3-font); font-size: 16px; font-weight: var(--typo-
 
 /* ===== HEADER LINK ===== */
 .header-link {
-  @apply px-3 py-2 text-sm font-semibold text-dark/70 hover:text-dark rounded-lg hover:bg-dark/5 transition-all duration-200 whitespace-nowrap;
+  @apply px-3 py-2 text-base font-medium text-zinc-600 hover:text-dark rounded-lg hover:bg-dark/5 transition-all duration-200 whitespace-nowrap;
   font-family: 'DM Sans', sans-serif;
 }
 

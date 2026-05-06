@@ -6,6 +6,8 @@ import { usePathname, useRouter } from 'next/navigation'
 
 const navItems = [
   { href: '/admin', label: 'Tableau de bord', icon: '▦' },
+  { href: '/admin/pages', label: 'Pages', icon: '📄' },
+  { href: '/admin/typographie', label: 'Typographie', icon: '🔤' },
   { href: '/admin/edit-homepage', label: 'Éditeur Accueil', icon: '✨' },
   { href: '/admin/actualites', label: 'Actualités', icon: '📢' },
   { href: '/admin/textes', label: 'Textes', icon: '✏️' },

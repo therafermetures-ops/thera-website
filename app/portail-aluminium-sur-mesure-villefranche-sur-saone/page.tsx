@@ -1,5 +1,8 @@
 ﻿import { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
 import ProductTemplate from '../components/ProductTemplate'
+import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Portail Aluminium sur Mesure Villefranche-sur-Saône | THERA Fermetures',
@@ -44,7 +47,7 @@ export default function PortailPage() {
             'Entretien minime — roulements en acier inoxydable',
             'Disponible avec ou sans portillon assorti',
           ],
-          image: '/images/portails/portail-coulissant-chasselay.jpg',
+          image: '/images/portails/portail_coulissant_alu_ajouré_villefranche.jpg',
           imageAlt: 'Portail coulissant aluminium THERA Fermetures',
         },
         {
@@ -59,10 +62,24 @@ export default function PortailPage() {
             'Personnalisation totale : lames, barreaux, tole decorative',
             'Portillon assorti disponible en option',
           ],
-          image: '/images/portails/portail-battant-somfy.jpg',
+          image: '/images/portails/Portail_battant_aluminium_rillieux.png',
           imageAlt: 'Portail battant aluminium motorisation Somfy THERA Fermetures',
         },
-      ]}
+        {
+          title: 'Portail Autoportant',
+          badge: 'Sans rail au sol',
+          description: "Le portail autoportant glisse lateralement sans aucun rail enterre dans le sol. Ideal pour les allees pavees, en pente ou avec caniveaux. Grandes ouvertures possibles jusqu'a 15 metres.",
+          specs: [
+            'Aucun rail enterre dans le sol — installation propre',
+            "Ideal pour allees en pente, avec caniveaux ou pavees",
+            "Grandes ouvertures possibles jusqu'a 15m",
+            'Contrepoids integre pour equilibre parfait',
+            'Compatible motorisation a galets ou chaine',
+            'Structure renforcee pour les portails lourds',
+          ],
+          image: '/images/portails/portail-aluminium-autoportant.jpg',
+          imageAlt: 'Portail autoportant aluminium THERA Fermetures',
+        },      ]}
       galleryImages={[
         { src: '/images/portails/portail-arnas.jpg', alt: 'Portail aluminium Arnas', caption: 'Portail coulissant — Arnas' },
         { src: '/images/portails/portail-trevoux.jpg', alt: 'Portail aluminium Trevoux', caption: 'Portail battant — Trevoux' },
@@ -77,7 +94,10 @@ export default function PortailPage() {
         { icon: '', title: 'Fabrication francaise', text: 'Fabriques en France par des partenaires certifies Qualicoat. Qualite et tracabilite garanties.' },
       ]}
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Mise en service']}
-      ctaText="Obtenir mon devis portail a Villefranche-sur-Saône"
+      youtubeId="wVuPyTZSGig"
+      youtubeStart={22}
+            seoText="Entreprise Thera Fermetures : vente et installation de portail aluminium sur mesure à Villefranche-sur-Saône et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
+            ctaText="Obtenir mon devis portail a Villefranche-sur-Saône"
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',

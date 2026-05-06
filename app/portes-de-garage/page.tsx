@@ -127,6 +127,7 @@ export default async function PortesDeGaragePage() {
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Mise en service']}
       ctaText="Obtenir mon devis porte de garage"
+      seoText="Entreprise Thera Fermetures : vente et installation de porte de garage sectionnelle sur mesure et standard. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'Service',

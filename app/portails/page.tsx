@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
 import ProductTemplate from '../components/ProductTemplate'
+import ScrollReveal from '../components/ScrollReveal'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 export const revalidate = 60
@@ -96,10 +99,60 @@ export default async function PortailsPage() {
             "Compatible motorisation à galets ou chaîne",
             "Structure renforcée pour les portails lourds",
           ],
-          image: '/images/portails/Portail_battant_aluminium_rillieux.png',
+          image: '/images/portails/portail-aluminium-autoportant.jpg',
           imageAlt: 'Portail autoportant aluminium THERA Fermetures',
         },
       ]}
+      afterVariants={
+        <section className="section-padding bg-light">
+          <div className="container">
+            <ScrollReveal className="text-center mb-12">
+              <div className="section-tag justify-center">Complémentaires</div>
+              <h2>Portillon et Clôtures<br className="hidden md:block" /> assortis</h2>
+              <p className="text-muted text-lg max-w-2xl mx-auto mt-4">
+                Complétez votre portail avec un portillon et une clôture aluminium assortis pour une cohérence esthétique parfaite.
+              </p>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* Image clôture */}
+              <ScrollReveal delay={0}>
+                <div className="relative h-72 md:h-80 overflow-hidden rounded-2xl shadow-card group">
+                  <Image
+                    src="/images/portails/cloture-aluminium-jassans-riotier.jpg"
+                    alt="Clôture aluminium Jassans-Riottier"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </ScrollReveal>
+
+              {/* Image portail */}
+              <ScrollReveal delay={80}>
+                <div className="relative h-72 md:h-80 overflow-hidden rounded-2xl shadow-card group">
+                  <Image
+                    src="/images/portails/Portail-alu-neuville.jpg"
+                    alt="Portail aluminium Neuville"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <ScrollReveal className="text-center mt-10">
+              <Link href="/contact" className="btn-outline-dark">
+                Demander mon projet complet
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </ScrollReveal>
+          </div>
+        </section>
+      }
       galleryImages={[
         { src: '/images/portails/portail-arnas.jpg', alt: 'Portail aluminium Arnas', caption: 'Portail coulissant — Arnas' },
         { src: '/images/portails/portail-trevoux.jpg', alt: 'Portail aluminium Trévoux', caption: 'Portail battant — Trévoux' },
@@ -118,6 +171,7 @@ export default async function PortailsPage() {
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Mise en service']}
       ctaText="Obtenir mon devis portail"
+      seoText="Entreprise Thera Fermetures : vente et installation de portail battant et coulissant aluminium sur mesure et de fabrication française. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'Service',

@@ -53,16 +53,17 @@ export default async function CarportsPage() {
       heroImageAlt="Carport aluminium claustra sur mesure installé par THERA Fermetures"
       features={[
         'Dimensions sur mesure (1 à 4+ voitures)',
-        'Structure aluminium anti-corrosion',
-        'Toiture polycarbonate, aluminium ou panneaux sandwich',
+        'Structure aluminium',
+        'Toiture polycarbonate ou panneaux sandwich',
         'Options claustra, bardage ou façade pleine',
         'Éclairage LED intégré possible',
         'Déclaration préalable facilitée (< 20m²)',
-        'Garantie 10 ans structure et finitions',
+        'Garantie 10 ans',
         'Installation en 1-2 jours',
       ]}
       galleryImages={[
         { src: '/images/carports/carport-claustra.png', alt: 'Carport aluminium claustra', caption: 'Carport claustra aluminium' },
+        { src: '/images/carports/Carport-poteau-deporte.avif', alt: 'Carport poteau déporté', caption: 'Carport poteau déporté' },
       ]}
       advantages={[
         { icon: '', title: 'Protection totale', text: 'Pluie, grêle, neige, soleil — vos véhicules sont protégés 365 jours par an sans risque de dommages.' },
@@ -74,6 +75,7 @@ export default async function CarportsPage() {
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Livraison']}
       ctaText="Obtenir mon devis carport"
+      seoText="Entreprise Thera Fermetures : vente et installation de carport aluminium sur mesure. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={structuredData}
     />
   )

@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
           </table>
         </div>
         <div style="padding: 15px; background: #e85d04; text-align: center;">
-          <p style="color: white; margin: 0; font-size: 12px;">thera-fermetures.fr — 04 74 64 91 65</p>
+          <p style="color: white; margin: 0; font-size: 12px;">thera-fermetures.fr — 04 74 65 91 65</p>
         </div>
       </div>
     `
@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
           <p>Nous avons bien reçu votre demande de devis pour <strong>${productLabel}</strong>.</p>
           <p>Notre équipe vous contactera dans les <strong>24 heures</strong> pour donner suite à votre demande.</p>
           <div style="background: #f9f9f9; padding: 15px; border-left: 4px solid #e85d04; margin: 20px 0;">
-            <p style="margin: 0;"><strong>📞 Besoin urgent?</strong><br>Appelez-nous directement au <a href="tel:+33474649165">04 74 64 91 65</a></p>
+            <p style="margin: 0;"><strong>📞 Besoin urgent?</strong><br>Appelez-nous directement au <a href="tel:+33474649165">04 74 65 91 65</a></p>
           </div>
           <p>Cordialement,<br><strong>L'équipe THERA Fermetures</strong></p>
         </div>

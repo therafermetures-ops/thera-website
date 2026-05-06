@@ -18,11 +18,28 @@ export async function PUT(request: NextRequest) {
   const session = await getSessionFromCookies()
   if (!session) return NextResponse.json({ error: 'Non autorisé' }, { status: 401 })
 
-  const body = await request.json() as { cle: string; valeur: string }[]
+  const body = await request.json() as { cle: string; valeur: string; categorie?: string }[]
 
-  const updates = body.map(({ cle, valeur }) =>
-    getSupabaseAdmin().from('site_config').update({ valeur }).eq('cle', cle)
-  )
-  await Promise.all(updates)
+  // Upsert: update if exists, insert if new
+  const { error } = await getSupabaseAdmin()
+    .from('site_config')
+    .upsert(
+      body.map(({ cle, valeur, categorie }) => ({
+        cle,
+        valeur,
+        categorie: categorie || 'general',
+        updated_at: new Date().toISOString(),
+      })),
+      { onConflict: 'cle', ignoreDuplicates: false }
+    )
+
+  if (error) {
+    // Fallback: update row by row (in case upsert fails due to constraints)
+    const updates = body.map(({ cle, valeur }) =>
+      getSupabaseAdmin().from('site_config').update({ valeur }).eq('cle', cle)
+    )
+    await Promise.all(updates)
+  }
+
   return NextResponse.json({ success: true })
 }

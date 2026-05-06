@@ -68,7 +68,7 @@ export default function PreviewPage() {
                 Demander un devis gratuit →
               </span>
               <span className="border border-white/30 text-white px-8 py-4 rounded-xl font-medium">
-                📞 04 74 64 91 65
+                📞 04 74 65 91 65
               </span>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function PreviewPage() {
               </div>
               <div className="flex items-center gap-2">
                 <span>📞</span>
-                <span>04 74 64 91 65</span>
+                <span>04 74 65 91 65</span>
               </div>
               <div className="flex items-center gap-2">
                 <span>✉️</span>

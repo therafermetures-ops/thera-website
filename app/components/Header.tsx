@@ -126,8 +126,8 @@ export default function Header() {
               rel="noopener noreferrer"
               className="header-link flex flex-col items-center leading-tight text-center py-1"
             >
-              <span className="text-[11px] font-bold uppercase tracking-widest text-primary">Professionnel</span>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-primary">& Collectif</span>
+              <span className="text-[13px] font-semibold uppercase tracking-widest text-primary">Professionnel</span>
+              <span className="text-[13px] font-semibold uppercase tracking-widest text-primary">& Collectif</span>
             </a>
           </nav>
 
@@ -141,7 +141,7 @@ export default function Header() {
               </div>
               <div>
                 <div className="text-[11px] text-muted leading-none mb-0.5 uppercase tracking-wide font-medium">Appelez-nous</div>
-                <div className="text-[16px] font-bold text-dark tracking-tight select-all">04 74 64 91 65</div>
+                <div className="text-[16px] font-bold text-dark tracking-tight select-all">04 74 65 91 65</div>
               </div>
             </div>
           </div>
@@ -405,7 +405,7 @@ export default function Header() {
             <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
-            04 74 64 91 65
+            04 74 65 91 65
           </a>
           <Link
             href="/contact"
