@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import ClientLayoutShell from './components/ClientLayoutShell'
 import Footer from './components/Footer'
@@ -132,6 +133,18 @@ export default async function RootLayout({
         </ClientLayoutShell>
         <Footer />
         <FloatingCTA />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZV13CGBGJ5"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZV13CGBGJ5');
+          `}
+        </Script>
       </body>
     </html>
   )
