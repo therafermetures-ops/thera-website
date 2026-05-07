@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Pergola Bioclimatique sur Mesure Lozanne | THERA Fermetures',
   description: 'Pergolas bioclimatiques motorisees a Lozanne. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
   keywords: ['pergola bioclimatique Lozanne', 'pergola motorisee Lozanne', 'terrasse couverte Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/pergolas' },
+  alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-lozanne' },
   openGraph: {
     title: 'Pergola Bioclimatique sur Mesure Lozanne — THERA Fermetures',
     description: 'Pergola motorisee sur mesure a Lozanne. Devis gratuit.',

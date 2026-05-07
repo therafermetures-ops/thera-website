@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Portail Aluminium sur Mesure Limonest | THERA Fermetures',
   description: 'Portails aluminium battants, coulissants et autoportants a Limonest. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
   keywords: ['portail aluminium Limonest', 'portail coulissant Limonest', 'portail sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/portails' },
+  alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-limonest' },
   openGraph: {
     title: 'Portail Aluminium sur Mesure Limonest — THERA Fermetures',
     description: 'Portails aluminium sur mesure a Limonest. Devis gratuit.',

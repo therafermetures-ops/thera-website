@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Portail Aluminium sur Mesure Caluire-et-Cuire | THERA Fermetures',
   description: 'Portails aluminium battants, coulissants et autoportants a Caluire-et-Cuire. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
   keywords: ['portail aluminium Caluire-et-Cuire', 'portail coulissant Caluire-et-Cuire', 'portail sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/portails' },
+  alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-caluire-et-cuire' },
   openGraph: {
     title: 'Portail Aluminium sur Mesure Caluire-et-Cuire — THERA Fermetures',
     description: 'Portails aluminium sur mesure a Caluire-et-Cuire. Devis gratuit.',

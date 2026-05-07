@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Pergola Bioclimatique sur Mesure Villefranche-sur-Saône | THERA Fermetures',
   description: 'Pergolas bioclimatiques motorisees a Villefranche-sur-Saône. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
   keywords: ['pergola bioclimatique Villefranche-sur-Saône', 'pergola motorisee Villefranche-sur-Saône', 'terrasse couverte Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/pergolas' },
+  alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-villefranche-sur-saone' },
   openGraph: {
     title: 'Pergola Bioclimatique sur Mesure Villefranche-sur-Saône — THERA Fermetures',
     description: 'Pergola motorisee sur mesure a Villefranche-sur-Saône. Devis gratuit.',

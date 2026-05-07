@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Pergola Bioclimatique sur Mesure Trévoux | THERA Fermetures',
   description: 'Pergolas bioclimatiques motorisees a Trévoux. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
   keywords: ['pergola bioclimatique Trévoux', 'pergola motorisee Trévoux', 'terrasse couverte Ain (01)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/pergolas' },
+  alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-trevoux' },
   openGraph: {
     title: 'Pergola Bioclimatique sur Mesure Trévoux — THERA Fermetures',
     description: 'Pergola motorisee sur mesure a Trévoux. Devis gratuit.',

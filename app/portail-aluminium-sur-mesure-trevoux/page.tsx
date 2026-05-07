@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Portail Aluminium sur Mesure Trévoux | THERA Fermetures',
   description: 'Portails aluminium battants, coulissants et autoportants a Trévoux. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
   keywords: ['portail aluminium Trévoux', 'portail coulissant Trévoux', 'portail sur mesure Ain (01)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/portails' },
+  alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-trevoux' },
   openGraph: {
     title: 'Portail Aluminium sur Mesure Trévoux — THERA Fermetures',
     description: 'Portails aluminium sur mesure a Trévoux. Devis gratuit.',

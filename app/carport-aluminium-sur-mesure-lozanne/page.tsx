@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Carport Aluminium sur Mesure Lozanne | THERA Fermetures',
   description: 'Carports aluminium sur mesure a Lozanne pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
   keywords: ['carport aluminium Lozanne', 'abri voiture Lozanne', 'carport sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/carports' },
+  alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-lozanne' },
   openGraph: {
     title: 'Carport Aluminium sur Mesure Lozanne — THERA Fermetures',
     description: 'Protection voitures sur mesure a Lozanne. Devis gratuit.',

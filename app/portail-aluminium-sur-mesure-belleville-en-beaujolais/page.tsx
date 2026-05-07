@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Portail Aluminium sur Mesure Belleville-en-Beaujolais | THERA Fermetures',
   description: 'Portails aluminium battants, coulissants et autoportants a Belleville-en-Beaujolais. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
   keywords: ['portail aluminium Belleville-en-Beaujolais', 'portail coulissant Belleville-en-Beaujolais', 'portail sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/portails' },
+  alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-belleville-en-beaujolais' },
   openGraph: {
     title: 'Portail Aluminium sur Mesure Belleville-en-Beaujolais — THERA Fermetures',
     description: 'Portails aluminium sur mesure a Belleville-en-Beaujolais. Devis gratuit.',

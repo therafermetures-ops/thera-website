@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Carport Aluminium sur Mesure Trévoux | THERA Fermetures',
   description: 'Carports aluminium sur mesure a Trévoux pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
   keywords: ['carport aluminium Trévoux', 'abri voiture Trévoux', 'carport sur mesure Ain (01)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/carports' },
+  alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-trevoux' },
   openGraph: {
     title: 'Carport Aluminium sur Mesure Trévoux — THERA Fermetures',
     description: 'Protection voitures sur mesure a Trévoux. Devis gratuit.',

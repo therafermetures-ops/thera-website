@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Pergola Bioclimatique sur Mesure Caluire-et-Cuire | THERA Fermetures',
   description: 'Pergolas bioclimatiques motorisees a Caluire-et-Cuire. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
   keywords: ['pergola bioclimatique Caluire-et-Cuire', 'pergola motorisee Caluire-et-Cuire', 'terrasse couverte Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/pergolas' },
+  alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-caluire-et-cuire' },
   openGraph: {
     title: 'Pergola Bioclimatique sur Mesure Caluire-et-Cuire — THERA Fermetures',
     description: 'Pergola motorisee sur mesure a Caluire-et-Cuire. Devis gratuit.',

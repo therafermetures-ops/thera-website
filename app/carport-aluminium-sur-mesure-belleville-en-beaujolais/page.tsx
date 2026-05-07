@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Carport Aluminium sur Mesure Belleville-en-Beaujolais | THERA Fermetures',
   description: 'Carports aluminium sur mesure a Belleville-en-Beaujolais pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
   keywords: ['carport aluminium Belleville-en-Beaujolais', 'abri voiture Belleville-en-Beaujolais', 'carport sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/carports' },
+  alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-belleville-en-beaujolais' },
   openGraph: {
     title: 'Carport Aluminium sur Mesure Belleville-en-Beaujolais — THERA Fermetures',
     description: 'Protection voitures sur mesure a Belleville-en-Beaujolais. Devis gratuit.',

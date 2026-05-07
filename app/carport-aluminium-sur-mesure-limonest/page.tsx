@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Carport Aluminium sur Mesure Limonest | THERA Fermetures',
   description: 'Carports aluminium sur mesure a Limonest pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
   keywords: ['carport aluminium Limonest', 'abri voiture Limonest', 'carport sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/carports' },
+  alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-limonest' },
   openGraph: {
     title: 'Carport Aluminium sur Mesure Limonest — THERA Fermetures',
     description: 'Protection voitures sur mesure a Limonest. Devis gratuit.',

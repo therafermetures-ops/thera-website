@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Pergola Bioclimatique sur Mesure Belleville-en-Beaujolais | THERA Fermetures',
   description: 'Pergolas bioclimatiques motorisees a Belleville-en-Beaujolais. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
   keywords: ['pergola bioclimatique Belleville-en-Beaujolais', 'pergola motorisee Belleville-en-Beaujolais', 'terrasse couverte Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/pergolas' },
+  alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-belleville-en-beaujolais' },
   openGraph: {
     title: 'Pergola Bioclimatique sur Mesure Belleville-en-Beaujolais — THERA Fermetures',
     description: 'Pergola motorisee sur mesure a Belleville-en-Beaujolais. Devis gratuit.',

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Pergola Bioclimatique sur Mesure Limonest | THERA Fermetures',
   description: 'Pergolas bioclimatiques motorisees a Limonest. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
   keywords: ['pergola bioclimatique Limonest', 'pergola motorisee Limonest', 'terrasse couverte Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/pergolas' },
+  alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-limonest' },
   openGraph: {
     title: 'Pergola Bioclimatique sur Mesure Limonest — THERA Fermetures',
     description: 'Pergola motorisee sur mesure a Limonest. Devis gratuit.',

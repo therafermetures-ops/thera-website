@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Portail Aluminium sur Mesure Lozanne | THERA Fermetures',
   description: 'Portails aluminium battants, coulissants et autoportants a Lozanne. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
   keywords: ['portail aluminium Lozanne', 'portail coulissant Lozanne', 'portail sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/portails' },
+  alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-lozanne' },
   openGraph: {
     title: 'Portail Aluminium sur Mesure Lozanne — THERA Fermetures',
     description: 'Portails aluminium sur mesure a Lozanne. Devis gratuit.',

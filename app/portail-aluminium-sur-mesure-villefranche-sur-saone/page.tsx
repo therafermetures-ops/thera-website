@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Portail Aluminium sur Mesure Villefranche-sur-Saône | THERA Fermetures',
   description: 'Portails aluminium battants, coulissants et autoportants a Villefranche-sur-Saône. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
   keywords: ['portail aluminium Villefranche-sur-Saône', 'portail coulissant Villefranche-sur-Saône', 'portail sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/portails' },
+  alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-villefranche-sur-saone' },
   openGraph: {
     title: 'Portail Aluminium sur Mesure Villefranche-sur-Saône — THERA Fermetures',
     description: 'Portails aluminium sur mesure a Villefranche-sur-Saône. Devis gratuit.',

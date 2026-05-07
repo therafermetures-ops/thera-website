@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Carport Aluminium sur Mesure Caluire-et-Cuire | THERA Fermetures',
   description: 'Carports aluminium sur mesure a Caluire-et-Cuire pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
   keywords: ['carport aluminium Caluire-et-Cuire', 'abri voiture Caluire-et-Cuire', 'carport sur mesure Rhône (69)'],
-  alternates: { canonical: 'https://thera-fermetures.fr/carports' },
+  alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-caluire-et-cuire' },
   openGraph: {
     title: 'Carport Aluminium sur Mesure Caluire-et-Cuire — THERA Fermetures',
     description: 'Protection voitures sur mesure a Caluire-et-Cuire. Devis gratuit.',
