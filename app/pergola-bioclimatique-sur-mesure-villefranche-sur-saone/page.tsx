@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pergola Bioclimatique sur Mesure Villefranche-sur-Saône | THERA Fermetures',
-  description: 'Pergolas bioclimatiques motorisees a Villefranche-sur-Saône. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Pergola Bioclimatique Villefranche-sur-Saône — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures installe vos pergolas bioclimatiques à Villefranche-sur-Saône. Lames orientables motorisées, fabrication française, sur mesure. Devis gratuit.',
   keywords: ['pergola bioclimatique Villefranche-sur-Saône', 'pergola motorisee Villefranche-sur-Saône', 'terrasse couverte Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-villefranche-sur-saone' },
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 export default function PergolaPage() {
   return (
     <ProductTemplate
-      title="Pergolas Bioclimatiques a Villefranche-sur-Saône"
-      subtitle="Terrasses motorisees Carat, Elements et VizVersa — couvrez votre espace exterieur dans la region Rhône (69)"
-      description="THERA Fermetures transforme les terrasses de Villefranche-sur-Saône en veritable piece de vie exterieure avec nos pergolas bioclimatiques motorisees. Trois modeles premium disponibles : Pergola Carat (label Origine France Garantie), Pergola Elements (design eleve accessible) et VizVersa (store retractable haute performance). Lames orientables de 0° a 145°, eclairage LED, chauffage infrarouge en option."
+      title="Pergolas Bioclimatiques à Villefranche-sur-Saône"
+      subtitle="Terrasses motorisées Carat, Elements et VizVersa — capitale du Beaujolais, intervention à 15 min"
+      description="Entreprise locale spécialisée en pergolas bioclimatiques, THERA Fermetures intervient régulièrement à Villefranche-sur-Saône pour équiper terrasses et jardins. La capitale du Beaujolais, avec ses maisons individuelles et ses espaces extérieurs, offre de nombreuses opportunités d'aménagement. À 15 minutes de nos ateliers de Chasselay, nous assurons installation et SAV réactifs."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique motorisee a Villefranche-sur-Saône par THERA Fermetures"
       features={[
@@ -137,9 +137,22 @@ export default function PergolaPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Pergolas Bioclimatiques',
-        description: 'Specialiste pergolas bioclimatiques a Villefranche-sur-Saône depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de pergolas bioclimatiques sur mesure à Villefranche-sur-Saône. Lames orientables motorisées, fabrication française. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-villefranche-sur-saone',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Villefranche-sur-Saône' },
+        priceRange: '€€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

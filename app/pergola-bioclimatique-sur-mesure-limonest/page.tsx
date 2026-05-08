@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pergola Bioclimatique sur Mesure Limonest | THERA Fermetures',
-  description: 'Pergolas bioclimatiques motorisees a Limonest. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Pergola Bioclimatique Limonest — Installateur Local | THERA Fermetures',
+  description: 'Pergola bioclimatique premium Limonest par THERA Fermetures. Design haut de gamme, motorisée, sur mesure. Devis gratuit.',
   keywords: ['pergola bioclimatique Limonest', 'pergola motorisee Limonest', 'terrasse couverte Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-limonest' },
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 export default function PergolaPage() {
   return (
     <ProductTemplate
-      title="Pergolas Bioclimatiques a Limonest"
-      subtitle="Terrasses motorisees Carat, Elements et VizVersa — couvrez votre espace exterieur dans la region Rhône (69)"
-      description="THERA Fermetures transforme les terrasses de Limonest en veritable piece de vie exterieure avec nos pergolas bioclimatiques motorisees. Trois modeles premium disponibles : Pergola Carat (label Origine France Garantie), Pergola Elements (design eleve accessible) et VizVersa (store retractable haute performance). Lames orientables de 0° a 145°, eclairage LED, chauffage infrarouge en option."
+      title="Pergolas Bioclimatiques à Limonest"
+      subtitle="Terrasses motorisées premium — commune résidentielle haut de gamme aux portes de Lyon"
+      description="Commune résidentielle haut de gamme, Limonest concentre des propriétés où la qualité de l'aménagement extérieur est primordiale. THERA Fermetures y installe des pergolas bioclimatiques premium avec lames orientables motorisées, éclairage LED intégré et stores latéraux optionnels. Basés à Chasselay à quelques minutes, nous connaissons parfaitement les exigences esthétiques du secteur."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique motorisee a Limonest par THERA Fermetures"
       features={[
@@ -137,9 +137,22 @@ export default function PergolaPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Pergolas Bioclimatiques',
-        description: 'Specialiste pergolas bioclimatiques a Limonest depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de pergolas bioclimatiques sur mesure à Limonest. Lames orientables motorisées, fabrication française. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-limonest',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Limonest' },
+        priceRange: '€€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

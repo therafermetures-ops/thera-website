@@ -2,8 +2,8 @@
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Villefranche-sur-Saône | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Villefranche-sur-Saône pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Villefranche-sur-Saône — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures installe vos carports aluminium sur mesure à Villefranche-sur-Saône. Abri voiture 1 à 4 places, fabrication française, pose en 1-2 jours. Devis gratuit sous 24h.',
   keywords: ['carport aluminium Villefranche-sur-Saône', 'abri voiture Villefranche-sur-Saône', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-villefranche-sur-saone' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Villefranche-sur-Saône"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Rhône (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Villefranche-sur-Saône depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Villefranche-sur-Saône"
+      subtitle="Abris voiture sur mesure — protection élégante et durable pour 1 à 4 véhicules, capitale du Beaujolais"
+      description="Entreprise locale spécialisée en carports aluminium, THERA Fermetures intervient régulièrement à Villefranche-sur-Saône et son agglomération. Les lotissements récents et maisons individuelles de la capitale du Beaujolais constituent notre terrain d'intervention privilégié. À 15 minutes de nos ateliers, nous assurons un suivi rapide du devis à la pose pour tout abri voiture sur mesure."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Villefranche-sur-Saône par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Villefranche-sur-Saône depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Villefranche-sur-Saône. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-villefranche-sur-saone',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Villefranche-sur-Saône' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

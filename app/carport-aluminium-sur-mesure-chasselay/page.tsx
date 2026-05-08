@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Chasselay | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Chasselay pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Chasselay — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures, basé à Chasselay, installe vos carports aluminium sur mesure. Intervention immédiate, fabrication française. Devis gratuit.',
   keywords: ['carport aluminium Chasselay', 'abri voiture Chasselay', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-chasselay' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Chasselay"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Beaujolais (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Chasselay depuis 2015. Notre showroom est installe a Chasselay, au coeur du Beaujolais. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Chasselay"
+      subtitle="Abris voiture sur mesure — siège de THERA Fermetures, showroom sur place, intervention immédiate"
+      description="Siège de THERA Fermetures (134 ZAC Crouloup, 69380), Chasselay est notre commune d'implantation. Les résidents de Chasselay peuvent visiter notre showroom pour voir nos carports aluminium exposés, obtenir un devis immédiat et rencontrer directement notre équipe. Délais d'intervention et de livraison les plus courts de notre zone de chalandise."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Chasselay par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Chasselay depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Chasselay. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-chasselay',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Chasselay' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

@@ -111,7 +111,7 @@ export default async function PergolasPage() {
         { src: '/images/pergolas/pergola-store.jpg', alt: 'VizVersa store pergola', caption: 'VizVersa — store rétractable' },
       ]}
       afterVariants={
-        <div>
+        <>
           {/* Personnalisable et évolutive */}
           <section className="section-padding">
             <div className="container">
@@ -162,7 +162,35 @@ export default async function PergolasPage() {
               </ScrollReveal>
             </div>
           </section>
-        </div>
+
+          {/* Zones d'intervention */}
+          <section className="section-padding bg-light">
+            <div className="container">
+              <div className="section-tag justify-center">Zones d'intervention</div>
+              <h2 className="text-center mb-8">Installation de pergolas dans votre commune</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {[
+                  { href: '/pergola-bioclimatique-sur-mesure-villefranche-sur-saone', label: 'Villefranche-sur-Saône' },
+                  { href: '/pergola-bioclimatique-sur-mesure-belleville-en-beaujolais', label: 'Belleville-en-Beaujolais' },
+                  { href: '/pergola-bioclimatique-sur-mesure-limonest', label: 'Limonest' },
+                  { href: '/pergola-bioclimatique-sur-mesure-trevoux', label: 'Trévoux' },
+                  { href: '/pergola-bioclimatique-sur-mesure-lozanne', label: 'Lozanne' },
+                  { href: '/pergola-bioclimatique-sur-mesure-caluire-et-cuire', label: 'Caluire-et-Cuire' },
+                  { href: '/pergola-bioclimatique-sur-mesure-anse', label: 'Anse' },
+                  { href: '/pergola-bioclimatique-sur-mesure-arnas', label: 'Arnas' },
+                  { href: '/pergola-bioclimatique-sur-mesure-quincieux', label: 'Quincieux' },
+                  { href: '/pergola-bioclimatique-sur-mesure-neuville-sur-saone', label: 'Neuville-sur-Saône' },
+                  { href: '/pergola-bioclimatique-sur-mesure-chasselay', label: 'Chasselay' },
+                  { href: '/pergola-bioclimatique-sur-mesure-jassans-riottier', label: 'Jassans-Riottier' },
+                ].map(({ href, label }) => (
+                  <Link key={href} href={href} className="block p-4 bg-white rounded-xl shadow-sm hover:shadow-card transition-shadow text-center font-medium text-dark hover:text-accent">
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
       }
       advantages={[
         { icon: '', title: "Confort toute l'année", text: "Régulation naturelle par orientation des lames. Fraîcheur l'été, protection pluie toute l'année." },

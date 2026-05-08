@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pergola Bioclimatique sur Mesure Caluire-et-Cuire | THERA Fermetures',
-  description: 'Pergolas bioclimatiques motorisees a Caluire-et-Cuire. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Pergola Bioclimatique Caluire-et-Cuire — Installateur Local | THERA Fermetures',
+  description: 'Pergola bioclimatique Caluire-et-Cuire par THERA Fermetures. Commune lyonnaise, design contemporain, sur mesure. Devis gratuit.',
   keywords: ['pergola bioclimatique Caluire-et-Cuire', 'pergola motorisee Caluire-et-Cuire', 'terrasse couverte Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-caluire-et-cuire' },
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 export default function PergolaPage() {
   return (
     <ProductTemplate
-      title="Pergolas Bioclimatiques a Caluire-et-Cuire"
-      subtitle="Terrasses motorisees Carat, Elements et VizVersa — couvrez votre espace exterieur dans la region Rhône (69)"
-      description="THERA Fermetures transforme les terrasses de Caluire-et-Cuire en veritable piece de vie exterieure avec nos pergolas bioclimatiques motorisees. Trois modeles premium disponibles : Pergola Carat (label Origine France Garantie), Pergola Elements (design eleve accessible) et VizVersa (store retractable haute performance). Lames orientables de 0° a 145°, eclairage LED, chauffage infrarouge en option."
+      title="Pergolas Bioclimatiques à Caluire-et-Cuire"
+      subtitle="Terrasses motorisées — solutions compactes et design pour espaces urbains lyonnais"
+      description="Commune lyonnaise à forte densité, Caluire-et-Cuire présente des terrasses souvent réduites pour lesquelles THERA Fermetures propose des pergolas bioclimatiques compactes et design. Nos solutions sur mesure s'adaptent aux contraintes urbaines tout en maximisant l'espace de vie extérieur. Matériaux aluminium première qualité pour une intégration parfaite à l'architecture locale."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique motorisee a Caluire-et-Cuire par THERA Fermetures"
       features={[
@@ -137,9 +137,22 @@ export default function PergolaPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Pergolas Bioclimatiques',
-        description: 'Specialiste pergolas bioclimatiques a Caluire-et-Cuire depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de pergolas bioclimatiques sur mesure à Caluire-et-Cuire. Lames orientables motorisées, fabrication française. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-caluire-et-cuire',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Caluire-et-Cuire' },
+        priceRange: '€€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

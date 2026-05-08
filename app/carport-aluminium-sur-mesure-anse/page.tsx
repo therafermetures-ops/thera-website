@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Anse | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Anse pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Anse — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures installe vos carports aluminium à Anse (69). Beaujolais, abri voiture sur mesure, pose en 1-2 jours. Devis gratuit.',
   keywords: ['carport aluminium Anse', 'abri voiture Anse', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-anse' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Anse"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Beaujolais (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Anse depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Anse"
+      subtitle="Abris voiture sur mesure — village du Beaujolais, intervention depuis Chasselay en moins de 15 min"
+      description="Village du Beaujolais au confluent de l'Azergues et de la Saône, Anse compte de nombreuses maisons individuelles pour lesquelles THERA Fermetures propose des carports aluminium sur mesure. Nos solutions couvrent 1 à 4 véhicules et s'intègrent harmonieusement aux propriétés de la commune. Intervention depuis Chasselay en moins de 15 minutes."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Anse par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Anse depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Anse. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-anse',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Anse' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

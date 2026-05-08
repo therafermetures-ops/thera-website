@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Quincieux | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Quincieux pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Quincieux — Installateur Local | THERA Fermetures',
+  description: 'Carport aluminium Quincieux par THERA Fermetures. Val de Saône, abri voiture sur mesure, interlocuteur unique. Devis gratuit.',
   keywords: ['carport aluminium Quincieux', 'abri voiture Quincieux', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-quincieux' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Quincieux"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Beaujolais (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Quincieux depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Quincieux"
+      subtitle="Abris voiture sur mesure — grandes propriétés du Val de Saône, jusqu'à 4 véhicules"
+      description="Village du Val de Saône, Quincieux attire de nombreuses familles pour ses grandes propriétés où l'espace ne manque pas. THERA Fermetures y installe des carports aluminium spacieux, parfois pour 3 ou 4 véhicules, avec options claustra et éclairage LED intégré. Devis sur site sous 48h depuis Chasselay."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Quincieux par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Quincieux depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Quincieux. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-quincieux',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Quincieux' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

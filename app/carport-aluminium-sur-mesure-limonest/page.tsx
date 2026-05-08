@@ -2,8 +2,8 @@
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Limonest | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Limonest pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Limonest — Installateur Local | THERA Fermetures',
+  description: 'Carport aluminium premium à Limonest par THERA Fermetures. Commune résidentielle, design intégré, fabrication française. Devis gratuit.',
   keywords: ['carport aluminium Limonest', 'abri voiture Limonest', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-limonest' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Limonest"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Rhône (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Limonest depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Limonest"
+      subtitle="Abris voiture premium sur mesure — design intégré pour une commune résidentielle haut de gamme"
+      description="Commune résidentielle haut de gamme aux portes de Lyon, Limonest demande des carports aluminium esthétiques et soignés. THERA Fermetures y conçoit des abris voiture sur mesure intégrant claustra, bardage bois ou façades pleines pour s'harmoniser avec l'architecture locale. Basés à Chasselay, voisin direct, nous intervenons en priorité sur ce secteur."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Limonest par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Limonest depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Limonest. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-limonest',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Limonest' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

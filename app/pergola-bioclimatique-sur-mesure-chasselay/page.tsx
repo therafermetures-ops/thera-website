@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pergola Bioclimatique sur Mesure Chasselay | THERA Fermetures',
-  description: 'Pergolas bioclimatiques motorisees a Chasselay. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Pergola Bioclimatique Chasselay — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures, basé à Chasselay, installe pergolas bioclimatiques sur mesure. Showroom sur place, intervention immédiate. Devis gratuit.',
   keywords: ['pergola bioclimatique Chasselay', 'pergola motorisee Chasselay', 'terrasse couverte Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-chasselay' },
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 export default function PergolaPage() {
   return (
     <ProductTemplate
-      title="Pergolas Bioclimatiques a Chasselay"
-      subtitle="Terrasses motorisees Carat, Elements et VizVersa — couvrez votre espace exterieur dans la region Beaujolais (69)"
-      description="THERA Fermetures transforme les terrasses de Chasselay en veritable piece de vie exterieure avec nos pergolas bioclimatiques motorisees. Notre showroom expose une pergola d'exception a Chasselay, venez la decouvrir. Trois modeles premium disponibles : Pergola Carat (label Origine France Garantie), Pergola Elements (design eleve accessible) et VizVersa (store retractable haute performance). Lames orientables de 0° a 145°, eclairage LED, chauffage infrarouge en option."
+      title="Pergolas Bioclimatiques à Chasselay"
+      subtitle="Terrasses motorisées — siège de THERA Fermetures, showroom sur place, pergola grandeur nature"
+      description="Notre siège se trouve à Chasselay (134 ZAC Crouloup, 69380). Les résidents de Chasselay ont l'avantage de pouvoir visiter notre showroom pour voir nos pergolas bioclimatiques grandeur nature avant commande. THERA Fermetures assure les délais d'installation les plus courts sur Chasselay et ses environs immédiats."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique motorisee a Chasselay par THERA Fermetures"
       features={[
@@ -137,9 +137,22 @@ export default function PergolaPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Pergolas Bioclimatiques',
-        description: 'Specialiste pergolas bioclimatiques a Chasselay depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de pergolas bioclimatiques sur mesure à Chasselay. Lames orientables motorisées, fabrication française. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-chasselay',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Chasselay' },
+        priceRange: '€€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

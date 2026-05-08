@@ -2,8 +2,8 @@
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Belleville-en-Beaujolais | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Belleville-en-Beaujolais pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Belleville-en-Beaujolais — Installateur Local | THERA Fermetures',
+  description: 'Carport aluminium sur mesure à Belleville-en-Beaujolais par THERA Fermetures. Abri voiture design, pose rapide, fabrication française. Devis gratuit.',
   keywords: ['carport aluminium Belleville-en-Beaujolais', 'abri voiture Belleville-en-Beaujolais', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-belleville-en-beaujolais' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Belleville-en-Beaujolais"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Rhône (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Belleville-en-Beaujolais depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Belleville-en-Beaujolais"
+      subtitle="Abris voiture sur mesure — protection élégante et durable pour 1 à 4 véhicules, nord Beaujolais"
+      description="THERA Fermetures réalise des carports aluminium sur mesure à Belleville-en-Beaujolais et ses environs. Les maisons pavillonnaires du nord Beaujolais nécessitent souvent des abris voiture adaptés aux contraintes de terrain. Nous proposons des solutions claustra, bardage ou toiture polycarbonate selon votre architecture et vos besoins."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Belleville-en-Beaujolais par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Belleville-en-Beaujolais depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Belleville-en-Beaujolais. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-belleville-en-beaujolais',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Belleville-en-Beaujolais' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

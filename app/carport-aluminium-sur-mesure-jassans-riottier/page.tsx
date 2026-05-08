@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Jassans-Riottier | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Jassans-Riottier pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Jassans-Riottier — Installateur Local | THERA Fermetures',
+  description: 'Carport aluminium Jassans-Riottier (01) par THERA Fermetures. Ain et Rhône, fabrication française, interlocuteur unique. Devis gratuit.',
   keywords: ['carport aluminium Jassans-Riottier', 'abri voiture Jassans-Riottier', 'carport sur mesure Ain (01)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-jassans-riottier' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Jassans-Riottier"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Val de Saône (01)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Jassans-Riottier depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Jassans-Riottier"
+      subtitle="Abris voiture sur mesure — commune de l'Ain, rive droite de la Saône, intervention depuis Chasselay"
+      description="Commune de l'Ain sur la rive droite de la Saône, Jassans-Riottier est couverte par nos équipes depuis Chasselay. THERA Fermetures y installe des carports aluminium sur mesure pour les maisons individuelles du secteur. La proximité avec Trévoux et notre connaissance de la zone permettent des interventions réactives pour tout projet d'abri voiture."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Jassans-Riottier par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Jassans-Riottier depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Jassans-Riottier. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-jassans-riottier',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Jassans-Riottier' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

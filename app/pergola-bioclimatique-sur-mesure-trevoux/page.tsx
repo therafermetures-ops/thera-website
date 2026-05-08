@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pergola Bioclimatique sur Mesure Trévoux | THERA Fermetures',
-  description: 'Pergolas bioclimatiques motorisees a Trévoux. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Pergola Bioclimatique Trévoux — Installateur Local | THERA Fermetures',
+  description: 'Pergola bioclimatique Trévoux (01) par THERA Fermetures. Ain et Rhône, sur mesure, fabrication française. Devis gratuit.',
   keywords: ['pergola bioclimatique Trévoux', 'pergola motorisee Trévoux', 'terrasse couverte Ain (01)'],
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-trevoux' },
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 export default function PergolaPage() {
   return (
     <ProductTemplate
-      title="Pergolas Bioclimatiques a Trévoux"
-      subtitle="Terrasses motorisees Carat, Elements et VizVersa — couvrez votre espace exterieur dans la region Ain (01)"
-      description="THERA Fermetures transforme les terrasses de Trévoux en veritable piece de vie exterieure avec nos pergolas bioclimatiques motorisees. Trois modeles premium disponibles : Pergola Carat (label Origine France Garantie), Pergola Elements (design eleve accessible) et VizVersa (store retractable haute performance). Lames orientables de 0° a 145°, eclairage LED, chauffage infrarouge en option."
+      title="Pergolas Bioclimatiques à Trévoux"
+      subtitle="Terrasses motorisées Carat, Elements et VizVersa — préfecture de l'Ain au bord de la Saône"
+      description="Préfecture de l'Ain au bord de la Saône, Trévoux bénéficie d'un ensoleillement favorable qui rend l'aménagement des terrasses particulièrement appréciable. THERA Fermetures y installe des pergolas bioclimatiques sur mesure permettant de profiter de l'extérieur quelle que soit la météo. Notre équipe traverse le Rhône depuis Chasselay pour intervenir en moins de 20 minutes."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique motorisee a Trévoux par THERA Fermetures"
       features={[
@@ -137,9 +137,22 @@ export default function PergolaPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Pergolas Bioclimatiques',
-        description: 'Specialiste pergolas bioclimatiques a Trévoux depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de pergolas bioclimatiques sur mesure à Trévoux. Lames orientables motorisées, fabrication française. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-trevoux',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Trévoux' },
+        priceRange: '€€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

@@ -2,8 +2,8 @@
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Lozanne | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Lozanne pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Lozanne — Installateur Local | THERA Fermetures',
+  description: 'Carport aluminium Lozanne par THERA Fermetures. Commune voisine de Chasselay, intervention rapide, fabrication française. Devis gratuit.',
   keywords: ['carport aluminium Lozanne', 'abri voiture Lozanne', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-lozanne' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Lozanne"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Rhône (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Lozanne depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Lozanne"
+      subtitle="Abris voiture sur mesure — commune voisine de Chasselay, intervention la plus rapide de notre zone"
+      description="Commune limitrophe de Chasselay où sont basés nos ateliers, Lozanne bénéficie des interventions les plus rapides de notre équipe. THERA Fermetures y installe des carports aluminium sur mesure pour abriter 1 à 4 véhicules. Notre connaissance du terrain local garantit des solutions parfaitement adaptées aux configurations de votre propriété."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Lozanne par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Lozanne depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Lozanne. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-lozanne',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Lozanne' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

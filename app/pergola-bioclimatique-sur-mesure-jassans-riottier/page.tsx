@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pergola Bioclimatique sur Mesure Jassans-Riottier | THERA Fermetures',
-  description: 'Pergolas bioclimatiques motorisees a Jassans-Riottier. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Pergola Bioclimatique Jassans-Riottier — Installateur Local | THERA Fermetures',
+  description: 'Pergola bioclimatique Jassans-Riottier (01) par THERA Fermetures. Ain et Rhône, sur mesure. Devis gratuit.',
   keywords: ['pergola bioclimatique Jassans-Riottier', 'pergola motorisee Jassans-Riottier', 'terrasse couverte Ain (01)'],
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-jassans-riottier' },
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 export default function PergolaPage() {
   return (
     <ProductTemplate
-      title="Pergolas Bioclimatiques a Jassans-Riottier"
-      subtitle="Terrasses motorisees Carat, Elements et VizVersa — couvrez votre espace exterieur dans la region Val de Saône (01)"
-      description="THERA Fermetures transforme les terrasses de Jassans-Riottier en veritable piece de vie exterieure avec nos pergolas bioclimatiques motorisees. Trois modeles premium disponibles : Pergola Carat (label Origine France Garantie), Pergola Elements (design eleve accessible) et VizVersa (store retractable haute performance). Lames orientables de 0° a 145°, eclairage LED, chauffage infrarouge en option."
+      title="Pergolas Bioclimatiques à Jassans-Riottier"
+      subtitle="Terrasses motorisées — commune de l'Ain, rive droite de la Saône, terrasses orientées sud"
+      description="Commune de l'Ain sur la rive droite de la Saône, Jassans-Riottier est dans notre zone d'intervention régulière pour l'installation de pergolas bioclimatiques. Ses propriétés avec terrasses orientées sud bénéficient particulièrement de nos pergolas à lames orientables qui s'adaptent au soleil tout au long de la journée. Intervention rapide depuis Chasselay."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique motorisee a Jassans-Riottier par THERA Fermetures"
       features={[
@@ -137,9 +137,22 @@ export default function PergolaPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Pergolas Bioclimatiques',
-        description: 'Specialiste pergolas bioclimatiques a Jassans-Riottier depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de pergolas bioclimatiques sur mesure à Jassans-Riottier. Lames orientables motorisées, fabrication française. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-jassans-riottier',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Jassans-Riottier' },
+        priceRange: '€€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

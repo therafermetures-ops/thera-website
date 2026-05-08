@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pergola Bioclimatique sur Mesure Neuville-sur-Saône | THERA Fermetures',
-  description: 'Pergolas bioclimatiques motorisees a Neuville-sur-Saône. Lames orientables, capteur pluie, LED integree. Expert depuis 2015, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Pergola Bioclimatique Neuville-sur-Saône — Installateur Local | THERA Fermetures',
+  description: 'Pergola bioclimatique Neuville-sur-Saône par THERA Fermetures. Val de Saône, fabrication française. Devis gratuit.',
   keywords: ['pergola bioclimatique Neuville-sur-Saône', 'pergola motorisee Neuville-sur-Saône', 'terrasse couverte Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-neuville-sur-saone' },
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 export default function PergolaPage() {
   return (
     <ProductTemplate
-      title="Pergolas Bioclimatiques a Neuville-sur-Saône"
-      subtitle="Terrasses motorisees Carat, Elements et VizVersa — couvrez votre espace exterieur dans la region Val de Saône (69)"
-      description="THERA Fermetures transforme les terrasses de Neuville-sur-Saône en veritable piece de vie exterieure avec nos pergolas bioclimatiques motorisees. Trois modeles premium disponibles : Pergola Carat (label Origine France Garantie), Pergola Elements (design eleve accessible) et VizVersa (store retractable haute performance). Lames orientables de 0° a 145°, eclairage LED, chauffage infrarouge en option."
+      title="Pergolas Bioclimatiques à Neuville-sur-Saône"
+      subtitle="Terrasses motorisées — Val de Saône en expansion, maisons neuves et constructions récentes"
+      description="Ville en développement du Val de Saône, Neuville-sur-Saône concentre de nombreuses constructions récentes pour lesquelles une pergola bioclimatique complète idéalement l'aménagement extérieur. THERA Fermetures y propose des pergolas aluminium sur mesure avec motorisation Somfy, intégrables aux terrasses des maisons neuves ou anciennes."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
       heroImageAlt="Pergola bioclimatique motorisee a Neuville-sur-Saône par THERA Fermetures"
       features={[
@@ -137,9 +137,22 @@ export default function PergolaPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Pergolas Bioclimatiques',
-        description: 'Specialiste pergolas bioclimatiques a Neuville-sur-Saône depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de pergolas bioclimatiques sur mesure à Neuville-sur-Saône. Lames orientables motorisées, fabrication française. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-neuville-sur-saone',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Neuville-sur-Saône' },
+        priceRange: '€€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

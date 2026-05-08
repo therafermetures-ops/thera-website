@@ -2,8 +2,8 @@
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Trévoux | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Trévoux pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Trévoux — Installateur Local | THERA Fermetures',
+  description: 'Carport aluminium Trévoux (01) par THERA Fermetures. Installateur Ain et Rhône, abri voiture sur mesure, fabrication française. Devis gratuit.',
   keywords: ['carport aluminium Trévoux', 'abri voiture Trévoux', 'carport sur mesure Ain (01)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-trevoux' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Trévoux"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Ain (01)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Trévoux depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Trévoux"
+      subtitle="Abris voiture sur mesure — installateur Ain et Rhône, intervention depuis Chasselay en moins de 20 min"
+      description="Préfecture de l'Ain, Trévoux et son agglomération font partie de notre zone d'intervention régulière pour l'installation de carports aluminium. Les propriétés du Val de Saône, souvent spacieuses, accueillent idéalement nos abris voiture sur mesure 1 à 4 places. Traversée du Rhône depuis Chasselay pour intervenir en moins de 20 minutes."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Trévoux par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Trévoux depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Trévoux. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-trevoux',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Trévoux' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}

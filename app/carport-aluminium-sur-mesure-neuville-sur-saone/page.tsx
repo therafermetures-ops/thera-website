@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Carport Aluminium sur Mesure Neuville-sur-Saône | THERA Fermetures',
-  description: 'Carports aluminium sur mesure a Neuville-sur-Saône pour 1 a 4 voitures. Design epure, entretien zero, fabrication francaise. Devis gratuit.',
+  title: 'Entreprise Carport Aluminium Neuville-sur-Saône — Installateur Local | THERA Fermetures',
+  description: 'Carport aluminium Neuville-sur-Saône par THERA Fermetures. Val de Saône, fabrication française, pose rapide. Devis gratuit.',
   keywords: ['carport aluminium Neuville-sur-Saône', 'abri voiture Neuville-sur-Saône', 'carport sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-neuville-sur-saone' },
   openGraph: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 export default function CarportPage() {
   return (
     <ProductTemplate
-      title="Carports Aluminium a Neuville-sur-Saône"
-      subtitle="Abris voiture sur mesure — protection elegante et durable pour 1 a 4 vehicules dans la region Val de Saône (69)"
-      description="THERA Fermetures concoit et installe des carports aluminium sur mesure a Neuville-sur-Saône depuis 2015. Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. L'aluminium traite resiste a toutes les conditions climatiques sans rouille ni deformation, pour des dizaines d'annees sans entretien."
+      title="Carports Aluminium à Neuville-sur-Saône"
+      subtitle="Abris voiture sur mesure — ville du Val de Saône en expansion, nouveaux lotissements"
+      description="Ville du Val de Saône en pleine expansion résidentielle, Neuville-sur-Saône génère une forte demande en carports aluminium pour les nouveaux lotissements. THERA Fermetures y intervient régulièrement pour des installations 1 à 2 voitures avec déclaration préalable facilitée sous 20m². Design contemporain garanti pour valoriser les constructions récentes."
       heroImage="/images/carports/carport-claustra.png"
       heroImageAlt="Carport aluminium sur mesure a Neuville-sur-Saône par THERA Fermetures"
       features={[
@@ -49,9 +49,22 @@ export default function CarportPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Carports Aluminium',
-        description: 'Specialiste carports aluminium a Neuville-sur-Saône depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de carports aluminium sur mesure à Neuville-sur-Saône. Fabrication française, pose en 1-2 jours. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-neuville-sur-saone',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Neuville-sur-Saône' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
       showGalleryLink={false}
