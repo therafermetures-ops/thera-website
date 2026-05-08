@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Anse | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Anse. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Anse — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures installe vos portails aluminium sur mesure à Anse (69). Beaujolais, fabrication française, motorisation Somfy. Devis gratuit sous 24h.',
   keywords: ['portail aluminium Anse', 'portail coulissant Anse', 'portail sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-anse' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Anse"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Beaujolais (69)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Anse depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="Commune du Beaujolais au confluent de l'Azergues et de la Saône, Anse compte de nombreuses maisons individuelles pour lesquelles THERA Fermetures propose ses portails aluminium sur mesure. Coulissants, battants ou autoportants, nos portails sont fabriqués en aluminium extrudé de première qualité et installés par notre équipe locale. Le secteur d'Anse est couvert en priorité depuis notre base de Chasselay."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Anse par THERA Fermetures"
       features={[
@@ -147,9 +147,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Anse depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Anse. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-anse',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Anse' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

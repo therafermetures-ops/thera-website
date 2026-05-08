@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Caluire-et-Cuire | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Caluire-et-Cuire. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Caluire-et-Cuire — Installateur Local | THERA Fermetures',
+  description: 'Portails aluminium sur mesure à Caluire-et-Cuire par THERA Fermetures. Commune lyonnaise haut de gamme, portails design motorisés. Devis gratuit sous 24h.',
   keywords: ['portail aluminium Caluire-et-Cuire', 'portail coulissant Caluire-et-Cuire', 'portail sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-caluire-et-cuire' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Caluire-et-Cuire"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Rhône (69)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Caluire-et-Cuire depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="Commune résidentielle limitrophe de Lyon, Caluire-et-Cuire présente un parc immobilier varié où la qualité des aménagements extérieurs est exigeante. THERA Fermetures y intervient pour l'installation de portails aluminium haut de gamme, motorisés et sur mesure. Nos modèles s'adaptent aux contraintes urbaines (dégagement réduit, terrain en pente) tout en offrant un rendu esthétique soigné."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Caluire-et-Cuire par THERA Fermetures"
       features={[
@@ -151,9 +151,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Caluire-et-Cuire depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Caluire-et-Cuire. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-caluire-et-cuire',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Caluire-et-Cuire' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

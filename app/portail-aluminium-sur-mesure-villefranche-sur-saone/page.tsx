@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Villefranche-sur-Saône | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Villefranche-sur-Saône. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Villefranche-sur-Saône — Installateur Local | THERA Fermetures',
+  description: 'Entreprise THERA Fermetures installe vos portails aluminium sur mesure à Villefranche-sur-Saône. Coulissant, battant, motorisé Somfy. À 15 min de nos ateliers. Devis gratuit sous 24h.',
   keywords: ['portail aluminium Villefranche-sur-Saône', 'portail coulissant Villefranche-sur-Saône', 'portail sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-villefranche-sur-saone' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Villefranche-sur-Saône"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Rhône (69)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Villefranche-sur-Saône depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="Entreprise locale spécialisée en portails aluminium, THERA Fermetures intervient régulièrement à Villefranche-sur-Saône et dans son agglomération. Capitale du Beaujolais, Villefranche concentre de nombreuses maisons individuelles et lotissements pour lesquels nous concevons des portails coulissants ou battants sur mesure. À seulement 15 minutes de nos ateliers de Chasselay, nous assurons un suivi rapide du devis à la pose."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Villefranche-sur-Saône par THERA Fermetures"
       features={[
@@ -101,9 +101,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Villefranche-sur-Saône depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Villefranche-sur-Saône. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-villefranche-sur-saone',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Villefranche-sur-Saône' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

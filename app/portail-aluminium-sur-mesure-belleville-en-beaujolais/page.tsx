@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Belleville-en-Beaujolais | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Belleville-en-Beaujolais. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Belleville-en-Beaujolais — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures pose vos portails aluminium à Belleville-en-Beaujolais. Fabrication française, motorisation Somfy, +300 coloris. Devis gratuit en 24h.',
   keywords: ['portail aluminium Belleville-en-Beaujolais', 'portail coulissant Belleville-en-Beaujolais', 'portail sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-belleville-en-beaujolais' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Belleville-en-Beaujolais"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Rhône (69)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Belleville-en-Beaujolais depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="THERA Fermetures intervient à Belleville-en-Beaujolais pour l'installation de portails aluminium sur mesure. Ville dynamique du nord Beaujolais, Belleville accueille de nombreux pavillons et propriétés pour lesquels nous proposons des solutions coulissantes, battantes ou autoportantes. Notre équipe se déplace directement sur site pour le métrage et le conseil personnalisé."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Belleville-en-Beaujolais par THERA Fermetures"
       features={[
@@ -151,9 +151,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Belleville-en-Beaujolais depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Belleville-en-Beaujolais. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-belleville-en-beaujolais',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Belleville-en-Beaujolais' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

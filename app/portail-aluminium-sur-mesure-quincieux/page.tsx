@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Quincieux | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Quincieux. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Quincieux — Installateur Local | THERA Fermetures',
+  description: 'THERA Fermetures pose des portails aluminium à Quincieux (69). Val de Saône, fabrication française, interlocuteur unique. Devis gratuit.',
   keywords: ['portail aluminium Quincieux', 'portail coulissant Quincieux', 'portail sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-quincieux' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Quincieux"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Beaujolais (69)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Quincieux depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="Village du Val de Saône, Quincieux attire de nombreuses familles pour ses maisons spacieuses avec jardins. THERA Fermetures y réalise des installations de portails aluminium sur mesure, en priorité des modèles coulissants autoportants qui s'adaptent aux allées larges caractéristiques du secteur. Devis sur site réalisé sous 48h depuis Chasselay."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Quincieux par THERA Fermetures"
       features={[
@@ -147,9 +147,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Quincieux depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Quincieux. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-quincieux',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Quincieux' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

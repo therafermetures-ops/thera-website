@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Trévoux | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Trévoux. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Trévoux — Installateur Local | THERA Fermetures',
+  description: "Installation portail aluminium à Trévoux (01) par THERA Fermetures. Coulissant, battant, autoportant. Intervenant dans l'Ain et le Rhône. Devis gratuit.",
   keywords: ['portail aluminium Trévoux', 'portail coulissant Trévoux', 'portail sur mesure Ain (01)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-trevoux' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Trévoux"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Ain (01)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Trévoux depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="Préfecture de l'Ain, Trévoux est l'une des communes du Val de Saône où nous intervenons régulièrement. THERA Fermetures installe des portails aluminium sur mesure pour les maisons individuelles et propriétés de Trévoux et ses environs. La traversée du Rhône depuis Chasselay nous permet d'être sur site en moins de 20 minutes pour tout devis ou installation."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Trévoux par THERA Fermetures"
       features={[
@@ -151,9 +151,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Trévoux depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Trévoux. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-trevoux',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Trévoux' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

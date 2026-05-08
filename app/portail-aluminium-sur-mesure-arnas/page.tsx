@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Arnas | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Arnas. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Arnas — Installateur Local | THERA Fermetures',
+  description: 'Portails aluminium Arnas par THERA Fermetures. Commune Beaujolais, portail coulissant ou battant sur mesure, motorisé. Devis gratuit.',
   keywords: ['portail aluminium Arnas', 'portail coulissant Arnas', 'portail sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-arnas' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Arnas"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Beaujolais (69)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Arnas depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="Commune du Beaujolais située au cœur du vignoble, Arnas est une zone d'intervention régulière pour THERA Fermetures. Nous y installons des portails aluminium sur mesure pour les propriétés résidentielles et maisons de caractère. Nos références locales témoignent de notre capacité à adapter nos portails coulissants et battants aux entrées variées de la région."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Arnas par THERA Fermetures"
       features={[
@@ -147,9 +147,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Arnas depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Arnas. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-arnas',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Arnas' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />

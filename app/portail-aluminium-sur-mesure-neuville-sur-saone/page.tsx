@@ -5,8 +5,8 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Portail Aluminium sur Mesure Neuville-sur-Saône | THERA Fermetures',
-  description: 'Portails aluminium battants, coulissants et autoportants a Neuville-sur-Saône. Expert local depuis 2015, fabrication francaise, garantie 10 ans. Devis gratuit.',
+  title: 'Entreprise Portail Aluminium Neuville-sur-Saône — Installateur Local | THERA Fermetures',
+  description: 'Portails aluminium Neuville-sur-Saône par THERA Fermetures. Installateur local Val de Saône, motorisation, +300 coloris. Devis gratuit.',
   keywords: ['portail aluminium Neuville-sur-Saône', 'portail coulissant Neuville-sur-Saône', 'portail sur mesure Rhône (69)'],
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-neuville-sur-saone' },
   openGraph: {
@@ -21,7 +21,7 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Neuville-sur-Saône"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Val de Saône (69)"
-      description="THERA Fermetures concoit et installe des portails aluminium sur mesure a Neuville-sur-Saône depuis 2015. Chaque portail est fabrique en France avec de l'aluminium extrade premium et livre cles en main avec motorisation optionnelle Somfy ou BFT. Plus de 300 coloris disponibles pour s'adapter a votre architecture."
+      description="Ville du Val de Saône aux portes de Lyon, Neuville-sur-Saône présente un tissu pavillonnaire dense où la sécurisation des entrées est une priorité. THERA Fermetures y installe des portails aluminium motorisés sur mesure, combinant sécurité et design. Notre équipe intervient régulièrement dans le secteur et connaît les contraintes spécifiques des entrées en pente ou avec caniveaux."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Neuville-sur-Saône par THERA Fermetures"
       features={[
@@ -147,9 +147,22 @@ export default function PortailPage() {
       structuredData={{
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'THERA Fermetures - Portails Aluminium',
-        description: 'Specialiste portails aluminium a Neuville-sur-Saône depuis 2015.',
+        name: 'THERA Fermetures',
+        description: 'Installateur de portails aluminium sur mesure à Neuville-sur-Saône. Coulissant, battant, autoportant. Devis gratuit.',
+        url: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-neuville-sur-saone',
+        telephone: '+33474659165',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '134 ZAC Crouloup',
+          addressLocality: 'Chasselay',
+          postalCode: '69380',
+          addressCountry: 'FR',
+        },
         areaServed: { '@type': 'City', name: 'Neuville-sur-Saône' },
+        priceRange: '€€',
+        openingHoursSpecification: [
+          { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+        ],
         offers: { '@type': 'Offer', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
       }}
     />
