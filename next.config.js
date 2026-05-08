@@ -14,6 +14,16 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.thera-fermetures.fr' }],
+        destination: 'https://thera-fermetures.fr/:path*',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {
