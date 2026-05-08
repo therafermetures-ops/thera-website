@@ -201,6 +201,7 @@ export default async function PergolasPage() {
         { icon: '', title: 'Fabriquée en France', text: 'Cébel, notre fabricant partenaire, est implanté au sud de Lyon. Label "Origine France Garantie".' },
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Formation']}
+      heroH1="Vente et installation de pergola bioclimatique moderne design et sur mesure à Villefranche-sur-Saône"
       ctaText="Obtenir mon devis pergola"
       seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={{

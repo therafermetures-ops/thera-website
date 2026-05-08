@@ -45,6 +45,7 @@ export default function CarportPage() {
       ]}
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Livraison']}
       seoText="Entreprise Thera Fermetures : vente et installation de carport aluminium sur mesure à Trévoux et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
+            heroH1="Vente et installation de carport aluminium moderne et sur mesure à Trévoux"
             ctaText="Obtenir mon devis carport a Trévoux"
       structuredData={{
         '@context': 'https://schema.org',

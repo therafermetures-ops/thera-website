@@ -183,6 +183,7 @@ export default async function PortailsPage() {
         { icon: '', title: 'Fabrication française', text: 'Fabriqués en France par des partenaires certifiés Qualicoat®. Qualité et traçabilité garanties.' },
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Mise en service']}
+      heroH1="Vente et installation de portails aluminium moderne et sur mesure à Villefranche-sur-Saône"
       ctaText="Obtenir mon devis portail"
       seoText="Entreprise Thera Fermetures : vente et installation de portail battant et coulissant aluminium sur mesure et de fabrication française. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={{

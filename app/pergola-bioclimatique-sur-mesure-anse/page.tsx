@@ -133,6 +133,7 @@ export default function PergolaPage() {
       gallerySectionTag="INSPIRATIONS"
       showAdvantages={false}
       seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure à Anse et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
+      heroH1="Vente et installation de pergola bioclimatique moderne design et sur mesure à Anse"
       ctaText="Obtenir mon devis pergola a Anse"
       structuredData={{
         '@context': 'https://schema.org',

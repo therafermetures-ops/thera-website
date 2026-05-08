@@ -75,6 +75,7 @@ export default async function CarportsPage() {
         { icon: '', title: 'Valeur immobilière', text: "Un carport bien intégré peut augmenter la valeur de votre bien de 3 à 7% selon les agences immobilières." },
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Livraison']}
+      heroH1="Vente et installation de carport aluminium moderne et sur mesure à Villefranche-sur-Saône"
       ctaText="Obtenir mon devis carport"
       seoText="Entreprise Thera Fermetures : vente et installation de carport aluminium sur mesure. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={structuredData}

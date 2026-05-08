@@ -133,6 +133,7 @@ export default function PergolaPage() {
       gallerySectionTag="INSPIRATIONS"
       showAdvantages={false}
       seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure à Jassans-Riottier et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
+      heroH1="Vente et installation de pergola bioclimatique moderne design et sur mesure à Jassans-Riottier"
       ctaText="Obtenir mon devis pergola a Jassans-Riottier"
       structuredData={{
         '@context': 'https://schema.org',

@@ -143,6 +143,7 @@ export default function PortailPage() {
         </section>
       }
       seoText="Entreprise Thera Fermetures : vente et installation de portail aluminium sur mesure à Neuville-sur-Saône et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
+      heroH1="Vente et installation de portails aluminium moderne et sur mesure à Neuville-sur-Saône"
       ctaText="Obtenir mon devis portail a Neuville-sur-Saône"
       structuredData={{
         '@context': 'https://schema.org',

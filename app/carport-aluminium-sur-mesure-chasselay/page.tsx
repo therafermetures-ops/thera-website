@@ -45,6 +45,7 @@ export default function CarportPage() {
       ]}
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Livraison']}
       seoText="Entreprise Thera Fermetures : vente et installation de carport aluminium sur mesure à Chasselay et alentours. Notre showroom est situé à Chasselay."
+      heroH1="Vente et installation de carport aluminium moderne et sur mesure à Chasselay"
       ctaText="Obtenir mon devis carport a Chasselay"
       structuredData={{
         '@context': 'https://schema.org',

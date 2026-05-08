@@ -133,6 +133,7 @@ export default function PergolaPage() {
       gallerySectionTag="INSPIRATIONS"
       showAdvantages={false}
       seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure à Chasselay. Notre showroom est situé à Chasselay."
+      heroH1="Vente et installation de pergola bioclimatique moderne design et sur mesure à Chasselay"
       ctaText="Obtenir mon devis pergola a Chasselay"
       structuredData={{
         '@context': 'https://schema.org',

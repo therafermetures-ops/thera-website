@@ -44,6 +44,7 @@ interface ProductTemplateProps {
   showAdvantages?: boolean
   showGalleryLink?: boolean
   presentationTitle?: string
+  heroH1?: string
 }
 
 export default function ProductTemplate({
@@ -70,6 +71,7 @@ export default function ProductTemplate({
   showAdvantages = false,
   showGalleryLink = true,
   presentationTitle,
+  heroH1,
 }: ProductTemplateProps) {
   return (
     <div>
@@ -88,7 +90,14 @@ export default function ProductTemplate({
               Nos produits
               <div className="w-4 h-px bg-accent" />
             </div>
-          <h1 className="text-white mb-5">{title}</h1>
+          {heroH1 ? (
+            <>
+              <h1 className="text-white/40 text-xs font-light mb-3 tracking-wide">{heroH1}</h1>
+              <h2 className="text-white mb-5">{title}</h2>
+            </>
+          ) : (
+            <h1 className="text-white mb-5">{title}</h1>
+          )}
           <p className="text-white/80 text-xl mb-10 leading-relaxed">{subtitle}</p>
           <Link href="/contact" className="btn-primary text-base py-4 px-8">
             {ctaText}

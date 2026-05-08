@@ -76,6 +76,7 @@ export default function PorteDeGaragePage() {
         { icon: '', title: 'Garantie 5 ans', text: "Pieces et main d'oeuvre couverts 5 ans. Service apres-vente reactif base a Chasselay." },
       ]}
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Mise en service']}
+      heroH1="Vente et installation de porte de garage sectionnelle motorisée sur mesure à Belleville-en-Beaujolais"
       ctaText="Obtenir mon devis porte de garage a Belleville-en-Beaujolais"
       seoText="Entreprise Thera Fermetures : vente et installation de porte de garage sectionnelle sur mesure a Belleville-en-Beaujolais et alentours. Base a Chasselay entre Villefranche-sur-Saone et Limonest."
       structuredData={{

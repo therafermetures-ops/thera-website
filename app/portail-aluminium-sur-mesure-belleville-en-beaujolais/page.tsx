@@ -147,6 +147,7 @@ export default function PortailPage() {
         </section>
       }
       seoText="Entreprise Thera Fermetures : vente et installation de portail aluminium sur mesure à Belleville-en-Beaujolais et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
+      heroH1="Vente et installation de portails aluminium moderne et sur mesure à Belleville-en-Beaujolais"
       ctaText="Obtenir mon devis portail a Belleville-en-Beaujolais"
       structuredData={{
         '@context': 'https://schema.org',
