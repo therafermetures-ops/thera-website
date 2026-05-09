@@ -277,6 +277,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Portails acier (13)
+    { url: `${BASE_URL}/portails-acier`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-villefranche-sur-saone`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-belleville-en-beaujolais`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-limonest`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-trevoux`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-lozanne`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-caluire-et-cuire`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-anse`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-arnas`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-quincieux`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-neuville-sur-saone`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-chasselay`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/portail-acier-sur-mesure-jassans-riottier`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     // Portes de garage géo (8)
     {
       url: `${BASE_URL}/porte-de-garage-sur-mesure-anse`,
