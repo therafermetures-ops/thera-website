@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://thera-fermetures.fr'
+const BASE_URL = 'https://www.thera-fermetures.fr'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
