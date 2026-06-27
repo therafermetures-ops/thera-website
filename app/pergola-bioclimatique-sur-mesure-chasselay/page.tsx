@@ -5,14 +5,13 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Entreprise Pergola Bioclimatique Chasselay — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures, basé à Chasselay, installe pergolas bioclimatiques sur mesure. Showroom sur place, intervention immédiate. Devis gratuit.',
-  keywords: ['pergola bioclimatique Chasselay', 'pergola motorisee Chasselay', 'terrasse couverte Rhône (69)'],
+  title: 'Pergola Bioclimatique Design Cebel Chasselay — Devis Gratuit, Installateur Sur Mesure | THERA Fermetures',
+  description: 'Installateur de pergolas bioclimatiques Cebel sur mesure à Chasselay : design moderne, lames orientables motorisées, LED intégrées. Devis gratuit par THERA Fermetures dans le Rhône (69) et l\'Ain (01).',
   alternates: { canonical: 'https://thera-fermetures.fr/pergola-bioclimatique-sur-mesure-chasselay' },
   openGraph: {
-    title: 'Pergola Bioclimatique sur Mesure Chasselay — THERA Fermetures',
-    description: 'Pergola motorisee sur mesure a Chasselay. Devis gratuit.',
-    images: [{ url: '/images/pergolas/pergola-bioclimatique.jpg', width: 1200, height: 630, alt: 'Pergola bioclimatique Chasselay' }],
+    title: 'Pergola Bioclimatique Design Cebel Chasselay | THERA Fermetures',
+    description: 'Installateur de pergolas bioclimatiques Cebel sur mesure à Chasselay : design moderne, lames orientables motorisées, LED intégrées. Devis gratuit par THERA Fermetures dans le Rhône (69) et l\'Ain (01).',
+    images: [{ url: '/images/pergolas/pergola-villefranche.jpg', width: 1200, height: 630, alt: 'Pergola Bioclimatique Chasselay' }],
   },
 }
 
@@ -23,26 +22,26 @@ export default function PergolaPage() {
       subtitle="Terrasses motorisées — siège de THERA Fermetures, showroom sur place, pergola grandeur nature"
       description="Notre siège se trouve à Chasselay (134 ZAC Crouloup, 69380). Les résidents de Chasselay ont l'avantage de pouvoir visiter notre showroom pour voir nos pergolas bioclimatiques grandeur nature avant commande. THERA Fermetures assure les délais d'installation les plus courts sur Chasselay et ses environs immédiats."
       heroImage="/images/pergolas/pergola-bioclimatique.jpg"
-      heroImageAlt="Pergola bioclimatique motorisee a Chasselay par THERA Fermetures"
+      heroImageAlt="Pergola bioclimatique motorisée a Chasselay par THERA Fermetures"
       features={[
         'Lames orientables de 0° a 145°',
-        'Motorisation electrique silencieuse + telecommande',
+        'Motorisation électrique silencieuse + télécommande',
         'Capteur de pluie automatique disponible',
         'Eclairage LED standard ou RGB dans les lames',
-        'Chauffage infrarouge integre en option',
-        'Stores et rideaux motorises en option',
-        'Aluminium certifie — finitions sans vis apparentes',
+        'Chauffage infrarouge intégré en option',
+        'Stores et rideaux motorisés en option',
+        'Aluminium certifié — finitions sans vis apparentes',
         'Pose cle en main en 1 a 2 jours',
       ]}
       variants={[
         {
           title: 'Pergola Carat',
           badge: 'Origine France Garantie',
-          description: "La Pergola Carat est notre modele premium, labellisee Origine France Garantie et fabriquee par Cebel, entreprise implantee au sud de Lyon. Ses poteaux en forme de diamant lui conferent une finition originale et raffinee. Exposee en showroom a Chasselay, venez la voir de pres.",
+          description: "La Pergola Carat est notre modele premium, labellisee Origine France Garantie et fabriquée par Cebel, entreprise implantee au sud de Lyon. Ses poteaux en forme de diamant lui conferent une finition originale et raffinee. Exposee en showroom a Chasselay, venez la voir de pres.",
           specs: [
             'Poteaux a section diamant — design unique et contemporain',
             'Label Origine France Garantie — fabrication Cebel (Lyon)',
-            'Store Veozip integre au coffre sans rail visible',
+            'Store Veozip intégré au coffre sans rail visible',
             'Fixations invisibles — aucune vis apparente',
             'Finitions deux tons disponibles',
             'Personnalisation totale : dimensions, couleurs, options',
@@ -52,13 +51,13 @@ export default function PergolaPage() {
         },
         {
           title: 'Pergola Elements',
-          badge: 'Excellent rapport qualite/prix',
-          description: "La Pergola Elements est notre modele accessible et haut de gamme. Poteaux avec chanfreins, quincaillerie entierement integree sans vis apparente. Ideale pour les proprietes de Chasselay, elle offre le meilleur rapport entre investissement et performance.",
+          badge: 'Excellent rapport qualité/prix',
+          description: "La Pergola Elements est notre modele accessible et haut de gamme. Poteaux avec chanfreins, quincaillerie entierement intégrée sans vis apparente. Ideale pour les proprietes de Chasselay, elle offre le meilleur rapport entre investissement et performance.",
           specs: [
             'Poteaux a chanfreins — elegance accessible',
-            'Quincaillerie entierement integree — zero vis visible',
+            'Quincaillerie entierement intégrée — zero vis visible',
             'Memes options que la Carat (LED, stores, chauffage)',
-            'Fabrication aluminium qualite professionnelle',
+            'Fabrication aluminium qualité professionnelle',
             'Installation rapide — 1 a 2 jours selon dimensions',
             'Garantie 10 ans structure et finitions',
           ],
@@ -78,15 +77,15 @@ export default function PergolaPage() {
               <div className="section-tag justify-center">Complémentaires</div>
               <h2>Personnalisable<br className="hidden md:block" /> et évolutive</h2>
               <p className="text-muted text-lg max-w-2xl mx-auto mt-4">
-                Les équipements complémentaires pour personnaliser votre pergola.
+                Les équipements complémentaires pour personnalisér votre pergola.
               </p>
             </ScrollReveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { src: "/images/pergolas/structure bi-ton.avif", label: "Structure bi-ton" },
                 { src: "/images/pergolas/prise-de-courant.avif", label: "Prise de courant" },
-                { src: "/images/pergolas/eclairage-blanc.avif", label: "Éclairage blanc" },
-                { src: "/images/pergolas/eclairage-couleur.avif", label: "Éclairage couleur" },
+                { src: "/images/pergolas/éclairage-blanc.avif", label: "Éclairage blanc" },
+                { src: "/images/pergolas/éclairage-couleur.avif", label: "Éclairage couleur" },
                 { src: "/images/pergolas/panneau-brise-vue.avif", label: "Panneau brise-vue" },
                 { src: "/images/pergolas/liserés.avif", label: "Liserés" },
                 { src: "/images/pergolas/enceinte-intégrée.avif", label: "Enceinte intégrée" },
@@ -121,9 +120,9 @@ export default function PergolaPage() {
       advantages={[
         { icon: '', title: "Confort toute l'annee", text: 'Regulation naturelle par orientation des lames. Fraicheur l\'ete, protection pluie toute l\'annee.' },
         { icon: '', title: 'Etancheite parfaite', text: 'Lames fermees a 145° : protection totale contre la pluie. Profitez de votre terrasse meme par mauvais temps.' },
-        { icon: '', title: 'Pilotage intelligent', text: "Telecommande, app smartphone, capteur de pluie automatique. Votre pergola s'adapte a la meteo." },
-        { icon: '', title: 'Plus-value immobiliere', text: 'Une pergola bien integree augmente la valeur et l\'attractivite de votre bien immobilier.' },
-        { icon: '', title: 'Options premium', text: 'LED RGBW, chauffage infrarouge, stores motorises — votre terrasse devient un vrai salon exterieur.' },
+        { icon: '', title: 'Pilotage intelligent', text: "Télécommande, app smartphone, capteur de pluie automatique. Votre pergola s'adapté a la meteo." },
+        { icon: '', title: 'Plus-value immobiliere', text: 'Une pergola bien intégrée augmente la valeur et l\'attractivité de votre bien immobilier.' },
+        { icon: '', title: 'Options premium', text: 'LED RGBW, chauffage infrarouge, stores motorisés — votre terrasse devient un vrai salon extérieur.' },
         { icon: '', title: 'Fabriquee en France', text: 'Cebel, notre fabricant partenaire, est implante au sud de Lyon. Label Origine France Garantie.' },
       ]}
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Formation']}
@@ -133,7 +132,7 @@ export default function PergolaPage() {
       gallerySectionTag="INSPIRATIONS"
       showAdvantages={false}
       seoText="Entreprise Thera Fermetures : vente et installation de pergola bioclimatique design sur mesure à Chasselay. Notre showroom est situé à Chasselay."
-      heroH1="Vente et installation de pergola bioclimatique moderne design et sur mesure à Chasselay"
+      heroH1="Pergola Bioclimatique Chasselay — Installation Sur Mesure par THERA Fermetures"
       ctaText="Obtenir mon devis pergola a Chasselay"
       structuredData={{
         '@context': 'https://schema.org',

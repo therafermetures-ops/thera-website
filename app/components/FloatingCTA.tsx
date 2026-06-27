@@ -29,7 +29,7 @@ export default function FloatingCTA() {
 
       {/* Phone button */}
       <a
-        href="tel:+33474649165"
+        href="tel:+33474659165"
         className="group flex items-center gap-2 bg-white text-dark font-bold text-sm px-4 py-3 rounded-full shadow-card hover:shadow-card-hover border border-gray-100 transition-all duration-300 hover:scale-105 hover:border-primary hover:text-primary"
         aria-label="Appeler THERA Fermetures"
       >

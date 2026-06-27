@@ -5,14 +5,13 @@ import ProductTemplate from '../components/ProductTemplate'
 import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Entreprise Portail Aluminium Quincieux — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures pose des portails aluminium à Quincieux (69). Val de Saône, fabrication française, interlocuteur unique. Devis gratuit.',
-  keywords: ['portail aluminium Quincieux', 'portail coulissant Quincieux', 'portail sur mesure Rhône (69)'],
+  title: 'Portail Aluminium Motorisé Quincieux — Devis Gratuit, Installateur Sur Mesure | THERA Fermetures',
+  description: 'Installateur de portails aluminium motorisés sur mesure à Quincieux : coulissants, battants et autoportants Somfy ou BFT. Devis gratuit, pose par THERA Fermetures dans le nord lyonnais (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-aluminium-sur-mesure-quincieux' },
   openGraph: {
-    title: 'Portail Aluminium sur Mesure Quincieux — THERA Fermetures',
-    description: 'Portails aluminium sur mesure a Quincieux. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail aluminium Quincieux' }],
+    title: 'Portail Aluminium Motorisé Quincieux | THERA Fermetures',
+    description: 'Installateur de portails aluminium motorisés sur mesure à Quincieux : coulissants, battants et autoportants Somfy ou BFT. Devis gratuit, pose par THERA Fermetures dans le nord lyonnais (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Aluminium Quincieux' }],
   },
 }
 
@@ -21,16 +20,16 @@ export default function PortailPage() {
     <ProductTemplate
       title="Portails Aluminium a Quincieux"
       subtitle="Coulissants, battants ou autoportants — installation sur mesure dans la region Beaujolais (69)"
-      description="Village du Val de Saône, Quincieux attire de nombreuses familles pour ses maisons spacieuses avec jardins. THERA Fermetures y réalise des installations de portails aluminium sur mesure, en priorité des modèles coulissants autoportants qui s'adaptent aux allées larges caractéristiques du secteur. Devis sur site réalisé sous 48h depuis Chasselay."
+      description="Village du Val de Saône, Quincieux attire de nombreuses familles pour ses maisons spacieuses avec jardins. THERA Fermetures y réalise des installations de portails aluminium sur mesure, en priorité des modèles coulissants autoportants qui s'adaptént aux allées larges caractéristiques du secteur. Devis sur site réalisé sous 48h depuis Chasselay."
       heroImage="/images/portails/portail-arnas.jpg"
       heroImageAlt="Portail aluminium coulissant sur mesure a Quincieux par THERA Fermetures"
       features={[
-        'Aluminium extrade premiere qualite (non recycle)',
+        'Aluminium extrudé première qualité (non recycle)',
         '+300 coloris disponibles — RAL standards ou sur demande',
         'Portails battants 1 ou 2 vantaux',
         'Portails coulissants autoportants ou sur rail',
-        'Motorisation Somfy / BFT (telecommande, badge, GSM)',
-        'Serrures et verrous haute securite',
+        'Motorisation Somfy / BFT (télécommande, badge, GSM)',
+        'Serrures et verrous haute sécurité',
         'Certifications Qualicoat et Qualimarine pour le laquage',
         'Garantie structure et peinture 10 ans',
       ]}
@@ -38,11 +37,11 @@ export default function PortailPage() {
         {
           title: 'Portail Coulissant',
           badge: 'Le plus populaire',
-          description: "Le portail coulissant s'ouvre en glissant lateralement. Ideal pour les entrees etroites ou les allees en pente, il est disponible sur rail ou autoportant. Solution robuste pour les proprietes de Quincieux.",
+          description: "Le portail coulissant s'ouvre en glissant latéralement. Ideal pour les entrées etroites ou les allées en pente, il est disponible sur rail ou autoportant. Solution robuste pour les proprietes de Quincieux.",
           specs: [
             'Glissement lateral sur rail ou autoportant (sans rail au sol)',
-            'Ideal pour allees en pente ou terrains etroits',
-            'Motorisation integree invisible disponible',
+            'Ideal pour allées en pente ou terrains etroits',
+            'Motorisation intégrée invisible disponible',
             "Larges dimensions possibles jusqu'a 10m",
             'Entretien minime — roulements en acier inoxydable',
             'Disponible avec ou sans portillon assorti',
@@ -53,13 +52,13 @@ export default function PortailPage() {
         {
           title: 'Portail Battant',
           badge: 'Design premium',
-          description: "Le portail battant s'ouvre comme une porte classique, en 1 ou 2 vantaux. Elegant et intemporel, il s'adapte parfaitement a tous les styles architecturaux. Motorisation totalement invisible. Tres apprecie des proprietaires de Quincieux.",
+          description: "Le portail battant s'ouvre comme une porte classique, en 1 ou 2 vantaux. Elegant et intemporel, il s'adapté parfaitement a tous les styles architecturaux. Motorisation totalement invisible. Très apprécié des propriétaires de Quincieux.",
           specs: [
             'Ouverture en 1 ou 2 vantaux selon la largeur',
-            'Motorisation integree et invisible dans le vantail',
+            'Motorisation intégrée et invisible dans le vantail',
             'Certifications Qualicoat et Qualimarine pour le laquage',
-            'Ferrage haute securite — verins ou bras articules',
-            'Personnalisation totale : lames, barreaux, tole decorative',
+            'Ferrage haute sécurité — verins ou bras articulés',
+            'Personnalisation totale : lames, barreaux, tole décorative',
             'Portillon assorti disponible en option',
           ],
           image: '/images/portails/Portail_battant_aluminium_rillieux.png',
@@ -68,14 +67,14 @@ export default function PortailPage() {
         {
           title: 'Portail Autoportant',
           badge: 'Sans rail au sol',
-          description: "Le portail autoportant glisse lateralement sans aucun rail enterre dans le sol. Ideal pour les allees pavees, en pente ou avec caniveaux. Grandes ouvertures possibles jusqu'a 15 metres.",
+          description: "Le portail autoportant glisse latéralement sans aucun rail enterré dans le sol. Ideal pour les allées pavées, en pente ou avec caniveaux. Grandes ouvertures possibles jusqu'a 15 metres.",
           specs: [
-            'Aucun rail enterre dans le sol — installation propre',
-            "Ideal pour allees en pente, avec caniveaux ou pavees",
+            'Aucun rail enterré dans le sol — installation propre',
+            "Ideal pour allées en pente, avec caniveaux ou pavées",
             "Grandes ouvertures possibles jusqu'a 15m",
-            'Contrepoids integre pour equilibre parfait',
+            'Contrepoids intégré pour equilibre parfait',
             'Compatible motorisation a galets ou chaine',
-            'Structure renforcee pour les portails lourds',
+            'Structure renforcée pour les portails lourds',
           ],
           image: '/images/portails/portail-aluminium-autoportant.jpg',
           imageAlt: 'Portail autoportant aluminium THERA Fermetures',
@@ -87,12 +86,12 @@ export default function PortailPage() {
         { src: '/images/portails/portail-villefranche.jpg', alt: 'Portail aluminium Villefranche', caption: 'Portail sur mesure — Villefranche' },
       ]}
       advantages={[
-        { icon: '', title: 'Robustesse extreme', text: "Aluminium extrade resistant aux chocs, intemperies et corrosion. Duree de vie 30+ ans." },
+        { icon: '', title: 'Robustesse extrême', text: "Aluminium extrudé résistant aux chocs, intemperies et corrosion. Duree de vie 30+ ans." },
         { icon: '', title: 'Zero entretien', text: "L'aluminium ne rouille pas et ne se deforme pas. Un coup d'eau suffit pour retrouver l'eclat du neuf." },
-        { icon: '', title: '+300 coloris', text: 'Blanc, gris anthracite, noir mat, couleurs sur demande. Finition laquee Qualicoat ultra-durable.' },
-        { icon: '', title: 'Securite maximale', text: 'Serrures certifiees, motorisation avec detection d\'obstacles. Votre propriete est pleinement protegee.' },
-        { icon: '', title: 'Motorisation smart', text: 'Telecommande, smartphone, interphone video. Compatibles Somfy, BFT — maison connectee.' },
-        { icon: '', title: 'Fabrication francaise', text: 'Fabriques en France par des partenaires certifies Qualicoat. Qualite et tracabilite garanties.' },
+        { icon: '', title: '+300 coloris', text: 'Blanc, gris anthracite, noir mat, couleurs sur demande. Finition laquée Qualicoat ultra-durable.' },
+        { icon: '', title: 'Sécurité maximale', text: 'Serrures certifiées, motorisation avec detection d\'obstacles. Votre propriete est pleinement protégée.' },
+        { icon: '', title: 'Motorisation smart', text: 'Télécommande, smartphone, interphone video. Compatibles Somfy, BFT — maison connectée.' },
+        { icon: '', title: 'Fabrication française', text: 'Fabriques en France par des partenaires certifiés Qualicoat. Qualite et traçabilité garanties.' },
       ]}
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Mise en service']}
       youtubeId="wVuPyTZSGig"
@@ -143,7 +142,7 @@ export default function PortailPage() {
         </section>
       }
       seoText="Entreprise Thera Fermetures : vente et installation de portail aluminium sur mesure à Quincieux et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
-      heroH1="Vente et installation de portails aluminium moderne et sur mesure à Quincieux"
+      heroH1="Portail Aluminium Quincieux — Installation Sur Mesure par THERA Fermetures"
       ctaText="Obtenir mon devis portail a Quincieux"
       structuredData={{
         '@context': 'https://schema.org',

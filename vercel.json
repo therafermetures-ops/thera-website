@@ -8,5 +8,88 @@
   "framework": "nextjs",
   "github": {
     "enabled": false
-  }
+  },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.thera-fermetures.fr" }],
+      "destination": "https://thera-fermetures.fr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/portail-aluminium-sur-mesure-villefranche",
+      "destination": "/portail-aluminium-sur-mesure-villefranche-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/portail-acier-sur-mesure-villefranche",
+      "destination": "/portail-acier-sur-mesure-villefranche-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/carport-aluminium-sur-mesure-villefranche",
+      "destination": "/carport-aluminium-sur-mesure-villefranche-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/pergola-bioclimatique-sur-mesure-villefranche",
+      "destination": "/pergola-bioclimatique-sur-mesure-villefranche-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/porte-de-garage-sur-mesure-villefranche",
+      "destination": "/porte-de-garage-sur-mesure-villefranche-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/portail-aluminium-sur-mesure-neuville",
+      "destination": "/portail-aluminium-sur-mesure-neuville-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/portail-acier-sur-mesure-neuville",
+      "destination": "/portail-acier-sur-mesure-neuville-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/carport-aluminium-sur-mesure-neuville",
+      "destination": "/carport-aluminium-sur-mesure-neuville-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/pergola-bioclimatique-sur-mesure-neuville",
+      "destination": "/pergola-bioclimatique-sur-mesure-neuville-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/porte-de-garage-sur-mesure-neuville",
+      "destination": "/porte-de-garage-sur-mesure-neuville-sur-saone",
+      "permanent": true
+    },
+    {
+      "source": "/portail-aluminium-sur-mesure-belleville",
+      "destination": "/portail-aluminium-sur-mesure-belleville-en-beaujolais",
+      "permanent": true
+    },
+    {
+      "source": "/portail-acier-sur-mesure-belleville",
+      "destination": "/portail-acier-sur-mesure-belleville-en-beaujolais",
+      "permanent": true
+    },
+    {
+      "source": "/carport-aluminium-sur-mesure-belleville",
+      "destination": "/carport-aluminium-sur-mesure-belleville-en-beaujolais",
+      "permanent": true
+    },
+    {
+      "source": "/pergola-bioclimatique-sur-mesure-belleville",
+      "destination": "/pergola-bioclimatique-sur-mesure-belleville-en-beaujolais",
+      "permanent": true
+    },
+    {
+      "source": "/porte-de-garage-sur-mesure-belleville",
+      "destination": "/porte-de-garage-sur-mesure-belleville-en-beaujolais",
+      "permanent": true
+    }
+  ]
 }

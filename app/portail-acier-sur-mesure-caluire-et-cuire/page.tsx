@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Caluire-et-Cuire — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Caluire-et-Cuire. Design contemporain, motifs exclusifs. Devis gratuit.',
-  keywords: ['portail acier caluire-et-cuire', 'portail acier sur mesure caluire-et-cuire', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Caluire-et-Cuire — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Caluire-et-Cuire : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans la métropole de Lyon (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-caluire-et-cuire' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Caluire-et-Cuire — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Caluire-et-Cuire. Design contemporain, motifs exclusifs. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Caluire-et-Cuire' }],
+    title: 'Portail Acier & Métallique Motorisé Caluire-et-Cuire | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Caluire-et-Cuire : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans la métropole de Lyon (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Caluire-et-Cuire' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Caluire-et-Cuire"
+      heroH1="Portail Acier & Métallique Caluire-et-Cuire — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Caluire-et-Cuire"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="Commune lyonnaise aux exigences esthétiques élevées, Caluire-et-Cuire accueille des portails acier sur mesure THERA Fermetures qui font la différence. Design contemporain, motifs exclusifs, finitions soignées — l'acier répond aux attentes les plus exigeantes."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Caluire-et-Cuire par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

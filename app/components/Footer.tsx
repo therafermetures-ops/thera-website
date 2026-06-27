@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             {/* Contact */}
             <div className="space-y-3 text-sm">
-              <a href="tel:+33474649165" className="flex items-center gap-2 text-gray-300 hover:text-primary transition-colors group">
+              <a href="tel:+33474659165" className="flex items-center gap-2 text-gray-300 hover:text-primary transition-colors group">
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
@@ -80,7 +80,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { label: 'Accueil', href: '/' },
-                { label: 'Nos Réalisations', href: '/realisations' },
+                { label: 'Inspirations', href: '/realisations' },
                 { label: 'Actualités', href: '/actualites' },
                 { label: 'À Propos', href: '/a-propos' },
                 { label: 'Contact', href: '/contact' },
@@ -117,7 +117,7 @@ export default function Footer() {
             {/* CTA Box */}
             <div className="bg-white/5 border border-white/10 rounded-xl p-5">
               <p className="text-white font-bold text-sm mb-1">Devis gratuit</p>
-              <p className="text-gray-400 text-xs mb-4">Visite offerte — sans engagement</p>
+              <p className="text-gray-400 text-xs mb-4">Devis personnalisé, sans engagement</p>
               <Link
                 href="/contact"
                 className="block text-center bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2.5 rounded-lg transition-colors"
@@ -151,7 +151,7 @@ export default function Footer() {
             '@type': 'LocalBusiness',
             name: 'THERA Fermetures',
             url: 'https://thera-fermetures.fr',
-            telephone: '+33474649165',
+            telephone: '+33474659165',
             email: 'therafermetures@gmail.com',
             address: {
               '@type': 'PostalAddress',

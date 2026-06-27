@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Lozanne — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Lozanne. Commune voisine de Chasselay, intervention rapide. Devis gratuit.',
-  keywords: ['portail acier lozanne', 'portail acier sur mesure lozanne', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Lozanne — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Lozanne : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans la vallée de l\'Azergues (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-lozanne' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Lozanne — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Lozanne. Commune voisine de Chasselay, intervention rapide. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Lozanne' }],
+    title: 'Portail Acier & Métallique Motorisé Lozanne | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Lozanne : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans la vallée de l\'Azergues (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Lozanne' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Lozanne"
+      heroH1="Portail Acier & Métallique Lozanne — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Lozanne"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="Commune voisine de Chasselay, Lozanne bénéficie de nos interventions les plus rapides pour l'installation de portails acier sur mesure. THERA Fermetures y conçoit des portails uniques adaptés aux styles architecturaux variés du secteur Beaujolais."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Lozanne par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

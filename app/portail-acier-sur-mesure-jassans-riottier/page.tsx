@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Jassans-Riottier — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Jassans-Riottier (01). Ain et Rhône, fabrication unique. Devis gratuit.',
-  keywords: ['portail acier jassans-riottier', 'portail acier sur mesure jassans-riottier', 'installateur portail acier ain'],
+  title: 'Portail Acier & Métallique Motorisé Jassans-Riottier — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Jassans-Riottier : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans l\'Ain (01) et le Beaujolais.',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-jassans-riottier' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Jassans-Riottier — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Jassans-Riottier (01). Ain et Rhône, fabrication unique. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Jassans-Riottier' }],
+    title: 'Portail Acier & Métallique Motorisé Jassans-Riottier | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Jassans-Riottier : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans l\'Ain (01) et le Beaujolais.',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Jassans-Riottier' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Jassans-Riottier"
+      heroH1="Portail Acier & Métallique Jassans-Riottier — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Jassans-Riottier"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="THERA Fermetures couvre Jassans-Riottier et le secteur de l'Ain pour l'installation de portails acier sur mesure. La proximité avec Trévoux et notre base à Chasselay permettent des interventions rapides et un suivi personnalisé pour chaque projet acier."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Jassans-Riottier par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

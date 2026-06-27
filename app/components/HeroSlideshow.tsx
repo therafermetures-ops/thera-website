@@ -1,8 +1,16 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+const slides = [
+  { src: "/images/portails/portail_coulissant_alu_ajouré_villefranche.avif", alt: 'Portail aluminium coulissant THERA Fermetures' },
+  { src: '/images/carports/Carport-poteau-deporte.avif', alt: 'Carport aluminium THERA Fermetures' },
+  { src: '/images/pergolas/pergola_bioclimatique_cebel.avif', alt: 'Pergola bioclimatique THERA Fermetures' },
+  { src: "/images/portails/portail_coulissant_aluminium_chazay_d'azrgues.avif", alt: "Portail coulissant aluminium Chazay d'Azergues" },
+  { src: '/images/pro/portail de résidence villefranche sur saone.jpg', alt: 'Portail de résidence Villefranche-sur-Saône THERA Fermetures' },
+]
 
 type Props = {
   tag: string
@@ -14,125 +22,112 @@ type Props = {
   btnReal: string
 }
 
-export default function HeroSlideshow({ tag, h1, h2, h3, heroDesc, btnDevis, btnReal }: Props) {
-  const [parallax, setParallax] = useState({ x: 0, y: 0 })
-  const [visible, setVisible]   = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+export default function HeroSlideshow({ tag, h1, h2, heroDesc, btnDevis }: Props) {
+  const [current, setCurrent] = useState(0)
 
-  // Apparition au montage
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 80)
-    return () => clearTimeout(t)
-  }, [])
-
-  // Parallaxe souris légère
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (!containerRef.current) return
-      const rect = containerRef.current.getBoundingClientRect()
-      setParallax({
-        x: ((e.clientX - rect.left) / rect.width  - 0.5) * 18,
-        y: ((e.clientY - rect.top)  / rect.height - 0.5) * 12,
-      })
-    }
-    const el = containerRef.current
-    el?.addEventListener('mousemove', onMove)
-    return () => el?.removeEventListener('mousemove', onMove)
+    const t = setInterval(() => setCurrent(c => (c + 1) % slides.length), 1600)
+    return () => clearInterval(t)
   }, [])
 
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-screen flex items-center overflow-hidden"
-    >
-      {/* ── IMAGE FOND — Pergola ── */}
-      <div
-        className="absolute inset-[-4%]"
-        style={{
-          transform: `translate(${parallax.x * 0.45}px, ${parallax.y * 0.45}px) scale(1.05)`,
-          transition: 'transform 0.12s ease-out',
-          willChange: 'transform',
-        }}
-      >
-        <Image
-          src="/images/pergolas/pergola-bioclimatique.jpg"
-          alt="Pergola bioclimatique sur mesure THERA Fermetures"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-      </div>
+    <section className="flex flex-col-reverse lg:grid lg:min-h-screen" style={{ gridTemplateColumns: '1fr 1.2fr' }}>
 
-      {/* ── DÉGRADÉS ── */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20 z-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
-
-      {/* ── CONTENU ── */}
-      <div className="relative z-20 container pt-16 pb-16 md:pt-20 md:pb-24">
-        <div className="max-w-2xl">
-
-          {/* Tag */}
-          <div
-            className="section-tag text-white/60 mb-8 transition-all duration-700"
-            style={{
-              opacity:   visible ? 1 : 0,
-              transform: visible ? 'translateY(0)' : 'translateY(10px)',
-            }}
-          >
+      {/* Texte gauche — fond blanc */}
+      <div className="flex flex-col justify-center px-6 py-14 sm:px-12 lg:px-[80px] lg:py-[80px] bg-white relative overflow-hidden">
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <p style={{ fontSize: 11, letterSpacing: '0.5em', textTransform: 'uppercase', color: '#aaa', marginBottom: 40, fontWeight: 500 }}>
             {tag}
-          </div>
+          </p>
 
-          {/* Titre ligne par ligne */}
-          <h1 className="text-white mb-6 leading-none font-extrabold">
-            {[h1, h2, h3].map((line, i) => (
-              <span key={i} className="block overflow-hidden">
-                <span
-                  className={`block transition-all duration-700 ${i === 1 ? 'text-gradient' : ''}`}
-                  style={{
-                    opacity:   visible ? 1 : 0,
-                    transform: visible ? 'translateY(0)' : 'translateY(30px)',
-                    transitionDelay: `${100 + i * 120}ms`,
-                  }}
-                >
-                  {line}
-                </span>
-              </span>
-            ))}
+          <h1 style={{
+            fontSize: 'clamp(44px, 5vw, 68px)',
+            fontWeight: 200, lineHeight: 1.05,
+            margin: '0 0 8px', letterSpacing: '-0.03em', color: '#1a1a1a',
+          }}>
+            {h1}
+          </h1>
+          <h1 style={{
+            fontSize: 'clamp(44px, 5vw, 68px)',
+            fontWeight: 700, lineHeight: 1.05,
+            margin: '0 0 8px', letterSpacing: '-0.03em', color: '#1a1a1a',
+          }}>
+            {h2}
           </h1>
 
-          {/* Description */}
-          <p
-            className="text-white/80 text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-light transition-all duration-700"
-            style={{
-              opacity:   visible ? 1 : 0,
-              transform: visible ? 'translateY(0)' : 'translateY(15px)',
-              transitionDelay: '480ms',
-            }}
-          >
+          <div style={{ width: 48, height: 2, background: '#22c55e', margin: '28px 0' }} />
+
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: '#666', maxWidth: 380, marginBottom: 48 }}>
             {heroDesc}
           </p>
 
-          {/* Boutons */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 transition-all duration-700"
+          <Link
+            href="/contact"
             style={{
-              opacity:   visible ? 1 : 0,
-              transform: visible ? 'translateY(0)' : 'translateY(15px)',
-              transitionDelay: '580ms',
+              display: 'inline-flex', alignItems: 'center',
+              background: '#1a1a1a', color: '#fff',
+              padding: '16px 36px',
+              fontWeight: 600, fontSize: 15,
+              textDecoration: 'none',
+              letterSpacing: '0.05em',
             }}
           >
-            <Link href="/contact" className="btn-primary text-base py-4 px-8">
-              {btnDevis}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link href="/realisations" className="btn-outline text-base py-4 px-8">
-              {btnReal}
-            </Link>
-          </div>
+            {btnDevis}
+          </Link>
+        </div>
+      </div>
 
+      {/* Image droite — diaporama */}
+      <div className="relative overflow-hidden min-h-[52vw] sm:min-h-[50vh] lg:min-h-0">
+        {slides.map((slide, i) => (
+          <div
+            key={i}
+            style={{
+              position: 'absolute', inset: 0,
+              opacity: i === current ? 1 : 0,
+              transition: 'opacity 1s ease-in-out',
+            }}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              className="object-cover"
+              priority={i === 0}
+              sizes="55vw"
+            />
+          </div>
+        ))}
+
+        {/* Badge Made in France — gauche */}
+        <div style={{ position: 'absolute', bottom: 36, left: 28, zIndex: 10 }}>
+          <Image
+            src="/images/made in france.png"
+            alt="Fabrication française"
+            width={80}
+            height={80}
+            style={{ objectFit: 'contain' }}
+          />
+        </div>
+
+        {/* Points de navigation — droite */}
+        <div style={{
+          position: 'absolute', bottom: 36, right: 28,
+          display: 'flex', gap: 8, zIndex: 10,
+        }}>
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              style={{
+                width: i === current ? 24 : 8, height: 8,
+                borderRadius: 4,
+                background: i === current ? '#22c55e' : 'rgba(255,255,255,0.5)',
+                border: 'none', cursor: 'pointer',
+                transition: 'all 0.3s', padding: 0,
+              }}
+            />
+          ))}
         </div>
       </div>
     </section>

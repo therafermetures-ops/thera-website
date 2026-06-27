@@ -49,6 +49,12 @@ export default async function PergolasPage() {
       squareImages={true}
       gallerySectionTag="INSPIRATIONS"
       showAdvantages={false}
+      variantMinimalText={true}
+      variantSectionTitle="Les types de pergolas"
+      gallerySectionLarge={true}
+      variantLargeMinHeight={650}
+      variantSmallMinHeight={325}
+      galleryObjectFit="contain"
       features={[
         'Lames orientables de 0° à 145° (de fermé à ouvert)',
         'Motorisation électrique silencieuse + télécommande',
@@ -150,47 +156,37 @@ export default async function PergolasPage() {
                 ))}
               </div>
               <ScrollReveal className="text-center mt-12">
-                <p className="text-muted text-lg max-w-3xl mx-auto mb-8">
+                <p className="text-muted text-lg max-w-3xl mx-auto">
                   La pergola Carat propose des stores dissimulés dans la structure — pas de coffre visible, ni de rails apparents — pour une esthétique parfaite même lorsque le store est ouvert.
                 </p>
-                <Link href="/contact" className="btn-outline-dark">
-                  Configurer ma pergola
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
               </ScrollReveal>
             </div>
           </section>
 
-          {/* Zones d'intervention */}
-          <section className="section-padding bg-light">
-            <div className="container">
-              <div className="section-tag justify-center">Zones d'intervention</div>
-              <h2 className="text-center mb-8">Installation de pergolas dans votre commune</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {[
-                  { href: '/pergola-bioclimatique-sur-mesure-villefranche-sur-saone', label: 'Villefranche-sur-Saône' },
-                  { href: '/pergola-bioclimatique-sur-mesure-belleville-en-beaujolais', label: 'Belleville-en-Beaujolais' },
-                  { href: '/pergola-bioclimatique-sur-mesure-limonest', label: 'Limonest' },
-                  { href: '/pergola-bioclimatique-sur-mesure-trevoux', label: 'Trévoux' },
-                  { href: '/pergola-bioclimatique-sur-mesure-lozanne', label: 'Lozanne' },
-                  { href: '/pergola-bioclimatique-sur-mesure-caluire-et-cuire', label: 'Caluire-et-Cuire' },
-                  { href: '/pergola-bioclimatique-sur-mesure-anse', label: 'Anse' },
-                  { href: '/pergola-bioclimatique-sur-mesure-arnas', label: 'Arnas' },
-                  { href: '/pergola-bioclimatique-sur-mesure-quincieux', label: 'Quincieux' },
-                  { href: '/pergola-bioclimatique-sur-mesure-neuville-sur-saone', label: 'Neuville-sur-Saône' },
-                  { href: '/pergola-bioclimatique-sur-mesure-chasselay', label: 'Chasselay' },
-                  { href: '/pergola-bioclimatique-sur-mesure-jassans-riottier', label: 'Jassans-Riottier' },
-                ].map(({ href, label }) => (
-                  <Link key={href} href={href} className="block p-4 bg-white rounded-xl shadow-sm hover:shadow-card transition-shadow text-center font-medium text-dark hover:text-accent">
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
         </>
+      }
+      seoLinksSection={
+        <div>
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-3 font-medium">Zones d&apos;intervention — Pergolas</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {[
+              { href: '/pergola-bioclimatique-sur-mesure-villefranche-sur-saone', label: 'Villefranche-sur-Saône' },
+              { href: '/pergola-bioclimatique-sur-mesure-belleville-en-beaujolais', label: 'Belleville-en-Beaujolais' },
+              { href: '/pergola-bioclimatique-sur-mesure-limonest', label: 'Limonest' },
+              { href: '/pergola-bioclimatique-sur-mesure-trevoux', label: 'Trévoux' },
+              { href: '/pergola-bioclimatique-sur-mesure-lozanne', label: 'Lozanne' },
+              { href: '/pergola-bioclimatique-sur-mesure-caluire-et-cuire', label: 'Caluire-et-Cuire' },
+              { href: '/pergola-bioclimatique-sur-mesure-anse', label: 'Anse' },
+              { href: '/pergola-bioclimatique-sur-mesure-arnas', label: 'Arnas' },
+              { href: '/pergola-bioclimatique-sur-mesure-quincieux', label: 'Quincieux' },
+              { href: '/pergola-bioclimatique-sur-mesure-neuville-sur-saone', label: 'Neuville-sur-Saône' },
+              { href: '/pergola-bioclimatique-sur-mesure-chasselay', label: 'Chasselay' },
+              { href: '/pergola-bioclimatique-sur-mesure-jassans-riottier', label: 'Jassans-Riottier' },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} className="text-xs text-gray-400 hover:text-primary transition-colors">{label}</Link>
+            ))}
+          </div>
+        </div>
       }
       advantages={[
         { icon: '', title: "Confort toute l'année", text: "Régulation naturelle par orientation des lames. Fraîcheur l'été, protection pluie toute l'année." },

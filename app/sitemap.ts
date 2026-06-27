@@ -340,5 +340,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/porte-de-garage-sur-mesure-villefranche-sur-saone`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/porte-de-garage-sur-mesure-caluire-et-cuire`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/porte-de-garage-sur-mesure-trevoux`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/porte-de-garage-sur-mesure-jassans-riottier`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 }

@@ -2,25 +2,24 @@ import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Villefranche-sur-Saône — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Villefranche-sur-Saône. Design unique, découpe laser, motorisation Somfy. Devis gratuit sous 24h.',
-  keywords: ['portail acier villefranche-sur-saône', 'portail acier sur mesure villefranche-sur-saône', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Villefranche-sur-Saône — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Villefranche-sur-Saône : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le Beaujolais et le Rhône (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-villefranche-sur-saone' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Villefranche-sur-Saône — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Villefranche-sur-Saône. Design unique, découpe laser, motorisation Somfy. Devis gratuit sous 24h.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Villefranche-sur-Saône' }],
+    title: 'Portail Acier & Métallique Motorisé Villefranche-sur-Saône | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Villefranche-sur-Saône : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le Beaujolais et le Rhône (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Villefranche-sur-Saône' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Villefranche-sur-Saône"
+      heroH1="Portail Acier & Métallique Villefranche-sur-Saône — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Villefranche-sur-Saône"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="THERA Fermetures conçoit et installe des portails acier sur mesure à Villefranche-sur-Saône. Capitale du Beaujolais, Villefranche concentre de nombreuses propriétés pour lesquelles l'acier apporte une identité visuelle forte et unique. Découpe laser, motifs personnalisés, finitions au choix — chaque projet est une création originale."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Villefranche-sur-Saône par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

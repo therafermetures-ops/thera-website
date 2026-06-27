@@ -4,7 +4,7 @@ import Link from 'next/link'
 import ProcessSteps from '../components/ProcessSteps'
 
 export const metadata: Metadata = {
-  title: 'Nos Réalisations — Portfolio THERA Fermetures',
+  title: 'INSPIRATIONS — Portfolio THERA Fermetures',
   description: 'Découvrez nos installations : portails, pergolas, carports, clôtures. Portfolio professionnel à Villefranche-sur-Saône et région Beaujolais.',
   keywords: ['réalisations portails', 'portfolio aménagement extérieur', 'installations villefranche-sur-saône'],
   alternates: { canonical: 'https://thera-fermetures.fr/realisations' },
@@ -23,6 +23,14 @@ const realisations = [
   { title: 'Portail & Clôtures Ambérieux', category: 'Portail', image: '/images/realisations/portail-cloture-amberieux.jpg', alt: 'Portail et clôtures aluminium à Ambérieux-d\'Azergues' },
   { title: 'Portail Aluminium Caluire', category: 'Portail', image: '/images/realisations/portail-caluire.jpg', alt: 'Portail aluminium installé à Caluire-et-Cuire' },
   { title: 'Portail Battant Belleville', category: 'Portail', image: '/images/realisations/portail-belleville.jpg', alt: 'Portail battant aluminium installé à Belleville' },
+  { title: 'Portail Autoportant Aluminium', category: 'Portail', image: '/images/portails/portail-aluminium-autoportant.jpg', alt: 'Portail aluminium autoportant sur mesure THERA Fermetures' },
+  { title: 'Portail et Portillon Anse', category: 'Portail', image: '/images/portails/Portail et portillon aluminium Anse.jpg', alt: 'Portail et portillon aluminium installé à Anse' },
+  { title: 'Portail Coulissant Belleville', category: 'Portail', image: '/images/portails/Portail coulissant deisgn sur mesure belleville.jpg', alt: 'Portail coulissant design sur mesure à Belleville-en-Beaujolais' },
+  { title: 'Portail Battant en Pente Gleizé', category: 'Portail', image: '/images/portails/Portail battant en pente Gleizé.jpg', alt: 'Portail battant aluminium en pente installé à Gleizé' },
+  { title: 'Portail Battant Personnalisé', category: 'Portail', image: '/images/portails/Portail battant personnalisé.jpg', alt: 'Portail battant aluminium personnalisé THERA Fermetures' },
+  { title: "Pergola d'exposition Chasselay", category: 'Pergola', image: "/images/pergolas/Pergola d'exposition à Chasselay.jpg", alt: "Pergola bioclimatique d'exposition au showroom de Chasselay" },
+  { title: 'Pergola Bioclimatique Belleville', category: 'Pergola', image: '/images/pergolas/pergola_bioclimatique_bellevile.png', alt: 'Pergola bioclimatique installée à Belleville-en-Beaujolais' },
+  { title: 'Pergola avec Store Motorisé', category: 'Pergola', image: '/images/pergolas/pergola_bioclimatique_avec_store.png', alt: 'Pergola bioclimatique avec store motorisé THERA Fermetures' },
 ]
 
 const categories = ['Tout', 'Portail', 'Pergola', 'Carport', 'Clôture']
@@ -37,7 +45,7 @@ export default function RealisationsPage() {
         </div>
         <div className="relative container text-center">
           <div className="section-tag justify-center text-white/50 mb-6">Portfolio</div>
-          <h1 className="text-white mb-4">Nos réalisations</h1>
+          <h1 className="text-white mb-4">INSPIRATIONS</h1>
           <p className="text-white/65 text-lg max-w-xl mx-auto font-light">
             Chaque projet illustre notre engagement pour la qualité et le sur mesure dans le Beaujolais.
           </p>
@@ -105,7 +113,7 @@ export default function RealisationsPage() {
           <div className="section-tag justify-center text-white/50 mb-6">Votre projet</div>
           <h2 className="text-white mb-6">Votre projet est unique —<br />parlons-en.</h2>
           <p className="text-white/65 text-lg mb-10 max-w-xl mx-auto font-light">
-            Visite offerte à domicile, fabrication française, installation par nos équipes.
+            Fabrication française, installé par nos soins.
           </p>
           <Link href="/contact" className="btn-primary text-base px-8 py-4">
             Demander un devis gratuit

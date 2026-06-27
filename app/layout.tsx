@@ -114,6 +114,9 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{ __html: typoCss }} />
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV13CGBGJ5" />
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZV13CGBGJ5');` }} />
       </head>
       <body className="bg-white text-dark antialiased">
         <script
@@ -133,18 +136,6 @@ export default async function RootLayout({
         </ClientLayoutShell>
         <Footer />
         <FloatingCTA />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZV13CGBGJ5"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZV13CGBGJ5');
-          `}
-        </Script>
       </body>
     </html>
   )

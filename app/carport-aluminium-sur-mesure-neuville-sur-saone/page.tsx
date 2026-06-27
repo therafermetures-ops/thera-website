@@ -2,14 +2,13 @@ import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Entreprise Carport Aluminium Neuville-sur-Saône — Installateur Local | THERA Fermetures',
-  description: 'Carport aluminium Neuville-sur-Saône par THERA Fermetures. Val de Saône, fabrication française, pose rapide. Devis gratuit.',
-  keywords: ['carport aluminium Neuville-sur-Saône', 'abri voiture Neuville-sur-Saône', 'carport sur mesure Rhône (69)'],
+  title: 'Carport Aluminium Neuville-sur-Saône — Devis Gratuit, Abri Voiture Sur Mesure | THERA Fermetures',
+  description: 'Installateur de carports aluminium et abris de voiture sur mesure à Neuville-sur-Saône : adossé ou autoporté, toiture étanche. Devis gratuit, pose par THERA Fermetures dans le nord lyonnais (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/carport-aluminium-sur-mesure-neuville-sur-saone' },
   openGraph: {
-    title: 'Carport Aluminium sur Mesure Neuville-sur-Saône — THERA Fermetures',
-    description: 'Protection voitures sur mesure a Neuville-sur-Saône. Devis gratuit.',
-    images: [{ url: '/images/carports/carport-claustra.png', width: 1200, height: 630, alt: 'Carport aluminium Neuville-sur-Saône' }],
+    title: 'Carport Aluminium Neuville-sur-Saône | THERA Fermetures',
+    description: 'Installateur de carports aluminium et abris de voiture sur mesure à Neuville-sur-Saône : adossé ou autoporté, toiture étanche. Devis gratuit, pose par THERA Fermetures dans le nord lyonnais (69).',
+    images: [{ url: '/images/carports/carport-villefranche.jpg', width: 1200, height: 630, alt: 'Carport Aluminium Neuville-sur-Saône' }],
   },
 }
 
@@ -26,7 +25,7 @@ export default function CarportPage() {
         'Structure aluminium',
         'Toiture polycarbonate ou panneaux sandwich',
         'Options claustra, bardage ou facade pleine',
-        'Eclairage LED integre possible',
+        'Eclairage LED intégré possible',
         'Declaration prealable facilitee (< 20m2)',
         'Garantie 10 ans',
         'Installation en 1-2 jours',
@@ -36,16 +35,16 @@ export default function CarportPage() {
         { src: '/images/carports/Carport-poteau-deporte.avif', alt: 'Carport poteau déporté', caption: 'Carport poteau déporté' },
       ]}
       advantages={[
-        { icon: '', title: 'Protection totale', text: 'Pluie, grele, neige, soleil — vos vehicules sont proteges 365 jours par an sans risque de dommages.' },
+        { icon: '', title: 'Protection totale', text: 'Pluie, grele, neige, soleil — vos vehicules sont protégés 365 jours par an sans risque de dommages.' },
         { icon: '', title: 'Sur mesure absolu', text: 'Chaque carport est dimensionne selon votre terrain, votre maison et vos vehicules. Aucun compromis.' },
         { icon: '', title: 'Entretien zero', text: "L'aluminium traite ne rouille pas, ne se deforme pas et ne necessite aucun traitement. Simple a nettoyer." },
-        { icon: '', title: 'Design integre', text: 'Coloris assortis a votre maison, claustra, bardage — votre carport devient un element architectural a part entiere.' },
-        { icon: '', title: 'Installation express', text: 'Grace a notre fabrication precise, la pose se fait en 1-2 jours avec un minimum de desagrement.' },
-        { icon: '', title: 'Valeur immobiliere', text: 'Un carport bien integre peut augmenter la valeur de votre bien de 3 a 7% selon les agences immobilieres.' },
+        { icon: '', title: 'Design intégré', text: 'Coloris assortis a votre maison, claustra, bardage — votre carport devient un element architectural a part entiere.' },
+        { icon: '', title: 'Installation express', text: 'Grâce à une fabrication precise, la pose se fait en 1-2 jours avec un minimum de désagrément.' },
+        { icon: '', title: 'Valeur immobiliere', text: 'Un carport bien intégré peut augmenter la valeur de votre bien de 3 a 7% selon les agences immobilieres.' },
       ]}
       processSteps={['Visite', 'Etude', 'Devis rapide', 'Installation', 'Livraison']}
       seoText="Entreprise Thera Fermetures : vente et installation de carport aluminium sur mesure à Neuville-sur-Saône et alentours. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
-      heroH1="Vente et installation de carport aluminium moderne et sur mesure à Neuville-sur-Saône"
+      heroH1="Carport Aluminium Neuville-sur-Saône — Abri Voiture Sur Mesure par THERA Fermetures"
       ctaText="Obtenir mon devis carport a Neuville-sur-Saône"
       structuredData={{
         '@context': 'https://schema.org',

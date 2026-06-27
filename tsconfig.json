@@ -16,8 +16,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": [
         "./*"

@@ -11,7 +11,7 @@ module.exports = {
         'primary-light': '#ff7c26',
         accent: '#45b535',
         'accent-dark': '#339926',
-        dark: '#111827',
+        dark: '#1a1b1e',
         'dark-2': '#1f2937',
         light: '#f8f8f6',
         'light-2': '#f0f0ec',

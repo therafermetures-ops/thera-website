@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Quincieux — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Quincieux. Val de Saône, grande dimension, motorisé. Devis gratuit.',
-  keywords: ['portail acier quincieux', 'portail acier sur mesure quincieux', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Quincieux — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Quincieux : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le nord lyonnais (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-quincieux' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Quincieux — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Quincieux. Val de Saône, grande dimension, motorisé. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Quincieux' }],
+    title: 'Portail Acier & Métallique Motorisé Quincieux | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Quincieux : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le nord lyonnais (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Quincieux' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Quincieux"
+      heroH1="Portail Acier & Métallique Quincieux — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Quincieux"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="Les grandes propriétés du Val de Saône à Quincieux appellent des portails à la hauteur de leur architecture. THERA Fermetures y installe des portails acier sur mesure de grande dimension, avec découpe laser et motorisation intégrée pour un accès fluide et sécurisé."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Quincieux par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

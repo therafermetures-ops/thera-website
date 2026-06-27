@@ -55,7 +55,7 @@ export default async function CarportsPage() {
       features={[
         'Dimensions sur mesure (1 à 4+ voitures)',
         'Structure aluminium',
-        'Toiture polycarbonate ou panneaux sandwich',
+        'Toiture en panneaux sandwich 55 mm',
         'Options claustra, bardage ou façade pleine',
         'Éclairage LED intégré possible',
         'Déclaration préalable facilitée (< 20m²)',
@@ -71,7 +71,7 @@ export default async function CarportsPage() {
         { icon: '', title: 'Sur mesure absolu', text: 'Chaque carport est dimensionné selon votre terrain, votre maison et vos véhicules. Aucun compromis.' },
         { icon: '', title: 'Entretien zéro', text: "L'aluminium traité ne rouille pas, ne se déforme pas et ne nécessite aucun traitement. Simple à nettoyer." },
         { icon: '', title: 'Design intégré', text: "Coloris assortis à votre maison, claustra, bardage — votre carport devient un élément architectural à part entière." },
-        { icon: '', title: 'Installation express', text: 'Grâce à notre fabrication précise, la pose se fait en 1-2 jours avec un minimum de désagrément.' },
+        { icon: '', title: 'Installation express', text: 'Grâce à une fabrication précise, la pose se fait en 1-2 jours avec un minimum de désagrément.' },
         { icon: '', title: 'Valeur immobilière', text: "Un carport bien intégré peut augmenter la valeur de votre bien de 3 à 7% selon les agences immobilières." },
       ]}
       processSteps={['Visite', 'Étude', 'Devis rapide', 'Installation', 'Livraison']}
@@ -80,33 +80,28 @@ export default async function CarportsPage() {
       seoText="Entreprise Thera Fermetures : vente et installation de carport aluminium sur mesure. Basé à Chasselay entre Villefranche-sur-Saône et Limonest."
       structuredData={structuredData}
       showGalleryLink={false}
-      afterVariants={
-        <section className="section-padding bg-light">
-          <div className="container">
-            <div className="section-tag justify-center">Zones d'intervention</div>
-            <h2 className="text-center mb-8">Installation de carports dans votre commune</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[
-                { href: '/carport-aluminium-sur-mesure-villefranche-sur-saone', label: 'Villefranche-sur-Saône' },
-                { href: '/carport-aluminium-sur-mesure-belleville-en-beaujolais', label: 'Belleville-en-Beaujolais' },
-                { href: '/carport-aluminium-sur-mesure-limonest', label: 'Limonest' },
-                { href: '/carport-aluminium-sur-mesure-trevoux', label: 'Trévoux' },
-                { href: '/carport-aluminium-sur-mesure-lozanne', label: 'Lozanne' },
-                { href: '/carport-aluminium-sur-mesure-caluire-et-cuire', label: 'Caluire-et-Cuire' },
-                { href: '/carport-aluminium-sur-mesure-anse', label: 'Anse' },
-                { href: '/carport-aluminium-sur-mesure-arnas', label: 'Arnas' },
-                { href: '/carport-aluminium-sur-mesure-quincieux', label: 'Quincieux' },
-                { href: '/carport-aluminium-sur-mesure-neuville-sur-saone', label: 'Neuville-sur-Saône' },
-                { href: '/carport-aluminium-sur-mesure-chasselay', label: 'Chasselay' },
-                { href: '/carport-aluminium-sur-mesure-jassans-riottier', label: 'Jassans-Riottier' },
-              ].map(({ href, label }) => (
-                <Link key={href} href={href} className="block p-4 bg-white rounded-xl shadow-sm hover:shadow-card transition-shadow text-center font-medium text-dark hover:text-accent">
-                  {label}
-                </Link>
-              ))}
-            </div>
+      seoLinksSection={
+        <div>
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-3 font-medium">Zones d&apos;intervention — Carports</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {[
+              { href: '/carport-aluminium-sur-mesure-villefranche-sur-saone', label: 'Villefranche-sur-Saône' },
+              { href: '/carport-aluminium-sur-mesure-belleville-en-beaujolais', label: 'Belleville-en-Beaujolais' },
+              { href: '/carport-aluminium-sur-mesure-limonest', label: 'Limonest' },
+              { href: '/carport-aluminium-sur-mesure-trevoux', label: 'Trévoux' },
+              { href: '/carport-aluminium-sur-mesure-lozanne', label: 'Lozanne' },
+              { href: '/carport-aluminium-sur-mesure-caluire-et-cuire', label: 'Caluire-et-Cuire' },
+              { href: '/carport-aluminium-sur-mesure-anse', label: 'Anse' },
+              { href: '/carport-aluminium-sur-mesure-arnas', label: 'Arnas' },
+              { href: '/carport-aluminium-sur-mesure-quincieux', label: 'Quincieux' },
+              { href: '/carport-aluminium-sur-mesure-neuville-sur-saone', label: 'Neuville-sur-Saône' },
+              { href: '/carport-aluminium-sur-mesure-chasselay', label: 'Chasselay' },
+              { href: '/carport-aluminium-sur-mesure-jassans-riottier', label: 'Jassans-Riottier' },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} className="text-xs text-gray-400 hover:text-primary transition-colors">{label}</Link>
+            ))}
           </div>
-        </section>
+        </div>
       }
     />
   )

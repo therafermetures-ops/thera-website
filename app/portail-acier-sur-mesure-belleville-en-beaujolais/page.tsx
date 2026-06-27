@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Belleville-en-Beaujolais — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Belleville-en-Beaujolais. Design unique, découpe laser, motorisation Somfy. Devis gratuit.',
-  keywords: ['portail acier belleville-en-beaujolais', 'portail acier sur mesure belleville-en-beaujolais', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Belleville-en-Beaujolais — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Belleville-en-Beaujolais : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le Beaujolais et le Rhône (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-belleville-en-beaujolais' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Belleville-en-Beaujolais — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Belleville-en-Beaujolais. Design unique, découpe laser, motorisation Somfy. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Belleville-en-Beaujolais' }],
+    title: 'Portail Acier & Métallique Motorisé Belleville-en-Beaujolais | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Belleville-en-Beaujolais : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le Beaujolais et le Rhône (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Belleville-en-Beaujolais' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Belleville-en-Beaujolais"
+      heroH1="Portail Acier & Métallique Belleville-en-Beaujolais — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Belleville-en-Beaujolais"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="THERA Fermetures installe des portails acier sur mesure à Belleville-en-Beaujolais. L'acier permet de créer des entrées uniques qui se démarquent dans les quartiers résidentiels du nord Beaujolais. Fabrication artisanale, motorisation intégrée, traitement anticorrosion garanti."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Belleville-en-Beaujolais par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

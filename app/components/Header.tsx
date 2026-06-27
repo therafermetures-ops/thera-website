@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 
-/* ── 5 PRODUITS ── */
+/* ── 6 PRODUITS ── */
 const products = [
   {
     title: 'Portails Aluminium',
@@ -12,6 +12,13 @@ const products = [
     href: '/portails',
     image: '/images/portails/portail-arnas.jpg',
     tag: 'Le + demandé',
+  },
+  {
+    title: 'Portails Acier',
+    desc: 'Créations uniques, découpe laser, design libre et fabrication artisanale.',
+    href: '/portails-acier',
+    image: '/images/portails/Coulissant acier RAL 7035.jpg',
+    tag: null,
   },
   {
     title: 'Pergolas Bioclimatiques',
@@ -45,7 +52,7 @@ const products = [
 
 const NAV_MAIN = [
   { label: 'Accueil',      href: '/' },
-  { label: 'Réalisations', href: '/realisations' },
+  { label: 'Inspirations', href: '/realisations' },
   { label: 'Actualités',   href: '/actualites' },
   { label: 'Contact',      href: '/contact' },
 ]
@@ -126,24 +133,21 @@ export default function Header() {
               rel="noopener noreferrer"
               className="header-link flex flex-col items-center leading-tight text-center py-1"
             >
-              <span className="text-[13px] font-semibold uppercase tracking-widest text-primary">Professionnel</span>
-              <span className="text-[13px] font-semibold uppercase tracking-widest text-primary">& Collectif</span>
+              <span className="text-[14px] font-semibold uppercase tracking-widest text-primary">Professionnel</span>
+              <span className="text-[14px] font-semibold uppercase tracking-widest text-primary">& Collectif</span>
             </a>
           </nav>
 
-          {/* ── Téléphone + CTA ── */}
+          {/* ── Téléphone ── */}
           <div className="hidden lg:flex items-center gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" className="text-green-600">
+            <a href="tel:+33474659165" className="flex flex-col items-center gap-1.5 hover:text-primary transition-colors group">
+              <div className="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
+                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" className="text-green-600 group-hover:text-primary transition-colors">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.2 10.8 19.79 19.79 0 01.11 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
                 </svg>
               </div>
-              <div>
-                <div className="text-[11px] text-muted leading-none mb-0.5 uppercase tracking-wide font-medium">Appelez-nous</div>
-                <div className="text-[16px] font-bold text-dark tracking-tight select-all">04 74 65 91 65</div>
-              </div>
-            </div>
+              <div className="text-[14px] font-bold text-dark tracking-tight select-all group-hover:text-primary transition-colors">04 74 65 91 65</div>
+            </a>
           </div>
 
           {/* ── Hamburger mobile ── */}
@@ -197,8 +201,8 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Grille 5 cartes produits */}
-          <div className="grid grid-cols-5 gap-4">
+          {/* Grille 6 cartes produits */}
+          <div className="grid grid-cols-6 gap-4">
             {products.map(p => (
               <Link
                 key={p.href}
@@ -222,7 +226,7 @@ export default function Header() {
                 {/* Texte */}
                 <div className="p-4">
                   <p
-                    className="font-bold text-dark text-sm group-hover:text-primary transition-colors duration-200 leading-tight mb-1.5"
+                    className="font-normal text-dark text-sm group-hover:text-primary transition-colors duration-200 leading-tight mb-1.5 uppercase tracking-wide"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {p.title}
@@ -372,7 +376,7 @@ export default function Header() {
         {/* Pied panneau */}
         <div className="border-t border-gray-100 p-5 flex flex-col gap-3">
           <a
-            href="tel:+33474649165"
+            href="tel:+33474659165"
             className="flex items-center justify-center gap-2 bg-light py-3.5 rounded-xl font-bold text-dark"
           >
             <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -388,7 +392,7 @@ export default function Header() {
             Demander un devis gratuit
           </Link>
           <div className="flex flex-wrap gap-2 mt-1">
-            {['Fabrication française', 'Garantie 10 ans', 'Visite offerte'].map(t => (
+            {['Fabrication française', 'Garantie 10 ans', 'Installé par nos soins'].map(t => (
               <div key={t} className="flex items-center gap-1.5 text-xs text-muted">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                 {t}

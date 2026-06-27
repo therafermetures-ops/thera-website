@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Limonest — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Limonest. Design haut de gamme, découpe laser, motorisation discrète. Devis gratuit.',
-  keywords: ['portail acier limonest', 'portail acier sur mesure limonest', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Limonest — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Limonest : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans l\'ouest lyonnais (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-limonest' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Limonest — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Limonest. Design haut de gamme, découpe laser, motorisation discrète. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Limonest' }],
+    title: 'Portail Acier & Métallique Motorisé Limonest | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Limonest : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans l\'ouest lyonnais (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Limonest' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Limonest"
+      heroH1="Portail Acier & Métallique Limonest — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Limonest"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="Commune résidentielle premium, Limonest accueille des propriétés exigeantes pour lesquelles THERA Fermetures propose des portails acier sur mesure haut de gamme. Découpe laser fine, finitions épurées, motorisation discrète — l'acier s'exprime avec élégance dans ce secteur prisé."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Limonest par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

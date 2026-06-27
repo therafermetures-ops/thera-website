@@ -10,13 +10,18 @@ interface ContactFormData {
   commune: string
   product: string
   message: string
+  _honeypot?: string
 }
 
 function validateForm(data: Partial<ContactFormData>): string | null {
   if (!data.name || data.name.trim().length < 2) return 'Le nom est requis (min. 2 caractères)'
   if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return 'Adresse email invalide'
   if (!data.product) return 'Veuillez sélectionner un produit'
-  if (data.phone && !/^[\d\s\+\-\(\)\.]{6,20}$/.test(data.phone)) return 'Numéro de téléphone invalide'
+  if (data.phone) {
+    const digitsOnly = data.phone.replace(/\D/g, '')
+    if (digitsOnly.length < 10) return 'Numéro de téléphone invalide (10 chiffres minimum)'
+  }
+  // Pas de validation message — champ optionnel
   return null
 }
 
@@ -31,6 +36,11 @@ const productLabels: Record<string, string> = {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json() as Partial<ContactFormData>
+
+    // Honeypot : si rempli → bot silencieux
+    if (body._honeypot) {
+      return NextResponse.json({ success: true })
+    }
 
     const error = validateForm(body)
     if (error) {
@@ -69,21 +79,24 @@ export async function POST(request: NextRequest) {
     `
 
     const confirmationHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <div style="background: #e85d04; padding: 20px; text-align: center;">
-          <h1 style="color: white; margin: 0;">THERA Fermetures</h1>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #eee;">
+        <div style="padding: 28px; text-align: center; border-bottom: 3px solid #e85d04; background: #1a1b1e;">
+          <img src="https://thera-fermetures.fr/images/logo-thera.png" alt="THERA Fermetures" style="height: 48px; width: auto;" />
         </div>
-        <div style="padding: 30px;">
-          <h2>Bonjour ${name},</h2>
-          <p>Nous avons bien reçu votre demande de devis pour <strong>${productLabel}</strong>.</p>
-          <p>Notre équipe vous contactera dans les <strong>24 heures</strong> pour donner suite à votre demande.</p>
-          <div style="background: #f9f9f9; padding: 15px; border-left: 4px solid #e85d04; margin: 20px 0;">
-            <p style="margin: 0;"><strong>📞 Besoin urgent?</strong><br>Appelez-nous directement au <a href="tel:+33474649165">04 74 65 91 65</a></p>
+        <div style="padding: 36px 32px; background: #fff;">
+          <h2 style="margin: 0 0 16px; font-size: 20px; color: #1a1b1e;">Bonjour ${name},</h2>
+          <p style="color: #444; line-height: 1.7; margin: 0 0 12px;">Nous avons bien reçu votre demande concernant <strong>${productLabel}</strong> et nous vous en remercions.</p>
+          <p style="color: #444; line-height: 1.7; margin: 0 0 24px;">Notre équipe vous contactera dans les <strong>meilleurs délais</strong> pour étudier votre projet et vous proposer un devis personnalisé.</p>
+          <div style="background: #f8f8f8; border-left: 4px solid #e85d04; padding: 16px 20px; margin: 0 0 24px;">
+            <p style="margin: 0; font-size: 13px; color: #555;"><strong>Récapitulatif de votre demande :</strong></p>
+            <p style="margin: 8px 0 0; font-size: 13px; color: #555;">Solution : ${productLabel}</p>
+            ${codePostal || commune ? `<p style="margin: 4px 0 0; font-size: 13px; color: #555;">Localisation : ${[codePostal, commune].filter(Boolean).join(' ')}</p>` : ''}
           </div>
-          <p>Cordialement,<br><strong>L'équipe THERA Fermetures</strong></p>
+          <p style="color: #444; line-height: 1.7; margin: 0 0 4px;">Cordialement,</p>
+          <p style="color: #1a1b1e; font-weight: 700; margin: 0;">L&apos;équipe THERA Fermetures</p>
         </div>
-        <div style="padding: 15px; background: #1a1a1a; text-align: center;">
-          <p style="color: #aaa; margin: 0; font-size: 12px;">134, za du Crouloup — 69380 Chasselay — therafermetures@gmail.com</p>
+        <div style="padding: 16px; background: #1a1b1e; text-align: center;">
+          <p style="color: rgba(255,255,255,0.5); margin: 0; font-size: 11px; letter-spacing: 0.05em;">04 74 65 91 65 — 134 ZA du Crouloup, 69380 Chasselay — <a href="https://thera-fermetures.fr" style="color: rgba(255,255,255,0.5);">thera-fermetures.fr</a></p>
         </div>
       </div>
     `

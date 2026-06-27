@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Neuville-sur-Saône — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Neuville-sur-Saône. Val de Saône, design fort, durabilité. Devis gratuit.',
-  keywords: ['portail acier neuville-sur-saône', 'portail acier sur mesure neuville-sur-saône', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Neuville-sur-Saône — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Neuville-sur-Saône : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le nord lyonnais (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-neuville-sur-saone' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Neuville-sur-Saône — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Neuville-sur-Saône. Val de Saône, design fort, durabilité. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Neuville-sur-Saône' }],
+    title: 'Portail Acier & Métallique Motorisé Neuville-sur-Saône | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Neuville-sur-Saône : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le nord lyonnais (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Neuville-sur-Saône' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Neuville-sur-Saône"
+      heroH1="Portail Acier & Métallique Neuville-sur-Saône — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Neuville-sur-Saône"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="Ville dynamique du Val de Saône, Neuville-sur-Saône voit THERA Fermetures intervenir régulièrement pour des portails acier sur mesure. L'acier apporte une identité forte aux nouvelles constructions comme aux rénovations, avec une durabilité exceptionnelle adaptée au climat de la région."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Neuville-sur-Saône par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

@@ -56,6 +56,8 @@ export default async function PortailsPage() {
         'Certifications Qualicoat® et Qualimarine® pour le laquage',
         'Garantie structure et peinture 10 ans',
       ]}
+      variantMinimalText={true}
+      variantSectionTitle="Les types de portails"
       variants={[
         {
           title: 'Portail Coulissant',
@@ -89,6 +91,91 @@ export default async function PortailsPage() {
       ]}
       afterVariants={
         <>
+          {/* ===== ENCART AUTRES SOLUTIONS ===== */}
+          <ScrollReveal>
+            <div className="px-4 sm:px-8 md:px-[72px] py-12 text-center" style={{ borderTop: '1px solid #eee' }}>
+              <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, marginBottom: 24, color: '#1a1b1e' }}>À chaque contrainte une solution</h2>
+              <div style={{ width: 64, height: 2, background: '#22c55e', margin: '0 auto 20px' }} />
+              <p style={{ fontSize: 18, color: '#444', lineHeight: 1.8, maxWidth: 680, margin: '0 auto 8px' }}>
+                Ces trois solutions sont les plus courantes mais il existe d&apos;autres types de portails coulissants et battants qui peuvent répondre à des contraintes spécifiques, comme le manque de place ou les terrains en pente.
+              </p>
+              <p style={{ fontSize: 18, color: '#222', fontWeight: 600, margin: '0 auto 24px', maxWidth: 680 }}>
+                Chaque contrainte a sa réponse. Consultez-nous, nous trouverons la vôtre&nbsp;!
+              </p>
+              <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: '#1a1b1e', color: '#fff', padding: '14px 32px', fontSize: 14, fontWeight: 600, textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                Prendre contact
+              </a>
+            </div>
+          </ScrollReveal>
+
+          {/* ===== AUTOMATISMES ===== */}
+          <ScrollReveal>
+            <div className="flex flex-col lg:flex-row overflow-hidden" style={{ minHeight: 420 }}>
+              <div className="bg-dark flex flex-col justify-center px-8 py-12 lg:px-12 lg:w-2/5 flex-shrink-0">
+                <div className="section-tag mb-5" style={{ color: '#22c55e' }}>Automatismes</div>
+                <h3 style={{ color: '#fff', fontWeight: 300, lineHeight: 1.2, margin: '0 0 4px', fontSize: 27 }}>
+                  Motorisez,
+                </h3>
+                <h3 style={{ color: '#fff', fontWeight: 700, lineHeight: 1.2, margin: '0 0 20px', fontSize: 27 }}>
+                  ouvrez simplement !
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 17, lineHeight: 1.75, marginBottom: 28 }}>
+                  Marques références Roger Technology et Somfy. Ouverture par télécommande, badge de proximité ou smartphone — installation et maintenance assurée.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    { title: 'Roger Technology', sub: 'Haut de gamme, précises et silencieuses' },
+                    { title: 'Somfy', sub: 'Domotique et application mobile' },
+                    { title: 'BFT / NICE / CAME', sub: 'Fiabilité et simplicité' },
+                    { title: 'Compatibilité', sub: 'Une seule télécommande pour votre portail et votre porte de garage !' },
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                      <div>
+                        <p style={{ color: '#fff', fontSize: 17, fontWeight: 700, margin: '0 0 2px' }}>{item.title}</p>
+                        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 16, margin: 0 }}>{item.sub}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="relative flex-1 min-h-[300px] lg:min-h-0">
+                <Image
+                  src="/images/portails/Motorisation portail Roger Technology.jpg"
+                  alt="Motorisation portail Roger Technology THERA Fermetures"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Inviso */}
+          <ScrollReveal>
+            <div className="flex flex-col sm:flex-row overflow-hidden border-t border-gray-100">
+              <div className="relative w-full sm:w-2/5 min-h-[300px] flex-shrink-0 bg-gray-50">
+                <Image
+                  src="/images/portails/morisation-integree-somfy.jpg"
+                  alt="Motorisation intégrée Inviso Somfy"
+                  fill
+                  className="object-contain p-2"
+                  sizes="(max-width: 640px) 100vw, 40vw"
+                />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-10 sm:w-3/5">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-4 h-0.5 bg-accent" />
+                  <span className="uppercase tracking-widest font-medium text-muted" style={{ fontSize: 15 }}>Motorisation Somfy</span>
+                </div>
+                <h3 className="text-dark mb-4" style={{ fontSize: 25, fontWeight: 600 }}>Motorisation intégrée Inviso</h3>
+                <p className="text-muted leading-relaxed" style={{ fontSize: 18 }}>
+                  Les moteurs sont dissimulés dans les montants du portail pour les rendre invisible. Une solution esthétique mais aussi technique, elle permet une ouverture du portail vers l&apos;extérieur sans avoir de moteur dans le passage et de motoriser un portail là où il serait impossible d&apos;installer des moteurs par manque de place.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
           <section className="section-padding bg-light">
             <div className="container">
               <ScrollReveal className="text-center mb-12">
@@ -138,33 +225,30 @@ export default async function PortailsPage() {
             </div>
           </section>
 
-          <section className="section-padding bg-light">
-            <div className="container">
-              <div className="section-tag justify-center">Zones d&apos;intervention</div>
-              <h2 className="text-center mb-8">Installation de portails dans votre commune</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {[
-                  { href: '/portail-aluminium-sur-mesure-villefranche-sur-saone', label: 'Villefranche-sur-Saône' },
-                  { href: '/portail-aluminium-sur-mesure-belleville-en-beaujolais', label: 'Belleville-en-Beaujolais' },
-                  { href: '/portail-aluminium-sur-mesure-limonest', label: 'Limonest' },
-                  { href: '/portail-aluminium-sur-mesure-trevoux', label: 'Trévoux' },
-                  { href: '/portail-aluminium-sur-mesure-lozanne', label: 'Lozanne' },
-                  { href: '/portail-aluminium-sur-mesure-caluire-et-cuire', label: 'Caluire-et-Cuire' },
-                  { href: '/portail-aluminium-sur-mesure-anse', label: 'Anse' },
-                  { href: '/portail-aluminium-sur-mesure-arnas', label: 'Arnas' },
-                  { href: '/portail-aluminium-sur-mesure-quincieux', label: 'Quincieux' },
-                  { href: '/portail-aluminium-sur-mesure-neuville-sur-saone', label: 'Neuville-sur-Saône' },
-                  { href: '/portail-aluminium-sur-mesure-chasselay', label: 'Chasselay' },
-                  { href: '/portail-aluminium-sur-mesure-jassans-riottier', label: 'Jassans-Riottier' },
-                ].map(({ href, label }) => (
-                  <Link key={href} href={href} className="block p-4 bg-white rounded-xl shadow-sm hover:shadow-card transition-shadow text-center font-medium text-dark hover:text-accent">
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
         </>
+      }
+      seoLinksSection={
+        <div>
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-3 font-medium">Zones d&apos;intervention — Portails Aluminium</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {[
+              { href: '/portail-aluminium-sur-mesure-villefranche-sur-saone', label: 'Villefranche-sur-Saône' },
+              { href: '/portail-aluminium-sur-mesure-belleville-en-beaujolais', label: 'Belleville-en-Beaujolais' },
+              { href: '/portail-aluminium-sur-mesure-limonest', label: 'Limonest' },
+              { href: '/portail-aluminium-sur-mesure-trevoux', label: 'Trévoux' },
+              { href: '/portail-aluminium-sur-mesure-lozanne', label: 'Lozanne' },
+              { href: '/portail-aluminium-sur-mesure-caluire-et-cuire', label: 'Caluire-et-Cuire' },
+              { href: '/portail-aluminium-sur-mesure-anse', label: 'Anse' },
+              { href: '/portail-aluminium-sur-mesure-arnas', label: 'Arnas' },
+              { href: '/portail-aluminium-sur-mesure-quincieux', label: 'Quincieux' },
+              { href: '/portail-aluminium-sur-mesure-neuville-sur-saone', label: 'Neuville-sur-Saône' },
+              { href: '/portail-aluminium-sur-mesure-chasselay', label: 'Chasselay' },
+              { href: '/portail-aluminium-sur-mesure-jassans-riottier', label: 'Jassans-Riottier' },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} className="text-xs text-gray-400 hover:text-primary transition-colors">{label}</Link>
+            ))}
+          </div>
+        </div>
       }
       galleryImages={[
         { src: '/images/portails/portail-arnas.jpg', alt: 'Portail aluminium Arnas', caption: 'Portail coulissant — Arnas' },

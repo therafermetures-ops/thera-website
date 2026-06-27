@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Arnas — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Arnas. Beaujolais, fabrication unique. Devis gratuit.',
-  keywords: ['portail acier arnas', 'portail acier sur mesure arnas', 'installateur portail acier rhône'],
+  title: 'Portail Acier & Métallique Motorisé Arnas — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Arnas : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le Beaujolais et le Rhône (69).',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-arnas' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Arnas — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Arnas. Beaujolais, fabrication unique. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Arnas' }],
+    title: 'Portail Acier & Métallique Motorisé Arnas | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Arnas : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans le Beaujolais et le Rhône (69).',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Arnas' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Arnas"
+      heroH1="Portail Acier & Métallique Arnas — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Arnas"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="THERA Fermetures réalise des portails acier sur mesure à Arnas et dans le secteur viticole du Beaujolais. L'acier s'intègre parfaitement aux maisons de caractère de la région, avec des motifs qui s'inspirent du patrimoine local ou d'un design résolument contemporain."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Arnas par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

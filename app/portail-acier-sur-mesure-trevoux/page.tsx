@@ -1,26 +1,25 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ProductTemplate from '../components/ProductTemplate'
 
 export const metadata: Metadata = {
-  title: 'Portail Acier sur Mesure Trévoux — Installateur Local | THERA Fermetures',
-  description: 'THERA Fermetures installe vos portails acier sur mesure à Trévoux (01). Design unique, robustesse, motorisation. Devis gratuit.',
-  keywords: ['portail acier trévoux', 'portail acier sur mesure trévoux', 'installateur portail acier ain'],
+  title: 'Portail Acier & Métallique Motorisé Trévoux — Devis Gratuit, Installateur | THERA Fermetures',
+  description: 'Installateur de portails acier et métalliques motorisés sur mesure à Trévoux : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans l\'Ain (01) et le Beaujolais.',
   alternates: { canonical: 'https://thera-fermetures.fr/portail-acier-sur-mesure-trevoux' },
   openGraph: {
-    title: 'Portail Acier sur Mesure Trévoux — Installateur Local | THERA Fermetures',
-    description: 'THERA Fermetures installe vos portails acier sur mesure à Trévoux (01). Design unique, robustesse, motorisation. Devis gratuit.',
-    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail acier Trévoux' }],
+    title: 'Portail Acier & Métallique Motorisé Trévoux | THERA Fermetures',
+    description: 'Installateur de portails acier et métalliques motorisés sur mesure à Trévoux : découpe laser, design unique, motorisation Somfy. Devis gratuit par THERA Fermetures dans l\'Ain (01) et le Beaujolais.',
+    images: [{ url: '/images/portails/portail-arnas.jpg', width: 1200, height: 630, alt: 'Portail Acier Trévoux' }],
   },
 }
 
 export default function PortailAcierPage() {
   return (
     <ProductTemplate
-      heroH1="Vente et installation de portails acier moderne et sur mesure à Trévoux"
+      heroH1="Portail Acier & Métallique Trévoux — Installation Sur Mesure par THERA Fermetures"
       title="Portails Acier sur Mesure à Trévoux"
       subtitle="Portails acier sur mesure — création unique, design libre, fabrication artisanale"
       description="THERA Fermetures intervient à Trévoux pour l'installation de portails acier sur mesure. Les propriétés du Val de Saône apprécient l'aspect robuste et design de l'acier. Notre équipe traverse le Rhône depuis Chasselay pour réaliser chaque projet avec soin."
-      heroImage="/images/portails/portail-arnas.jpg"
+      heroImage="/images/portails/Coulissant acier RAL 7035.jpg"
       heroImageAlt="Portail acier sur mesure à Trévoux par THERA Fermetures"
       features={[
         'Fabrication 100% sur mesure — dimensions et design libres',

@@ -16,10 +16,15 @@ const nextConfig = {
   compress: true,
   async redirects() {
     return [
+      // Anciennes URLs Wix indexées par Google
       {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.thera-fermetures.fr' }],
-        destination: 'https://thera-fermetures.fr/:path*',
+        source: '/femertures-industrielles-portail',
+        destination: '/portails',
+        permanent: true,
+      },
+      {
+        source: '/portail-alu-belleville',
+        destination: '/portail-aluminium-sur-mesure-belleville-en-beaujolais',
         permanent: true,
       },
     ]

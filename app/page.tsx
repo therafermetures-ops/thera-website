@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 
 const products = [
   { title: 'Portails Aluminium', desc: 'Battants, coulissants ou motorisés. Design sur mesure et sécurité maximale pour votre propriété.', href: '/portails', image: '/images/portails/portail-arnas.jpg', alt: 'Portail aluminium sur mesure THERA Fermetures', tag: 'Le + demandé' },
+  { title: 'Portails Acier', desc: 'Créations uniques, découpe laser, design libre et fabrication artisanale sur mesure.', href: '/portails-acier', image: '/images/portails/Coulissant acier RAL 7035.jpg', alt: 'Portail acier sur mesure THERA Fermetures', tag: null },
   { title: 'Pergolas Bioclimatiques', desc: 'Lames orientables motorisées. Profitez de votre terrasse 365 jours par an, pluie ou soleil.', href: '/pergolas', image: '/images/pergolas/pergola-bioclimatique.jpg', alt: 'Pergola bioclimatique motorisée THERA Fermetures', tag: 'Tendance 2025' },
   { title: 'Carports Aluminium', desc: 'Protection élégante pour vos véhicules. Structures sur mesure, pose rapide et sans entretien.', href: '/carports', image: '/images/carports/carport-claustra.png', alt: 'Carport aluminium claustra THERA Fermetures', tag: null },
-  { title: 'Clôtures Aluminium', desc: 'Délimitez et sécurisez votre propriété. Modèles pleins, ajourés ou mixtes en toutes couleurs.', href: '/clotures', image: '/images/clotures/cloture-alu.jpg', alt: 'Clôture aluminium THERA Fermetures', tag: null },
 ]
 
 const gallery = [
@@ -59,7 +59,7 @@ const avantages = [
       </svg>
     ),
     title: 'Qualité supérieure',
-    desc: 'Aluminium première qualité, non recyclé. Chaque installation bénéficie de notre garantie décennale.',
+    desc: 'Aluminium première qualité, non recyclé. Une pergola robuste et soignée au design unique.',
   },
   {
     icon: (
@@ -107,7 +107,7 @@ const localBusinessSchema = {
   url: 'https://thera-fermetures.fr',
   image: 'https://thera-fermetures.fr/images/portails/portail-arnas.jpg',
   description: 'Experts en portails aluminium, pergolas bioclimatiques, carports et clôtures sur mesure depuis 2015.',
-  telephone: '+33474649165',
+  telephone: '+33474659165',
   email: 'therafermetures@gmail.com',
   priceRange: '€€',
   address: {
@@ -128,11 +128,11 @@ const localBusinessSchema = {
 export default async function Home() {
   const cfg = await getSiteConfig()
 
-  const h1 = cfg.hero_titre_1 || 'Créateurs'
-  const h2 = cfg.hero_titre_2 || "d'espaces"
-  const h3 = cfg.hero_titre_3 || 'extérieurs'
+  const h1 = 'Aménagements extérieurs'
+  const h2 = '& Fermetures'
+  const h3 = cfg.hero_titre_3 || ''
   const heroTag = cfg.hero_tag || 'Villefranche-sur-Saône — Beaujolais — depuis 2015'
-  const heroDesc = cfg.hero_description || 'Portails aluminium, pergolas bioclimatiques, carports et clôtures sur mesure. Fabrication française, installation par nos équipes.'
+  const heroDesc = cfg.hero_description || 'Portails aluminium, pergolas bioclimatiques, carports et clôtures sur mesure. Fabrication française, installé par nos soins.'
   const btnDevis = cfg.hero_btn_devis || 'Demander un devis'
   const btnReal = cfg.hero_btn_realisations || 'Voir nos réalisations'
   const tel = cfg.contact_tel || '04 74 65 91 65'
@@ -184,28 +184,42 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ===== BANDE PARALLAX ===== */}
+      <section style={{
+        height: 280,
+        background: "url('/images/portails/portail_aluminium_cebel_villefranche_sur_saone.jpg') center/cover no-repeat fixed",
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,5,5,0.62)' }} />
+        <div style={{ position: 'relative', textAlign: 'center', padding: '0 24px' }}>
+          <p style={{ color: '#fff', fontSize: 'clamp(20px, 3vw, 36px)', fontWeight: 200, margin: 0, letterSpacing: '-0.01em', fontStyle: 'italic' }}>
+            Chaque projet part d&apos;une feuille blanche.
+          </p>
+        </div>
+      </section>
+
       {/* ===== PRODUITS ===== */}
       <section className="section-padding bg-light">
         <div className="container">
           <ScrollReveal className="text-center mb-14">
-            <div className="section-tag justify-center">Nos solutions</div>
+            <div className="section-tag justify-center" style={{ fontSize: '16px' }}>Nos solutions</div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {products.map((p, i) => (
               <ScrollReveal key={p.href} delay={i * 80}>
-                <Link href={p.href} className="product-card group block h-full">
-                  <div className="relative h-64 md:h-72 overflow-hidden rounded-2xl">
-                    <Image src={p.image} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
-                    <div className="product-card-overlay" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="text-white text-xl mb-1">{p.title}</h3>
-                      <div className="mt-3 flex items-center gap-1.5 text-white/90 text-sm font-medium">
-                        Découvrir
-                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </div>
+                <Link href={p.href} style={{ position: 'relative', overflow: 'hidden', display: 'block', textDecoration: 'none' }}>
+                  <div style={{ paddingBottom: '55%', position: 'relative' }}>
+                    <Image src={p.image} alt={p.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" loading={i < 2 ? 'eager' : 'lazy'} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 55%)' }} />
+                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px' }}>
+                      <h3 style={{ color: '#fff', fontSize: 22, fontWeight: 400, margin: '0 0 12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{p.title}</h3>
+                      <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, display: 'inline-flex', alignItems: 'center', gap: 8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                        Découvrir <span style={{ display: 'inline-block', width: 20, height: 1, background: '#22c55e' }} />
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -220,90 +234,6 @@ export default async function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ===== POURQUOI THERA ===== */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal direction="left">
-              <div className="section-tag">Pourquoi nous choisir</div>
-              <h2 className="mb-6">L&apos;expertise locale<br />au service de votre projet</h2>
-              <p className="text-muted text-lg mb-8 font-light leading-relaxed">
-                Depuis 2015, THERA Fermetures accompagne les particuliers et professionnels de la région dans les réalisations de leur projet extérieurs. Nous proposons un service clé en main, une prestation complète pour une meilleure continuité et un suivi plus simple.
-              </p>
-
-              {/* 4 avantages classiques */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                {avantages.map((a, i) => (
-                  <div key={i} className="flex gap-3 p-4 rounded-xl hover:bg-light transition-colors">
-                    <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0">
-                      {a.icon}
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-base mb-1">{a.title}</h4>
-                      <p className="text-muted text-sm leading-relaxed">{a.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-            </ScrollReveal>
-
-            <ScrollReveal direction="right">
-              <div className="relative">
-                <div className="relative h-[520px] md:h-[580px] overflow-hidden">
-                  <Image
-                    src="/images/pergolas/pergola_expostion_showroom_chasselay.jpg"
-                    alt="Showroom pergola THERA Fermetures Chasselay"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-                {/* Badge Fabrication Française */}
-                <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-5 shadow-card border border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#22c55e' }}>
-                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="font-bold text-dark text-sm">Fabrication Française</p>
-                      <p className="text-muted text-xs">Aluminium qualité supérieure</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          {/* Le vrai sur mesure — pleine largeur */}
-          <ScrollReveal className="mt-12">
-            <div className="flex flex-col sm:flex-row overflow-hidden border border-gray-100 shadow-card">
-              <div className="relative w-full sm:w-3/5 h-80 sm:h-96 flex-shrink-0">
-                <Image
-                  src="/images/portails/portail_coulissant_en_pente.png"
-                  alt="Portail coulissant en pente THERA Fermetures"
-                  fill
-                  className="object-contain bg-gray-50"
-                  sizes="(max-width: 640px) 100vw, 60vw"
-                />
-              </div>
-              <div className="bg-dark p-10 flex flex-col justify-center sm:w-2/5">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-4 h-0.5 bg-accent" />
-                  <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
-                </div>
-                <h3 className="text-white text-2xl mb-4">Le vrai sur mesure</h3>
-                <p className="text-white/70 text-base leading-relaxed">
-                  Chaque projet est unique et part d&apos;une feuille blanche. Dimensions, coloris, matériaux, automatismes — design et technique, rien de standard, chaque projet est réfléchi.
-                </p>
-              </div>
-            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -401,6 +331,73 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ===== POURQUOI THERA ===== */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollReveal direction="left">
+              <h2 className="mb-6">Au service de votre projet</h2>
+              <p className="text-muted text-lg mb-8 font-light leading-relaxed">
+                Depuis 2015, THERA Fermetures accompagne les particuliers et professionnels de la région dans les réalisations de leur projet extérieurs. Nous proposons un service clé en main, une prestation complète pour une meilleure continuité et un suivi plus simple.
+              </p>
+
+              {/* 4 avantages */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {avantages.map((a, i) => (
+                  <div key={i} style={{ padding: '20px', background: '#fafaf9', borderLeft: '2px solid #22c55e' }}>
+                    <h4 style={{ fontWeight: 700, fontSize: 16, margin: '0 0 8px' }}>{a.title}</h4>
+                    <p style={{ color: '#555', fontSize: 15, margin: 0, lineHeight: 1.65 }}>{a.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <div className="relative h-[520px] md:h-[580px] overflow-hidden">
+                <Image
+                  src="/images/pergolas/pergola_expostion_showroom_chasselay.jpg"
+                  alt="Showroom pergola THERA Fermetures Chasselay"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '28px 24px 20px', background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)' }}>
+                  <p style={{ fontSize: 15, color: '#fff', fontStyle: 'italic', margin: 0, letterSpacing: '0.03em' }}>
+                    Notre pergola d&apos;exposition
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Le vrai sur mesure — pleine largeur */}
+          <ScrollReveal className="mt-12">
+            <div className="flex flex-col sm:flex-row overflow-hidden border border-gray-100 shadow-card">
+              <div className="relative w-full sm:w-3/5 h-80 sm:h-96 flex-shrink-0">
+                <Image
+                  src="/images/portails/portail_coulissant_en_pente.png"
+                  alt="Portail coulissant en pente THERA Fermetures"
+                  fill
+                  className="object-contain bg-gray-50"
+                  sizes="(max-width: 640px) 100vw, 60vw"
+                />
+              </div>
+              <div className="bg-dark p-10 flex flex-col justify-center sm:w-2/5">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-4 h-0.5 bg-accent" />
+                  <span className="text-white/50 text-xs uppercase tracking-widest font-medium">Notre approche</span>
+                </div>
+                <h3 className="text-white text-2xl mb-4">Le vrai sur mesure</h3>
+                <p className="text-white/70 text-base leading-relaxed">
+                  Chaque projet est unique et part d&apos;une feuille blanche. Dimensions, coloris, matériaux, automatismes — design et technique, rien de standard, chaque projet est réfléchi.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ===== GALERIE TEASER ===== */}
       <section className="section-padding bg-white">
         <div className="container">
@@ -408,15 +405,11 @@ export default async function Home() {
             <h2 className="text-dark text-5xl md:text-6xl font-normal tracking-tight">INSPIRATIONS</h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {gallery.map((img, i) => (
               <ScrollReveal key={i} delay={i * 80}>
-                <div className="relative h-48 md:h-60 overflow-hidden group">
-                  <Image src={img.src} alt={img.alt} fill className="object-cover transition-transform duration-500 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 33vw" loading={i < 3 ? 'eager' : 'lazy'} />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all duration-300" />
-                  <div className="absolute bottom-3 left-3">
-                    <span className="badge bg-black/50 text-white backdrop-blur-sm text-xs">{img.cat}</span>
-                  </div>
+                <div style={{ position: 'relative', paddingBottom: '75%', overflow: 'hidden' }}>
+                  <Image src={img.src} alt={img.alt} fill className="object-cover transition-transform duration-500 hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" loading={i < 3 ? 'eager' : 'lazy'} />
                 </div>
               </ScrollReveal>
             ))}
@@ -499,7 +492,7 @@ export default async function Home() {
                   ))}
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-100 flex flex-col gap-3">
-                  <a href="tel:+33474649165" className="flex items-center justify-center gap-2 bg-light py-3.5 rounded-xl font-semibold text-dark hover:bg-dark/5 transition-colors">
+                  <a href="tel:+33474659165" className="flex items-center justify-center gap-2 bg-light py-3.5 rounded-xl font-semibold text-dark hover:bg-dark/5 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
@@ -513,32 +506,27 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ===== CTA FINAL ===== */}
-      <section className="relative py-24 md:py-36 overflow-hidden bg-dark">
-        <div className="absolute inset-0 opacity-15">
-          <Image src="/images/portails/portail-coulissant-chasselay.jpg" alt="" fill className="object-cover" aria-hidden="true" />
-        </div>
-        <div className="relative container text-center">
+      {/* ===== CTA FINAL — bande parallax ===== */}
+      <section style={{
+        position: 'relative',
+        padding: '120px 40px',
+        background: "url('/images/portails/portail-coulissant-chasselay.jpg') center/cover no-repeat fixed",
+      }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,10,0.78)' }} />
+        <div style={{ position: 'relative', textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
           <ScrollReveal>
-            <div className="section-tag justify-center text-white/40 mb-6">Prêt à démarrer?</div>
-            <h2 className="text-white text-4xl md:text-5xl mb-6">
-              Transformez votre extérieur<br className="hidden md:block" />
-              <span className="text-gradient"> dès aujourd&apos;hui</span>
+            <p style={{ color: '#22c55e', fontSize: 13, letterSpacing: '0.4em', textTransform: 'uppercase', fontWeight: 600, marginBottom: 20 }}>Prêt à démarrer ?</p>
+            <h2 style={{ color: '#fff', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 300, lineHeight: 1.15, margin: '0 0 16px', letterSpacing: '-0.02em' }}>
+              Transformez votre extérieur<br /><span style={{ fontWeight: 700 }}>dès aujourd&apos;hui</span>
             </h2>
-            <p className="text-white/65 text-lg max-w-xl mx-auto mb-10 font-light">
-              Visite offerte à domicile, devis personnalisé sans engagement, fabrication française.
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 17, marginBottom: 40 }}>
+              Fabrication française, installé par nos soins.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-base py-4 px-10">
+            <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/contact" style={{ background: '#22c55e', color: '#fff', padding: '16px 40px', fontWeight: 700, fontSize: 15, textDecoration: 'none', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 Demander mon devis
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
               </Link>
-              <a href="tel:+33474649165" className="btn-outline text-base py-4 px-10">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
+              <a href={`tel:+33474659165`} style={{ border: '1px solid rgba(255,255,255,0.25)', color: '#fff', padding: '16px 40px', fontSize: 15, textDecoration: 'none', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 {tel}
               </a>
             </div>

@@ -34,9 +34,11 @@ export default function ContactPage() {
     e.preventDefault()
     const validationErrors = validate(formData)
     if (Object.keys(validationErrors).length > 0) { setErrors(validationErrors); return }
+    const honeypot = (e.currentTarget.elements.namedItem('website') as HTMLInputElement)?.value
+    if (honeypot) return
     setStatus('loading'); setServerError('')
     try {
-      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...formData, commune: `${formData.codePostal} ${formData.commune}`.trim() }) })
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...formData, commune: `${formData.codePostal} ${formData.commune}`.trim(), _honeypot: honeypot }) })
       const data = await res.json()
       if (data.success) { setStatus('success'); setFormData(initialForm); setErrors({}) }
       else { setStatus('error'); setServerError(data.error || 'Une erreur est survenue. Veuillez réessayer.') }
@@ -65,7 +67,7 @@ export default function ContactPage() {
           <div className="section-tag justify-center text-white/50 mb-6">Nous contacter</div>
           <h1 className="text-white mb-4">Votre projet,<br />parlons-en</h1>
           <p className="text-white/65 text-lg max-w-xl mx-auto font-light">
-            Visite offerte à domicile — devis personnalisé sans engagement.
+            Devis personnalisé, sans engagement.
           </p>
         </div>
       </section>
@@ -80,20 +82,9 @@ export default function ContactPage() {
               <h2 className="mb-2">Envoyez-nous votre demande</h2>
               <p className="text-muted mb-8 font-light">Décrivez votre projet, nous vous recontactons rapidement.</p>
 
-              {status === 'success' && (
-                <div className="bg-green-50 border border-green-200 text-green-800 px-5 py-4 rounded-xl mb-6">
-                  <p className="font-bold mb-1">Demande envoyée avec succès</p>
-                  <p className="text-sm font-light">Merci ! Nous avons bien reçu votre message et nous vous recontacterons prochainement.</p>
-                </div>
-              )}
-              {status === 'error' && (
-                <div className="bg-red-50 border border-red-200 text-red-800 px-5 py-4 rounded-xl mb-6">
-                  <p className="font-bold mb-1">Erreur d&apos;envoi</p>
-                  <p className="text-sm">{serverError}</p>
-                </div>
-              )}
-
               <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                {/* Honeypot anti-bot — invisible pour les humains */}
+                <input type="text" name="website" autoComplete="off" tabIndex={-1} aria-hidden="true" style={{ display: 'none' }} />
                 <div>
                   <label className="block font-semibold mb-1.5 text-sm" htmlFor="name">Nom <span className="text-red-500">*</span></label>
                   <input id="name" type="text" name="name" value={formData.name} onChange={handleChange} className={inputClass('name')} placeholder="Votre nom et prénom" autoComplete="name" />
@@ -137,6 +128,18 @@ export default function ContactPage() {
                   <label className="block font-semibold mb-1.5 text-sm" htmlFor="message">Décrivez votre projet</label>
                   <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={5} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-dark transition-colors resize-none text-sm bg-white" placeholder="Dimensions souhaitées, couleur, contexte... Tout détail utile pour votre devis." />
                 </div>
+                {status === 'success' && (
+                  <div className="bg-green-50 border border-green-200 text-green-800 px-5 py-4 rounded-xl">
+                    <p className="font-bold mb-1">Demande envoyée avec succès</p>
+                    <p className="text-sm font-light">Merci ! Nous avons bien reçu votre message et nous vous recontacterons prochainement.</p>
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="bg-red-50 border border-red-200 text-red-800 px-5 py-4 rounded-xl">
+                    <p className="font-bold mb-1">Erreur d&apos;envoi</p>
+                    <p className="text-sm">{serverError}</p>
+                  </div>
+                )}
                 <button type="submit" disabled={status === 'loading'} className="w-full btn-primary justify-center py-4 text-base disabled:opacity-60">
                   {status === 'loading' ? 'Envoi en cours...' : 'Envoyer ma demande'}
                 </button>
@@ -159,7 +162,7 @@ export default function ContactPage() {
                   {
                     label: 'Téléphone',
                     content: '04 74 65 91 65',
-                    href: 'tel:+33474649165',
+                    href: 'tel:+33474659165',
                     svg: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
                   },
                   {
